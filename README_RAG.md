@@ -13,6 +13,7 @@ Use CUDA when available:
 .venv/bin/python -m rag_pipeline.build_index --chunker adaptive_paragraph --device cuda --batch-size 256
 .venv/bin/python -m rag_pipeline.build_index --chunker hierarchical_auto_merge --device cuda --batch-size 256
 .venv/bin/python -m rag_pipeline.build_index --chunker feedback_optimized --device cuda --batch-size 256
+.venv/bin/python -m rag_pipeline.build_index --chunker feedback_optimized_v2 --device cuda --batch-size 256
 ```
 
 `build_all_indexes.py` builds the three improved methods by default:
@@ -21,6 +22,7 @@ Use CUDA when available:
 adaptive_paragraph
 hierarchical_auto_merge
 feedback_optimized
+feedback_optimized_v2
 ```
 
 For a fast smoke test:

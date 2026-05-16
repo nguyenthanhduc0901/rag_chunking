@@ -1,6 +1,6 @@
 # Tổng quan các phương pháp chunking
 
-Dự án hiện có 5 phương pháp chunking, trong đó `fixed_sentence` là baseline, `paragraph_semantic` là semantic baseline đã đổi từ tên thử nghiệm cũ, và 3 phương pháp còn lại là các hướng cải tiến chính.
+Dự án hiện có 6 phương pháp chunking, trong đó `fixed_sentence` là baseline, `paragraph_semantic` là semantic baseline đã đổi từ tên thử nghiệm cũ, và các phương pháp còn lại là các hướng cải tiến chính.
 
 ## 1. fixed_sentence
 
@@ -31,6 +31,12 @@ Vai trò: semantic chunking cơ bản. So với chia từng câu, cách này ti�
 Ý tưởng: dùng semantic paragraph chunking nhưng ưu tiên chunk gọn hơn và ít vượt giới hạn token hơn. Metadata được thiết kế để phục vụ vòng lặp đánh giá: chạy retrieval eval trên bộ câu hỏi source-grounded, rồi tạo feedback report để phát hiện những vùng chunking cần chỉnh.
 
 Điểm cải tiến: đây là hướng tối ưu thực nghiệm. Nó không chỉ tạo chunk, mà còn chuẩn bị dữ liệu để lặp lại quá trình đo - sửa - đo. Với artifact hiện tại, phương pháp này có số chunk vượt 512 estimated tokens thấp nhất trong nhóm semantic.
+
+## 6. feedback_optimized_v2
+
+Ý tưởng: đây là vòng feedback thứ hai, được chỉnh từ lỗi retrieval của `feedback_optimized` v1. V1 thường retrieve đúng sách nhưng chưa overlap đúng source span, đặc biệt ở câu hỏi `why_how` và các đoạn đầu sách. V2 vì vậy giảm kích thước leaf chunk, dùng boundary threshold nhạy hơn và giảm window smoothing để ưu tiên tìm đúng vùng thông tin hẹp.
+
+Điểm cải tiến kỳ vọng: tăng `source_hit@5` và `source_mrr` so với v1, trong khi vẫn giữ số chunk thấp hơn đáng kể so với `fixed_sentence`.
 
 ## Artifact hiện tại
 

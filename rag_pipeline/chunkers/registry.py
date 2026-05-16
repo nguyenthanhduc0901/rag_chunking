@@ -7,6 +7,7 @@ from .adjacent import (
     AdaptiveParagraphChunker,
     AdjacentSimilarityChunker,
     FeedbackOptimizedChunker,
+    FeedbackOptimizedV2Chunker,
     HierarchicalAutoMergeChunker,
 )
 from .base import BaseChunker
@@ -19,6 +20,7 @@ CHUNKERS: dict[str, type[BaseChunker]] = {
     AdaptiveParagraphChunker.name: AdaptiveParagraphChunker,
     HierarchicalAutoMergeChunker.name: HierarchicalAutoMergeChunker,
     FeedbackOptimizedChunker.name: FeedbackOptimizedChunker,
+    FeedbackOptimizedV2Chunker.name: FeedbackOptimizedV2Chunker,
 }
 
 

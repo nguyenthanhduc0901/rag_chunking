@@ -522,3 +522,59 @@ class FeedbackOptimizedChunker(AdaptiveParagraphChunker):
             )
             repaired.append(replace(chunk, metadata=metadata))
         return repaired
+
+
+class FeedbackOptimizedV2Chunker(FeedbackOptimizedChunker):
+    """Second feedback iteration tuned from source-grounded retrieval misses.
+
+    V1 was strong on storage efficiency, but several misses retrieved the right
+    document without overlapping the exact source span. The first aggressive V2
+    candidate recovered some local misses but lost too much broader context, so
+    this version makes a conservative move: slightly smaller leaves while
+    preserving V1's windowed adaptive boundary behavior.
+    """
+
+    name = "feedback_optimized_v2"
+
+    def __init__(
+        self,
+        threshold: float = 0.54,
+        min_words: int = 85,
+        target_words: int = 120,
+        max_words: int = 175,
+        long_paragraph_words: int = 175,
+        adaptive_percentile: float = 25.0,
+        std_factor: float = 0.65,
+        min_threshold: float = 0.35,
+        max_threshold: float = 0.72,
+        window_size: int = 2,
+        repair_margin: float = 0.05,
+    ) -> None:
+        super().__init__(
+            threshold=threshold,
+            min_words=min_words,
+            target_words=target_words,
+            max_words=max_words,
+            long_paragraph_words=long_paragraph_words,
+            adaptive_percentile=adaptive_percentile,
+            std_factor=std_factor,
+            min_threshold=min_threshold,
+            max_threshold=max_threshold,
+            window_size=window_size,
+            repair_margin=repair_margin,
+        )
+
+    def chunk(self, document: Document, model=None, batch_size: int = 64) -> list[Chunk]:
+        chunks = super().chunk(document, model=model, batch_size=batch_size)
+        tuned: list[Chunk] = []
+        for chunk in chunks:
+            metadata = dict(chunk.metadata)
+            metadata.update(
+                {
+                    "repair_policy": "feedback_v2_locality_tuned",
+                    "feedback_iteration": 2,
+                    "v2_goal": "improve_source_span_overlap_without_losing_v1_context",
+                }
+            )
+            tuned.append(replace(chunk, metadata=metadata))
+        return tuned

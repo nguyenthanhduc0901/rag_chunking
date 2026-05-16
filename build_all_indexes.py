@@ -16,6 +16,7 @@ def main() -> None:
             "adaptive_paragraph",
             "hierarchical_auto_merge",
             "feedback_optimized",
+            "feedback_optimized_v2",
         ],
         help="Chunker names to build.",
     )
