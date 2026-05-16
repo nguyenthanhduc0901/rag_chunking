@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gutenberg RAG Chatbot</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #202124;
+        --muted: #5f6368;
+        --line: #dadce0;
+        --surface: #ffffff;
+        --soft: #f7f8f8;
+        --accent: #176b5c;
+        --accent-ink: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 14px;
+        display: grid;
+        gap: 8px;
+      }
+
+      h1 {
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.2;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+        align-items: center;
+      }
+
+      select,
+      button,
+      textarea {
+        font: inherit;
+      }
+
+      select {
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 7px 8px;
+        background: white;
+      }
+
+      .status {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      main {
+        overflow: auto;
+        padding: 14px;
+        background: var(--soft);
+      }
+
+      .msg {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: white;
+        white-space: pre-wrap;
+        line-height: 1.35;
+        font-size: 14px;
+      }
+
+      .user {
+        border-color: #b9d7d0;
+      }
+
+      .assistant {
+        border-color: var(--line);
+      }
+
+      details {
+        margin-top: 10px;
+        border-top: 1px solid var(--line);
+        padding-top: 8px;
+      }
+
+      summary {
+        cursor: pointer;
+        color: var(--accent);
+        font-size: 13px;
+      }
+
+      .source {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 7px 0;
+      }
+
+      form {
+        border-top: 1px solid var(--line);
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+      }
+
+      textarea {
+        resize: none;
+        min-height: 42px;
+        max-height: 110px;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 9px;
+      }
+
+      button {
+        border: 0;
+        border-radius: 7px;
+        padding: 0 14px;
+        background: var(--accent);
+        color: var(--accent-ink);
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: wait;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gutenberg Environmental Issues Chat</h1>
+      <div class="controls">
+        <select id="chunker"></select>
+        <span class="status" id="status">Loading</span>
+      </div>
+    </header>
+
+    <main id="messages">
+      <div class="msg assistant">Ask a question about the books in this Gutenberg bookshelf.</div>
+    </main>
+
+    <form id="form">
+      <textarea id="message" placeholder="Ask about a book, theme, or passage"></textarea>
+      <button id="send" type="submit">Send</button>
+    </form>
+
+    <script>
+      const apiBase = new URL(".", window.location.href).origin;
+      const chunkerSelect = document.getElementById("chunker");
+      const statusEl = document.getElementById("status");
+      const messagesEl = document.getElementById("messages");
+      const form = document.getElementById("form");
+      const messageInput = document.getElementById("message");
+      const sendButton = document.getElementById("send");
+
+      function addMessage(role, html) {
+        const item = document.createElement("div");
+        item.className = `msg ${role}`;
+        item.innerHTML = html;
+        messagesEl.appendChild(item);
+        messagesEl.scrollTop = messagesEl.scrollHeight;
+      }
+
+      function escapeHtml(text) {
+        return String(text)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function renderResult(result) {
+        const title = result.title || "Untitled";
+        const author = result.author || "Unknown author";
+        const url = result.gutenberg_url
+          ? (result.gutenberg_url.startsWith("http") ? result.gutenberg_url : `https://${result.gutenberg_url}`)
+          : "";
+        const sourceLink = url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Open book</a>` : "";
+        return `
+          <details>
+            <summary>#${result.rank} score=${result.score.toFixed(3)} | ${escapeHtml(title)}</summary>
+            <div class="source">${escapeHtml(author)} | doc_id=${escapeHtml(result.doc_id)} ${sourceLink}</div>
+            <div>${escapeHtml(result.text)}</div>
+          </details>
+        `;
+      }
+
+      async function loadChunkers() {
+        const response = await fetch(`${apiBase}/api/chunkers`);
+        const data = await response.json();
+        chunkerSelect.innerHTML = "";
+        for (const chunker of data.chunkers) {
+          const option = document.createElement("option");
+          option.value = chunker.name;
+          option.textContent = `${chunker.name} (${chunker.num_chunks || 0} chunks)`;
+          chunkerSelect.appendChild(option);
+        }
+        statusEl.textContent = data.chunkers.length ? "Ready" : "No indexes";
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const text = messageInput.value.trim();
+        if (!text) return;
+        messageInput.value = "";
+        sendButton.disabled = true;
+        statusEl.textContent = "Thinking";
+        addMessage("user", escapeHtml(text));
+
+        try {
+          const response = await fetch(`${apiBase}/api/chat`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              message: text,
+              chunker: chunkerSelect.value,
+              top_k: 5,
+              use_llm: true,
+            }),
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || response.statusText);
+          const sources = data.results.map(renderResult).join("");
+          addMessage("assistant", `${escapeHtml(data.answer)}${sources}`);
+          statusEl.textContent = data.used_llm ? "Gemma4" : "Retrieval only";
+        } catch (error) {
+          addMessage("assistant", `Error: ${escapeHtml(error.message)}`);
+          statusEl.textContent = "Error";
+        } finally {
+          sendButton.disabled = false;
+        }
+      });
+
+      loadChunkers().catch((error) => {
+        statusEl.textContent = "Error";
+        addMessage("assistant", `Could not load chunkers: ${escapeHtml(error.message)}`);
+      });
+    </script>
+  </body>
+</html>
+
