@@ -11,7 +11,7 @@ from starlette.requests import Request
 from starlette.responses import FileResponse, JSONResponse, RedirectResponse
 from starlette.routing import Route
 
-from .llm import answer_with_gemma
+from .llm import answer_with_gemini
 from .retrieve import Retriever, list_artifact_dirs
 
 
@@ -83,7 +83,7 @@ async def chat(request: Request) -> JSONResponse:
     retriever = _retriever(str(artifact_dir))
     results = retriever.search(question, top_k=top_k)
     answer = (
-        answer_with_gemma(question, results)
+        answer_with_gemini(question, results)
         if use_llm
         else None
     )
@@ -92,6 +92,7 @@ async def chat(request: Request) -> JSONResponse:
         {
             "answer": answer.text if answer else "Retrieved chunks are shown below.",
             "used_llm": answer.used_llm if answer else False,
+            "llm_provider": "gemini" if answer and answer.used_llm else None,
             "chunker": artifact_dir.name,
             "results": [
                 {

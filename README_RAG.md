@@ -52,6 +52,17 @@ artifacts/<chunker>/
 
 ## Embeddable Widget
 
+The widget uses CUDA for local BGE retrieval and Gemini on Vertex AI for the
+answer generator. It no longer needs a local Gemma/vLLM service.
+
+Configure Gemini first:
+
+```bash
+export VERTEX_PROJECT_ID=project-ccf4c6cc-ed33-46e5-acf
+export VERTEX_LOCATION=global
+export GEMINI_MODEL=gemini-2.5-flash
+```
+
 Run the widget/API server on the VM:
 
 ```bash
@@ -85,7 +96,8 @@ block scripts or iframes from a plain HTTP external VM IP on an HTTPS page.
 ## Generate A Fair Retrieval Benchmark
 
 Generate questions from the original `data_clean` source passages, not from any
-chunker artifact:
+chunker artifact. By default this uses the same Gemini Vertex AI environment
+variables shown above:
 
 ```bash
 .venv/bin/python -m rag_pipeline.generate_benchmark_questions \
@@ -95,7 +107,7 @@ chunker artifact:
   --seed 42
 ```
 
-Quick smoke test without calling Gemma:
+Quick smoke test without calling an LLM:
 
 ```bash
 .venv/bin/python -m rag_pipeline.generate_benchmark_questions \

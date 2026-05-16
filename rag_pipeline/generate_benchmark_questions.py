@@ -2,21 +2,21 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import random
 import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import httpx
-
+from .llm import make_gemini_client
 from .load_data import load_documents
 from .text_utils import normalize_inline_text, split_paragraphs_with_offsets, word_count
 
 
 QUESTION_TYPES = ("fact", "concept", "summary", "why_how")
 DIFFICULTIES = ("easy", "medium", "hard")
-GENERATOR_VERSION = "source-paragraph-v1"
+GENERATOR_VERSION = "source-paragraph-v2-gemini"
 
 
 @dataclass(frozen=True)
@@ -288,14 +288,15 @@ def _normalize_generated_question(
     }
 
 
-def _ask_gemma(
+def _ask_gemini(
     passage: SourcePassage,
     question_type: str,
     difficulty: str,
-    base_url: str,
+    client: Any,
     model: str,
-    timeout_seconds: float,
 ) -> dict[str, Any]:
+    from google.genai import types
+
     prompt = f"""
 Create one fair retrieval benchmark question from the source excerpt.
 
@@ -325,25 +326,19 @@ Author: {passage.author or "Unknown"}
 Excerpt:
 {passage.text[:2600]}
 """.strip()
-    response = httpx.post(
-        f"{base_url.rstrip('/')}/v1/chat/completions",
-        headers={"Authorization": "Bearer local-gemma"},
-        json={
-            "model": model,
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "You create JSON-only benchmark questions for retrieval evaluation.",
-                },
-                {"role": "user", "content": prompt},
-            ],
-            "temperature": 0.2,
-            "max_tokens": 360,
-        },
-        timeout=timeout_seconds,
+    response = client.models.generate_content(
+        model=model,
+        contents=(
+            "You create JSON-only benchmark questions for retrieval evaluation.\n\n"
+            f"{prompt}"
+        ),
+        config=types.GenerateContentConfig(
+            max_output_tokens=360,
+            temperature=0.2,
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+        ),
     )
-    response.raise_for_status()
-    content = response.json()["choices"][0]["message"]["content"]
+    content = response.text if isinstance(response.text, str) else str(response)
     return _extract_json_object(content)
 
 
@@ -356,9 +351,7 @@ def generate_benchmark_questions(
     min_words: int,
     max_words: int,
     seed: int,
-    gemma_url: str,
-    gemma_model: str,
-    timeout_seconds: float,
+    gemini_model: str,
     no_llm: bool,
     fail_on_llm_error: bool,
 ) -> list[dict[str, Any]]:
@@ -378,39 +371,17 @@ def generate_benchmark_questions(
     partial_path = out_path.with_suffix(out_path.suffix + ".partial")
     partial_path.parent.mkdir(parents=True, exist_ok=True)
     partial_path.unlink(missing_ok=True)
-    for index, passage in enumerate(passages, start=1):
-        question_type = QUESTION_TYPES[(index - 1) % len(QUESTION_TYPES)]
-        difficulty = DIFFICULTIES[(index - 1 + rng.randint(0, 2)) % len(DIFFICULTIES)]
 
-        generated: dict[str, Any]
-        generator_status = "llm"
-        if no_llm:
-            generator_status = "fallback_no_llm"
-            keywords = _fallback_keywords(passage.text)
-            generated = {
-                "question": (
-                    f"What does {passage.title or 'the selected book'} discuss "
-                    f"about {', '.join(keywords[:3])}?"
-                ),
-                "answer_hint": normalize_inline_text(passage.text[:260]),
-                "expected_keywords": keywords,
-                "question_type": question_type,
-                "difficulty": difficulty,
-            }
-        else:
-            try:
-                generated = _ask_gemma(
-                    passage=passage,
-                    question_type=question_type,
-                    difficulty=difficulty,
-                    base_url=gemma_url,
-                    model=gemma_model,
-                    timeout_seconds=timeout_seconds,
-                )
-            except Exception as exc:
-                if fail_on_llm_error:
-                    raise
-                generator_status = f"fallback_llm_error:{type(exc).__name__}"
+    gemini_client = None if no_llm else make_gemini_client()
+    try:
+        for index, passage in enumerate(passages, start=1):
+            question_type = QUESTION_TYPES[(index - 1) % len(QUESTION_TYPES)]
+            difficulty = DIFFICULTIES[(index - 1 + rng.randint(0, 2)) % len(DIFFICULTIES)]
+
+            generated: dict[str, Any]
+            generator_status = "gemini"
+            if no_llm:
+                generator_status = "fallback_no_llm"
                 keywords = _fallback_keywords(passage.text)
                 generated = {
                     "question": (
@@ -422,38 +393,65 @@ def generate_benchmark_questions(
                     "question_type": question_type,
                     "difficulty": difficulty,
                 }
+            else:
+                try:
+                    generated = _ask_gemini(
+                        passage=passage,
+                        question_type=question_type,
+                        difficulty=difficulty,
+                        client=gemini_client,
+                        model=gemini_model,
+                    )
+                except Exception as exc:
+                    if fail_on_llm_error:
+                        raise
+                    generator_status = f"fallback_llm_error:{type(exc).__name__}"
+                    keywords = _fallback_keywords(passage.text)
+                    generated = {
+                        "question": (
+                            f"What does {passage.title or 'the selected book'} discuss "
+                            f"about {', '.join(keywords[:3])}?"
+                        ),
+                        "answer_hint": normalize_inline_text(passage.text[:260]),
+                        "expected_keywords": keywords,
+                        "question_type": question_type,
+                        "difficulty": difficulty,
+                    }
 
-        question_fields = _normalize_generated_question(
-            generated=generated,
-            passage=passage,
-            question_type=question_type,
-            difficulty=difficulty,
-            generator_status=generator_status,
-        )
-        row = {
-            "question_id": f"q{index:05d}",
-            "generator_version": GENERATOR_VERSION,
-            **question_fields,
-            "expected_doc_id": passage.doc_id,
-            "source_file": passage.source_file,
-            "source_title": passage.title,
-            "source_author": passage.author,
-            "source_start_char": passage.start_char,
-            "source_end_char": passage.end_char,
-            "source_position": passage.bucket,
-            "source_position_ratio": round(passage.position_ratio, 4),
-            "source_word_count": word_count(passage.text),
-            "source_excerpt": passage.text,
-        }
-        rows.append(row)
-        with partial_path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
-        print(
-            f"[{index}/{len(passages)}] doc={passage.doc_id} "
-            f"type={row['question_type']} difficulty={row['difficulty']} "
-            f"status={row['generator_status']} -> {row['question']}",
-            flush=True,
-        )
+            question_fields = _normalize_generated_question(
+                generated=generated,
+                passage=passage,
+                question_type=question_type,
+                difficulty=difficulty,
+                generator_status=generator_status,
+            )
+            row = {
+                "question_id": f"q{index:05d}",
+                "generator_version": GENERATOR_VERSION,
+                **question_fields,
+                "expected_doc_id": passage.doc_id,
+                "source_file": passage.source_file,
+                "source_title": passage.title,
+                "source_author": passage.author,
+                "source_start_char": passage.start_char,
+                "source_end_char": passage.end_char,
+                "source_position": passage.bucket,
+                "source_position_ratio": round(passage.position_ratio, 4),
+                "source_word_count": word_count(passage.text),
+                "source_excerpt": passage.text,
+            }
+            rows.append(row)
+            with partial_path.open("a", encoding="utf-8") as f:
+                f.write(json.dumps(row, ensure_ascii=False) + "\n")
+            print(
+                f"[{index}/{len(passages)}] doc={passage.doc_id} "
+                f"type={row['question_type']} difficulty={row['difficulty']} "
+                f"status={row['generator_status']} -> {row['question']}",
+                flush=True,
+            )
+    finally:
+        if gemini_client is not None and hasattr(gemini_client, "close"):
+            gemini_client.close()
 
     _jsonl_write(out_path, rows)
     partial_path.unlink(missing_ok=True)
@@ -472,9 +470,11 @@ def main() -> None:
     parser.add_argument("--min-words", type=int, default=90)
     parser.add_argument("--max-words", type=int, default=260)
     parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--gemma-url", default="http://localhost:8000")
-    parser.add_argument("--gemma-model", default="gemma-4-e4b-it")
-    parser.add_argument("--timeout-seconds", type=float, default=120.0)
+    parser.add_argument(
+        "--gemini-model",
+        default=None,
+        help="Gemini model name. Defaults to GEMINI_MODEL or gemini-2.5-flash.",
+    )
     parser.add_argument("--no-llm", action="store_true")
     parser.add_argument("--fail-on-llm-error", action="store_true")
     args = parser.parse_args()
@@ -488,9 +488,9 @@ def main() -> None:
         min_words=args.min_words,
         max_words=args.max_words,
         seed=args.seed,
-        gemma_url=args.gemma_url,
-        gemma_model=args.gemma_model,
-        timeout_seconds=args.timeout_seconds,
+        gemini_model=(
+            args.gemini_model or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+        ),
         no_llm=args.no_llm,
         fail_on_llm_error=args.fail_on_llm_error,
     )

@@ -1,6 +1,6 @@
 sentence-transformers>=5.5.0
 numpy>=2.0.0
 faiss-cpu>=1.13.0
-httpx>=0.28.0
+google-genai>=1.0.0
 starlette>=0.40.0
 uvicorn>=0.30.0

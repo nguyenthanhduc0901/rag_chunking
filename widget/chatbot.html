@@ -240,7 +240,7 @@
           if (!response.ok) throw new Error(data.error || response.statusText);
           const sources = data.results.map(renderResult).join("");
           addMessage("assistant", `${escapeHtml(data.answer)}${sources}`);
-          statusEl.textContent = data.used_llm ? "Gemma4" : "Retrieval only";
+          statusEl.textContent = data.used_llm ? "Gemini" : "Retrieval only";
         } catch (error) {
           addMessage("assistant", `Error: ${escapeHtml(error.message)}`);
           statusEl.textContent = "Error";
@@ -256,4 +256,3 @@
     </script>
   </body>
 </html>
-
