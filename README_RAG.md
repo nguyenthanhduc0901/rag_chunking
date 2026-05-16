@@ -77,6 +77,7 @@ block scripts or iframes from a plain HTTP external VM IP on an HTTPS page.
 
 ```bash
 .venv/bin/python compare_chunkers.py
+.venv/bin/python compare_retrieval.py
 ```
 
 ## Generate A Fair Retrieval Benchmark
@@ -113,16 +114,19 @@ Evaluate any chunker against the same benchmark:
   --device cuda
 ```
 
+After running retrieval evaluation for all artifact folders, regenerate the
+summary table:
+
+```bash
+.venv/bin/python compare_retrieval.py
+```
+
 ## Feedback Loop
 
 ```bash
-.venv/bin/python -m rag_pipeline.generate_synthetic_questions \
-  --artifact-dir artifacts/feedback_optimized \
-  --out eval/synthetic_questions.jsonl
-
 .venv/bin/python -m rag_pipeline.evaluate_retrieval \
   --artifact-dir artifacts/feedback_optimized \
-  --questions eval/synthetic_questions.jsonl
+  --questions eval/source_questions.jsonl
 
 .venv/bin/python -m rag_pipeline.feedback_report \
   --artifact-dir artifacts/feedback_optimized \

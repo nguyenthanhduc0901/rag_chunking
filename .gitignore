@@ -24,7 +24,7 @@ data_clean/
 
 # In-progress benchmark generation
 *.partial
-eval/source_questions*.jsonl
+eval/*_smoke.jsonl
 
 # Local/editor files
 .DS_Store

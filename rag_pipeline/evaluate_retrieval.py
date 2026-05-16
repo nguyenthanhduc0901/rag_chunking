@@ -50,7 +50,7 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
     if not questions:
         return {
             "num_questions": 0,
-            "note": "No questions found. Add eval/questions.jsonl for retrieval metrics.",
+            "note": "No questions found. Generate eval/source_questions.jsonl first.",
         }
 
     doc_hits_at_1 = 0
@@ -170,7 +170,7 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Evaluate retrieval against JSONL questions.")
     parser.add_argument("--artifact-dir", type=Path, required=True)
-    parser.add_argument("--questions", type=Path, default=Path("eval/questions.jsonl"))
+    parser.add_argument("--questions", type=Path, default=Path("eval/source_questions.jsonl"))
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--device", default=None)
     parser.add_argument("--out", type=Path, default=None)

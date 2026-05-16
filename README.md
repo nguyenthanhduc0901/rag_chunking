@@ -10,6 +10,7 @@ Local RAG pipeline for comparing chunking strategies on a 100-book Project Guten
 - `widget/`: embeddable chatbot widget files.
 - `CHUNKING_METHODS.md`: explanation of each chunking strategy and benchmark plan.
 - `README_RAG.md`: commands for building indexes, running retrieval, and serving the widget.
+- `compare_chunkers.py` and `compare_retrieval.py`: report-ready comparison tables.
 
 ## Notes
 

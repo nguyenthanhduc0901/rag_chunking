@@ -28,7 +28,7 @@ Vai trò: semantic chunking cơ bản. So với chia từng câu, cách này ti�
 
 ## 5. feedback_optimized
 
-Ý tưởng: dùng semantic paragraph chunking nhưng ưu tiên chunk gọn hơn và ít vượt giới hạn token hơn. Metadata được thiết kế để phục vụ vòng lặp đánh giá: sinh câu hỏi synthetic bằng Gemma, chạy retrieval eval, rồi tạo feedback report để phát hiện những vùng chunking cần chỉnh.
+Ý tưởng: dùng semantic paragraph chunking nhưng ưu tiên chunk gọn hơn và ít vượt giới hạn token hơn. Metadata được thiết kế để phục vụ vòng lặp đánh giá: chạy retrieval eval trên bộ câu hỏi source-grounded, rồi tạo feedback report để phát hiện những vùng chunking cần chỉnh.
 
 Điểm cải tiến: đây là hướng tối ưu thực nghiệm. Nó không chỉ tạo chunk, mà còn chuẩn bị dữ liệu để lặp lại quá trình đo - sửa - đo. Với artifact hiện tại, phương pháp này có số chunk vượt 512 estimated tokens thấp nhất trong nhóm semantic.
 
@@ -47,12 +47,11 @@ Vai trò: semantic chunking cơ bản. So với chia từng câu, cách này ti�
 - Intrinsic chunk benchmark: mỗi artifact có `chunk_eval.json`, gồm số chunk, số sách, độ dài ký tự/token ước lượng, số câu mỗi chunk, số chunk vượt 512 estimated tokens, số chunk quá ngắn, boundary similarity và số chunk mỗi sách.
 - Bảng so sánh nhanh: chạy `python compare_chunkers.py` để gom các chỉ số chunk từ mọi artifact.
 - Retrieval benchmark framework: `rag_pipeline/evaluate_retrieval.py` đo `hit@1`, `hit@k`, `mrr`, keyword recall và top results từ file câu hỏi JSONL.
-- Synthetic question generator: `rag_pipeline/generate_synthetic_questions.py` dùng Gemma để sinh câu hỏi đánh giá từ chunk.
 - Source-grounded benchmark generator: `rag_pipeline/generate_benchmark_questions.py` sinh câu hỏi từ paragraph gốc trong `data_clean`, không lấy từ artifact của bất kỳ chunker nào, nên công bằng hơn khi so sánh các phương pháp chunking.
 - Feedback report: `rag_pipeline/feedback_report.py` dùng kết quả retrieval eval để phân tích điểm yếu của chunking.
 
-## Phần còn thiếu để đánh giá chắc chắn
+## Kết quả benchmark hiện tại
 
-`eval/questions.jsonl` hiện còn quá nhỏ và có ít nhất một câu hỏi trỏ tới sách đã bị loại khỏi tập 100 sách hiện tại. Vì vậy, intrinsic benchmark đã dùng được, nhưng retrieval benchmark chưa đủ tin cậy để kết luận phương pháp nào tốt nhất cho QA.
+`eval/source_questions.jsonl` hiện là bộ benchmark chính, gồm 200 câu hỏi được sinh từ paragraph gốc của 100 sách. Kết quả retrieval đã được ghi trong `artifacts/retrieval_summary.md` và `artifacts/retrieval_summary.json`.
 
-Việc cần làm tiếp theo là tạo một bộ câu hỏi đánh giá mới cho đúng 100 sách hiện tại bằng `generate_benchmark_questions.py`, chạy `evaluate_retrieval.py` cho tất cả artifact, rồi so sánh `doc_hit@1`, `doc_hit@5`, `doc_mrr`, `source_hit@1`, `source_hit@5`, `source_mrr` và keyword recall.
+Các chỉ số chính để báo cáo là `doc_hit@1`, `doc_hit@5`, `doc_mrr`, `source_hit@1`, `source_hit@5`, `source_hit@10`, `source_mrr` và số retrieval issues trong feedback report.
