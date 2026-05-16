@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Generated RAG artifacts
+artifacts/
+*.faiss
+*.index
+*.npy
+
+# Large or archived data not used by the current 100-book demo
+data_clean_excluded/
+
+# In-progress benchmark generation
+*.partial
+eval/source_questions*.jsonl
+
+# Local/editor files
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,1221 @@
+Transcriber Note: Text emphasis is denoted as =Bold= and _Italics_.
+  Fractions are represented as 1-2/3.
+
+
+
+
+                              SEWAGE and
+
+                                GARBAGE
+
+                               DISPOSAL
+
+                                on the
+
+                                 FARM
+
+
+                            [Illustration]
+
+
+                      FARMERS' BULLETIN No. 1950
+
+                    U.S. DEPARTMENT OF AGRICULTURE
+
+
+This Bulletin is a guide to up to-date methods for the sanitary
+disposal of sewage and other household and farm wastes. It tells how
+to construct satisfactory sanitary facilities and how to maintain them
+and gives special attention to the questions on sanitation asked most
+frequently by farm people.
+
+Solutions to all problems cannot be given here, and often advice
+must be sought from local sanitary officials. Many county and State
+health departments furnish advice and copies of local regulations and
+sometimes provide inspection service. Where there are no specific local
+requirements, this bulletin may be accepted as a guide to safe practice.
+
+
+
+                                            Issued March 1944
+  Washington, D. C.                         Revised June 1946
+
+
+
+
+SEWAGE AND GARBAGE DISPOSAL ON THE FARM
+
+
+By J. W. Rockey, _assistant agricultural engineer_,[1] and
+J. W. Simons, _associate agricultural engineer_, _Division of
+Farm Buildings and Rural Housing, Bureau of Plant Industry, Soils, and
+Agricultural Engineering, Agricultural Research Administration_
+
+[1] The senior author prepared the preliminary draft, and the junior
+author completed the bulletin.
+
+
+
+
+Contents
+
+                                                         Page
+
+  Characteristics of sewage                                1
+  Protection of water sources from household wastes        2
+  Septic-tank systems                                      2
+    Operation of a septic tank system                      2
+    Selecting the site                                     4
+    The house sewer                                        4
+    The septic tank                                        8
+    Building a concrete tank                              11
+    The effluent sewer                                    13
+    The disposal field                                    13
+    Disposal methods in tight or wet soils                14
+    Care and maintenance of septic tanks                  17
+    Effect of drain solvents and other materials          17
+    Protection against freezing                           17
+    Septic-tank troubles                                  18
+  Grease traps                                            18
+  Disposal of drainage from fixtures other than toilets   19
+  Cesspools                                               20
+  Privies                                                 21
+    Care, and maintenance                                 22
+  Chemical closets                                        24
+  Disposal of garbage and trash                           25
+
+
+TO INSURE healthful living, domestic wastes must be disposed of.
+Primitive wanderers and too often present-day tourists deposit their
+wastes promiscuously and move on when the surroundings become foul.
+This is impractical in built-up communities. Therefore, in most cities
+and in some rural areas sanitary codes regulate the disposal of wastes.
+
+
+
+
+CHARACTERISTICS OF SEWAGE
+
+
+Household sewage ordinarily consists principally of human excrement,
+toilet paper, garbage, dish water, and other wash water from the
+various plumbing fixtures and floor drains.
+
+Many kinds of bacteria, at times disease-producing ones, are contained
+in the discharges from the human body. Epidemics of typhoid fever,
+dysentery, diarrhea, cholera, and other water-borne diseases may
+result from the pollution of the water supply with sewage. Pollution
+is carried by water moving underground, as well as by water flowing
+on the surface. This is especially true in limestone regions, where
+underground channels and rock crevices permit water to flow for
+considerable distances with little filtering action. Sewage used for
+fertilizing or irrigating crops[2] may contaminate vegetables or the
+udders of cows and thus spread disease. Anthrax, cholera, and parasitic
+worms may be present in the surface drainage from fields and barn lots.
+It is wise to regard all sewage as dangerous and to dispose of it
+promptly in a sanitary manner, so that disease germs will not pollute
+the water supplies or be spread by flies, animals, or man.
+
+[2] This subject is discussed at length in Technical Bulletin 675,
+Sewage Irrigation as Practiced in the Western States.
+
+
+
+
+PROTECTION OF WATER SOURCES FROM HOUSEHOLD WASTES
+
+
+Under most farm conditions a safe place for the disposal of wastes
+is in the upper 3-foot layer of soil, where the action of bacteria
+tends to render it harmless. Tile disposal fields, such as are used
+with septic tanks, and earth-pit privies accomplish this if the water
+table remains several feet below the surface and if the location is
+remote from water supplies. Cesspools and other types of pits do not
+ordinarily confine contamination to their immediate vicinity and are
+not recommended except for special conditions.
+
+Sewage or other wastes discharged into abandoned wells or other pits
+that reach to the water table or below it are almost certain to
+contaminate the ground water.
+
+It is generally poor practice, and often illegal, to discharge wastes
+into surface streams. Streams do not necessarily purify themselves
+in 50 feet, 100 feet, or some other stated distance, as is commonly
+believed. They do tend to purify themselves over long distances through
+the action of sunlight, aeration, and other factors but may not be
+safe for domestic use for many miles below the source of pollution.
+Clear, sparkling water is not always safe drinking water. Streams in
+agricultural communities are subject to many sources of pollution and
+they are likely to become more contaminated as they merge into larger
+streams.
+
+
+
+
+SEPTIC-TANK SYSTEMS
+
+
+Septic-tank systems, if installed and maintained properly, provide the
+most sanitary method of sewage disposal for farmhouses equipped with
+running water.
+
+Ground water or rock close to the surface, lack of sufficient fall for
+the sewage to flow by gravity, and too small an absorption area for the
+effluent limit the satisfactory operation of a septic tank. When these
+conditions exist, special advice should be sought from a competent
+local sanitary authority. Adverse soil conditions can be overcome if
+sufficient fall and space are available.
+
+The five essential parts (fig. 1) of a septic-tank system are (1)
+the house sewer; (2) the septic tank; (3) the effluent sewer; (4)
+the distribution box; and (5) the disposal field. In special cases a
+grease trap (see fig. 11, p. 19) is added. To facilitate inspection and
+repairs it is good practice to keep in the house a chart showing the
+location of the tank and other parts of the system.
+
+A septic tank does not necessarily purify the sewage, eliminate odor,
+or destroy all solid matter. Its purpose is to condition the sewage or
+domestic waste by bacterial action, so that it can be disposed of in a
+more satisfactory manner.
+
+[Illustration: Figure 1.--A septic-tank system.]
+
+
+OPERATION OF A SEPTIC-TANK SYSTEM
+
+In a septic-tank system the sewage flows by gravity from the farmhouse
+through the sewer into the tank, where it should remain at least 24
+hours. While passing through the tank the solids are acted upon by
+anaerobic bacteria, which work only in the dark and where there is
+little air. The heavy particles settle to the bottom as sludge, the
+lighter particles float as scum, and the remainder passes out of the
+tank through the effluent sewer to the disposal field. The gas released
+in the process escapes through a vent provided either in the =T= to the
+house sewer or the effluent sewer.
+
+A tank that is too small may fill up with solids in a short while,
+because sufficient time is not allowed for breaking them down by
+fermentation, or the sewage may be pushed right through into the
+disposal field and clog it.
+
+The effluent may contain even more disease germs than the original
+sewage, and though it may be as clear as spring water it is far from
+pure and may cause foul odors if discharged or allowed to pool on the
+surface of the ground.
+
+The final disposition of the effluent into the upper layer of the soil
+exposes it to the action of aerobic bacteria. These bacteria, unlike
+those in the tank, need air and cannot work in saturated soil or live
+much more than 3 feet below the surface of the ground. The "living
+earth," or upper stratum, teems with these bacteria, which convert the
+dangerous sewage and disease germs into harmless matter and thus tend
+to purify the effluent if it remains long enough in the top layers of
+soil before seeping into the subsoil and thence to the ground water.
+Effluent discharged deep in the soil does not receive the benefit of
+this purifying action.
+
+Several types of septic tanks are in common use. The one described in
+this bulletin is the single-chamber type, which can be built with or
+without siphon. This should meet all average farm needs where there
+are not more than 16 members in the household. It would be advisable
+to consult the authorities of the State agricultural college or local
+health department as to their recommendations because frequently local
+conditions and larger establishments require special installations.
+
+
+SELECTING THE SITE
+
+First install the tile disposal field where there will be least danger
+of polluting water supplies, at least 100 feet from water sources if
+possible and always at a lower surface elevation. This is of greatest
+importance. Even though selecting a more distant location would result
+in greater initial cost, it would be a good investment as protection
+against diseases that might result from pollution of water sources.
+The site should slope away from the house and away from the source of
+water. Gentle unshaded slopes free of trees or shrubbery are best.
+Root-free locations are important because the open-jointed tile cannot
+be "rootproofed." Porous, well-drained, gravelly, or sandy soil allows
+greater purification. Do not have the disposal field in vegetable
+gardens, under roadways, in swampy land, in muck soils, or in areas
+having rock substrata sloping toward the water supply. Allow sufficient
+area, where available, to enlarge the field later if needed.
+
+The septic tank may be close to the house, but a more distant site
+would reduce the likelihood of odors if leakage occurs. The tank should
+also be kept 50 feet or more from any source of water supply and at a
+lower elevation. It should not be placed under driveways, pavements, or
+flower beds, as these would make it not readily accessible for periodic
+inspection. Care should be taken to insure that surface drainage from
+the area around the tank will not reach the vicinity of the water
+supply.
+
+
+THE HOUSE SEWER
+
+Material
+
+Vitrified salt-glazed clay or well-made concrete sewer pipe and
+cast-iron soil pipe are the standard materials for house sewers on
+farms. Asphalt-impregnated fiber pipe, of a type designed especially
+for house sewers, appears to be satisfactory for this purpose.
+Cast-iron soil pipe with leaded joints should be used when the sewer is
+within 50 feet of a well or suction line from a well, within 10 feet
+of any drinking-water supply line under pressure, within 5 feet of
+basement foundations, or when laid beneath driveways with less than 3
+feet of earth covering the pipes. When within 15 feet of large trees or
+shrubs, the sewers should have root-tight joints.
+
+Size
+
+For house sewers, 4- and 6-inch pipes are generally used. Where a
+4-inch pipe is used, cast-iron is commonly recommended. Grades with
+little fall require larger pipes. The large sizes are also less liable
+to become clogged. Clay pipe is made in pieces 2 or 2-1/2 feet long,
+whereas fiber-pipe sections are 4 feet long and cast-iron pipe 5 feet
+long, so that there are fewer joints. The minimum number of joints is
+desirable, as there is less danger of stoppage.
+
+Alinement
+
+Run the house sewer in a straight line and avoid bends whenever
+possible. Slight changes in direction may be made with one-sixteenth or
+one-eighth bend fittings. For sharper changes of direction a manhole or
+distribution box may be used. Changes in direction of more than 45 are
+not recommended unless a manhole is provided. Clean-outs are desirable
+within 5 feet of the septic tank where tanks are placed more than 20
+feet from the building and the sewer line is not buried deeper than 4
+feet.
+
+Establishing Line and Grade
+
+The trench for laying the sewer is usually dug after the septic-tank
+excavation has been completed and the elevation of the tank inlet
+determined. A simple method of setting guides for the excavation is
+illustrated in figure 2.
+
+Digging the Trench
+
+Start digging the trench at the tank end, so that rain or seepage will
+have an outlet. Rounding the bottom of the trench to the shape of the
+pipe and hollowing out basins for the "bell" ends allows the pipe to
+rest firmly throughout its full length, permits full calking of joints,
+and relieves the strain on them.
+
+Laying the Pipe
+
+Begin laying the pipe at the tank with the bell end uphill. Joints in
+clay-tile pipe are commonly made with portland cement mortar or grout.
+Where root-proof joints are essential, sulfur-sand compounds may be
+used or copper rings provided and used with cement-mortar joints.
+Asphalt-mastic compounds, however, are more satisfactory. For cast-iron
+soil pipe, lead is the standard joint material.
+
+After the hub is pushed into the bell, oakum (or old hemp rope) is
+packed with a calking iron or a piece of wood (fig. 3, _A_.) solidly
+and evenly in the joint to a depth of about half an inch to center the
+hub end in the bell and to keep the joint filler from getting inside
+the pipe. Oil, grease, or dirt on the joint surfaces should be removed,
+as it will prevent joint material from sticking. Figure 3 shows the
+different jointing methods.
+
+[Illustration: Figure 2.--Establishing grade for sewer. _A_,
+2- by 4-inch stakes are set each side of the trench at convenient
+distances _a_, _b_, _c_, and _d_. Then a board is nailed horizontally
+on the stakes at _d_ at a convenient height above the bottom of the
+trench, that is, the bottom of the sewer leaving the house. A board is
+nailed likewise to the stakes at a the same height above the inlet to
+the tank that _d_ is above the bottom of the trench. Similarly, boards
+are set at _b_ and _c_ by sighting from _a_ to _d_ so the tops of the
+intermediate boards will be in line. _B_, The exact grade of the sewer
+is obtained by measuring from the grade cord with the 1- by 1-inch
+stick, shown in detail. The length of the stick must equal the height
+of the board above sewer at _d_.]
+
+Bituminous, sulfur-sand, lead, and other commercial joint compounds are
+poured while hot into the joint from a ladle (fig. 3, _F_), and when
+the work is well done they form a joint that is practically root-proof.
+They are more expensive than cement mortar.
+
+For molding hot compounds, a clay dike, or funnel, built about 3 inches
+high around the triangular opening at the top of the jointer greatly
+aids in the rapid and complete filling of the joint space. A hot joint
+must be poured continuously, otherwise a seam may develop between
+successive pourings.
+
+Bituminous compounds make a slightly elastic joint. A joint in 4-inch
+pipe requires about 3/8 to 1/2 pound of compound and in 6-inch pipe
+about 1 to 1-1/2 pounds.
+
+Sulfur-sand joints are hard and inelastic. The compound is made by
+mixing together equal volumes of ordinary powdered sulfur and very
+fine clean sand, preferably the finest quicksand, and then heating
+the mixture until the sulfur melts. A 4-inch joint takes about 3/4
+pound and a 6-inch joint about 1-7/8 pounds of the mixture. Commercial
+sulfur-joint compounds also are available.
+
+[Illustration: Figure 3.--Jointing sewer pipe. _A_, Using
+calking iron to force packing into joint. _B_, Making joint with 1:2
+portland cement mortar. Use only enough water to dampen the mix. Recalk
+after half an hour, to close shrinkage cracks. _C_, The completed
+joint. Wrap finished joint with cloth and keep dampened, to aid
+curing. _D_, Joint made by pouring 1:1 Portland cement grout of creamy
+consistency into a form. This type of joint is not feasible unless the
+metal forms shown are available. _E_, Use of asbestos runner clamped
+around pipe, for pouring hot joint. _F_, Clay roll used in place of
+asbestos runner. _G_, A completed bituminous joint. _H_, Use of swab,
+to remove any joint material forced through to inside of pipe.]
+
+Soft pig lead or old scrap lead is suitable for lead joints on
+cast-iron pipe. About 3/4 pound per inch of pipe diameter is generally
+required for each joint. The lead is hot enough to pour when it begins
+to char the paddle used to skim off the impurities. When it cools it
+must be calked tightly to take up shrinkage. The calking should be
+uniform around the entire joint and should stop when the lead is tight.
+Heavy pounding or continued calking may crack the bell of the pipe.
+
+It is easier to get good, joints when the pipe is in a vertical
+position. Therefore, two lengths of pipe are frequently joined and are
+then laid as a single unit in the trench. In using terra cotta pipe,
+this procedure may be followed only when the joint is made with a
+mastic compound. Cement-mortar joints cannot be used in such cases.
+
+Before filling the trench, the sewer should be tested to detect
+possible leaks. Earth free from rubbish and large stones should then be
+tamped around and about 1 foot above the pipe.
+
+
+THE SEPTIC TANK
+
+Flow Through the Tank
+
+Slow, undisturbed flow through the tank is necessary for the separation
+of solids and liquids and for bacterial action. Submerged inlets
+and outlets or baffle boards reduce disturbance. A submerged outlet
+prevents scum from passing out with the effluent.
+
+The single-chamber tank without a siphon, shown in figure 4, is easy
+to build, inexpensive, and entirely satisfactory in most instances. In
+very tight soils or for large installations a siphon and sometimes two
+chambers are advisable.
+
+Size
+
+The tank should be large enough to retain the sewage at least 24 hours.
+The size should be determined by the largest number of persons that may
+live in the house, rather than by the number actually living there at
+the time the tank is built. The additional cost of a large tank over a
+small one is relatively little. If there is any question as to which
+of two sizes should be built, it is wise to choose the larger. The
+dimensions recommended in the table in figure 4 are based on an average
+production of 50 gallons of sewage per person per day.
+
+Unusually large quantities of sewage call for a tank of large capacity.
+In village and suburban homes where there is less food preparation
+than on farms and where the number of persons is more or less fixed,
+slightly smaller sizes will serve. In no case should the capacity of
+the tank below the flow line be less than 500 gallons. A tank length of
+two to three times the width should be maintained, and it is advisable
+to provide a depth of at least 4 feet below the flow line.
+
+Allow about 1 foot of "freeboard," or air space, above the flow line
+for the accumulation of gases. This space is generally vented through
+the soil stack of the house.
+
+A siphon (fig. 5) with a dosing chamber is not considered necessary
+for a farm septic tank except for large installations (1,000 gallons
+or more), for those in tight soils, and where the disposal field is
+limited.
+
+[Illustration]
+
+ +---------------------------------------------------------------------------+
+ |            CAPACITIES, DIMENSIONS, AND CONCRETE MATERIALS                 |
+ |           FOR SEPTIC TANKS SERVING INDIVIDUAL DWELLINGS                   |
+ +---------+--------+--------------------------------+-----------------------+
+ |_Maximum |_Liquid |_Recommended inside dimensions_ |_Materials for concrete|
+ |number of|capacity+-------+--------+-------+-------+     1:2-1/2:4 mix_    |
+ |persons  |of tank |_Width_|_Length_|_Liquid|_Total +-------+-------+-------+
+ |served_  |  in    |       |        | depth_| depth_|_Cement|_Sand  |_Gravel|
+ |         |gallons_|       |        |       |       | sacks_| cubic | cubic |
+ |         |        |       |        |       |       |       | yards_| yards_|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |4 or less|   500  | 3'-0" |  6'-0" | 4'-0" | 5'-0" |   16  | 1-1/2 |  2-1/2|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |6        |   600  | 3'-0" |  7'-0" | 4'-0" | 5'-0" |   17  | 1-3/4 |  2-3/4|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |8        |   750  | 3'-6" |  7'-6" | 4'-0" | 5'-0" |   19  | 2     |  3    |
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |10       |   900  | 3'-6" |  8'-6" | 4'-0" | 5'-0" |   21  | 2-1/4 |  3-1/4|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |12       |  1100  | 4'-0" |  5'-6" | 4'-6" | 5'-6" |   24  | 2-1/4 |  3-1/2|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |14       |  1200  | 4'-0" |  5'-0" | 4'-6" | 5'-6" |   25  | 2-1/2 |  3-3/4|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+ |16       |  1500  | 4'-6" | 10'-0" | 4'-6" | 5'-6" |   28  | 2-3/4 |  4-1/4|
+ +---------+--------+-------+--------+-------+-------+-------+-------+-------+
+
+Figure 4.--Single-chamber septic tank. Note alternate use of baffle
+boards where sanitary tees are omitted at inlet and outlet.
+
+
+The siphon provides intermittent discharge of effluent, which allows
+time for the disposal area to rest and aerate between discharges. This
+is more important where the discharge is nearly continuous than in
+small installations.
+
+The frequency and volume of the discharge into the tile field are
+controlled by the sizes of the siphon and the dosage chamber. The
+dealer should be informed of the size of the tank and the number of
+persons in the household, in order that he may furnish the proper
+unit. A 3- or 4-inch siphon will be adequate for almost any farmhouse
+installation.
+
+Construction
+
+Most septic tanks are built of concrete cast in place, since in this
+way there is a minimum possibility of cracks developing. Concrete
+blocks, however (not cinder blocks), stone, brick, or structural tile
+are sometimes used. Prefabricated commercial tanks of concrete and
+various other materials also are available.
+
+[Illustration]
+
+ +--------------------------------------------------------------+
+ |                       SIPHON                                 |
+ +--------------------------+-----------------------------------+
+ |_Diameter of siphon       |_Clearance under bell              |
+ |   A - 3" or 4"_          |  E - 2"_                          |
+ +--------------------------+-----------------------------------+
+ |_Diameter of bell         |_Distance across U-trap            |
+ |   B - 10"or 12"_         |  F - 10" or 12"_                  |
+ +--------------------------+-----------------------------------+
+ |_Bottom of outlet         |_Bottom of outlet                  |
+ |  to discharge line       |   to bottom of U-trap             |
+ |   C - 20-1/2" to 25-3/4"_|  G - 12" or 13"_                  |
+ +--------------------------+-----------------------------------+
+ |_Drawing depth            |_Height above floor                |
+ |   D - 13" to 17"_        |  H - 7-1/4"to 11-3/4"_            |
+ +--------------------------+-----------------------------------+
+ |                 DIMENSIONS OF DOSING CHAMBER                 |
+ +-----------------+-------------------+------------+-----------+
+ | _Number of      |_Depth below       |            |           |
+ | persons served_ | discharge line_[3]| _Width_[4] | _Length_  |
+ +-----------------+-------------------+------------+-----------+
+ |   4 or less     | 16-1/4" to 20-1/4"|    3'-0"   |   6'-0"   |
+ +-----------------+-------------------+------------+-----------+
+ |   6             |         "         |    3'-0"   |   7'-0"   |
+ +-----------------+-------------------+------------+-----------+
+ |   8             |         "         |    3'-6"   |   7'-6"   |
+ +-----------------+-------------------+------------+-----------+
+ |  10             |         "         |    3'-6"   |   8'-6"   |
+ +-----------------+-------------------+------------+-----------+
+ |  12             |         "         |    4'-0"   |   8'-6"   |
+ +-----------------+-------------------+------------+-----------+
+ |  14             |         "         |    4'-0"   |   9'-0"   |
+ +-----------------+-------------------+------------+-----------+
+ |  16             |         "         |    4'-6"   |  10'-0"   |
+ +-----------------+-------------------+------------+-----------+
+
+[3] Depending upon depth C of siphon.
+
+[4] Same as single chamber tank fig. 4.
+
+Figure 5.--Typical design for a concrete septic tank with a dosing
+chamber and a siphon.
+
+Masonry units should be laid in full beds of 1:3 cement mortar and
+the walls and floor plastered with at least a 1/2-inch coat of 1:2
+mortar. Cells of concrete blocks and tile must be filled with concrete.
+Masonry walls are generally 8 inches thick, and care must be taken to
+follow _inside_ dimensions given for concrete tanks. Directions for
+laying structural tile, brick, and concrete blocks can be obtained from
+dealers or trade associations.
+
+Commercial tanks are suitable if they embody the essential features
+given in this bulletin. Capacities should be as recommended in figure
+4 for concrete tanks. Proper installation and periodic servicing also
+are essential. Tanks badly damaged in handling should not be used.
+Rapid corrosion of steel tanks will result if the asphalt coating is
+impaired. Minor defects in precast masonry tanks may often be overcome
+by plastering the interior with cement mortar.
+
+
+BUILDING A CONCRETE TANK[5]
+
+[5] For information on making and placing concrete, see Farmers'
+Bulletin 1772, Use of Concrete on the Farm.
+
+A convenient method of assuring correct location of the tank is to
+build a frame as shown in figure 6. Care is necessary to aline it with
+the center line of the inlet and outlet and to level it so that the
+distance from the bottom of the 2 by 4's on the form to the lower edge
+of the inlet hole in the form will permit it to be set at the grade of
+the house sewer. This frame is used to support the form for the tank.
+To avoid caving the edges, drive the stakes supporting the frame before
+beginning the excavation. The lumber in the frame can be used later to
+make part of the tank baffles.
+
+[Illustration: Figure 6.--Method of outlining a septic-tank excavation
+on the ground surface.]
+
+Figure 7 shows how an inside form can be built and hung in place. The
+inlet and outlet tees should be carefully set and tied in place before
+the concrete is poured. A single length of pipe should be joined to
+the tee, so that the two can be set in the form as one unit. In most
+cases the earth walls of the excavations will serve as the outside
+forms unless the soil is sandy or gravelly and the excavation is deeper
+than 5 feet. If outside forms are used, space must also be provided for
+them. Forms should be constructed before the excavation is made and the
+tank built as soon as practical, to avoid warping of forms and caving
+of earth walls.
+
+[Illustration: Figure 7.--Inside form hung in place for single-chamber
+septic tank, also a form for casting concrete-slab cover in sections.]
+
+County agricultural agents, local health departments, building-material
+dealers, and other agencies often have forms that may be borrowed or
+rented.
+
+
+THE EFFLUENT SEWER
+
+The effluent sewer should be constructed in similar manner and of the
+same materials as the house sewer and on a slope of 1/8 inch to 1 foot.
+This line, however, may be laid of terra-cotta pipe, as cast-iron is
+not considered necessary except in unusual cases. This line should
+always terminate in a distribution box from which the tile lines
+of the disposal field lead away. For steep slopes the arrangement
+shown in figure 9 (p. 15) is practical. Joints must be of root-tight
+construction if the sewer is in the vicinity of trees or shrubs. The
+length of the sewer depends upon the distance from the tank to a safe
+site for the disposal field.
+
+
+THE DISPOSAL FIELD
+
+Correct installation of the disposal field is of great importance for
+proper functioning of the septic tank. Therefore, the width, depth,
+and spacing of the tile trenches must be carefully selected. Line of
+4-inch, open- jointed, agricultural drain tile laid in shallow trenches
+are ordinarily used. Perforated fiber drain pipes also may be used and
+are obtainable in 4-foot lengths.
+
+A distribution box with an inlet for the effluent sewer and an outlet
+for each individual run of disposal tile is the best means of dividing
+the flow. The outlet serving a large or double disposal field may be
+alternately opened and closed by means of a sewage switch that permits
+half the disposal field to work and rest alternately several weeks. A
+switch is especially helpful in tight soils but should not be provided
+unless proper maintenance is assured, so that a portion of the disposal
+field will not be left to handle the entire load of the system for an
+indefinite period. There are many variations of boxes, but figure 8
+shows a practical type.
+
+[Illustration: Figure 8.--Typical distribution box.]
+
+Shallow Tile Lines
+
+The disposal tile should not be more than 18 to 24 inches below the
+surface, and where the ground-water level rises to the bottom of the
+trench special underdrains, described on page 16, are necessary.
+Special provisions must also be made where tight soils are encountered.
+These methods are described in the section entitled "Disposal methods
+in tight or wet soils."
+
+The table in figure 9, together with the information given in table 1,
+below, may be used for estimating the number of tiles needed in any
+particular soil type. If there is any doubt about this requirement, a
+percolation test should be made in the disposal field, as follows:
+
+Dig a hole 1-foot square and to the depth at which the tile is to be
+laid. This depth in most instances will be about 24 inches and should
+not exceed 36 inches. Fill the hole with water to a depth of 6 inches
+and observe the time required for the water to seep away; divide by 6
+to get the average time for the water to fall 1 inch. The test should
+be repeated at three or four different points in the disposal field
+and the average time noted for all tests used. The data in table 1 can
+then be used to determine the number of tiles needed. Where 1 hour is
+required for the water to fall 1 inch the soil is totally unsuitable,
+and another site should be selected. Soil conditions at the time of
+the test may vary from year-round average conditions, and this factor
+must be taken into account. If the soil appears exceptionally dry,
+greater depths of water may be used or the test repeated in the same
+hole. In no case should tests be made in filled or frozen ground. Where
+fissured rock formations are encountered, advice should be sought from
+sanitation specialists.
+
+Table 1.--_Determining tile-disposal field requirements from
+percolation tests_[6]
+
+  ------------+----------------------++------------+---------------------
+    Minutes   |  Effective absorption|| Minutes    | Effective absorption
+    required  |  area required, per  || required   |  area required, per
+  for water to|  person, in bottom   ||for water to|   person, in bottom
+  fall 1 inch | of disposal trenches ||fall 1 inch | of disposal trenches
+  ------------+----------------------++------------+---------------------
+              |    _Square feet_     ||            |   _Square feet_
+              |                      ||            |
+   2 or less  |          26          ||   10       |        52
+              |          30          ||   15       |        63
+              |          36          ||   30       |        90
+              |          40          ||   60[7]    |       120
+  ------------+----------------------++------------+---------------------
+
+[6] A minimum of 150 square feet should be provided, equal to 100 feet
+of 18-inch trench.
+
+[7] If more than 60 minutes, use special design with seepage pits or
+sand-filter trenches.
+
+
+Figure 9 suggests methods of arranging the tiles in disposal fields
+under varying conditions and the length of tiles needed.
+
+[Illustration: Figure 9.--Arrangements for tile-disposal fields, method
+of laying tile, and length of tiles needed.]
+
+                 SIZE AND MINIMUM SPACING REQUIREMENTS
+                         FOR DISPOSAL TRENCHES
+      +---------+----------+----------------------+-------------+
+      | TRENCH  |  TRENCH  | EFFECTIVE ABSORPTION | TILE LINES  |
+      | WIDTH-W |  DEPTH-D | AREA IN SQUARE FEET  | SPACING-S   |
+      |IN INCHES| IN INCHES|   PER LINEAL FOOT    |  IN FEET    |
+      +---------+----------+----------------------+-------------+
+      |   18    | 18 to 30 |        1.5           |    6.0      |
+      |   24    | 18 to 30 |        2.0           |    6.0      |
+      |   30    | 18 to 36 |        2.5           |    7.5      |
+      |   36    | 24 to 36 |        3.0           |    9.0      |
+      +---------+----------+----------------------+-------------+
+    Wider spacing of the lines desirable where available area permits
+
+    DISPOSAL-TILE TRENCH
+
+    Disposal-tile lines--Maximum length for each line 100 feet.
+    All lines to be equal in length.
+
+    Disposal-tile lines to slope 2" to 4" per 100 feet, not over 6".
+    Sewer-tile lines to slope 1/8" to 1/4" per foot.
+
+
+DISPOSAL METHODS IN TIGHT OR WET SOILS
+
+If the soil is heavy clay or has tight formation, yet shows some
+porosity from percolation tests, the efficiency of the field may be
+increased by placing below the tile lines 12 to 15 inches of additional
+filter material (washed gravel, crushed stone, slag, clean cinders, or
+clean bank-run gravel 3/4 to 2-1/2 inches in size). When the surface
+soil is tight and is underlain by porous soil, sufficient drainage
+is sometimes obtained for the smaller installations by omitting the
+tile field and providing a dry well at the end of the effluent sewer,
+provided the water table will not be contaminated. Larger systems under
+such soil conditions should have a tile field, and absorption can be
+increased by boring 6- or 8-inch holes down to the porous stratum and
+filling them with gravel or sand; the holes should be 4 to 6 feet
+apart. Another and perhaps the best practice is to excavate the tile
+trenches 4 to 6 feet and install a lower tile line, as shown in figure
+10. This latter method is especially desirable if the upper tight
+stratum is especially thick, or if there is no porous lower stratum, or
+if in irrigated regions and where the disposal field is limited in area.
+
+Where the underdrain tile is not used, the absorption capacity of the
+field can be increased by providing a rock-filled trench across the
+lower end of the tiles for the full width of the field. The depth
+should be not less than 5 feet and the width not less than 3 feet.
+
+On account of the beneficial action of bacteria in the upper soil
+layers it is highly desirable to confine the effluent near the surface
+rather than to use underdrains. Purification becomes slower and less
+effective, the deeper the drains.
+
+In situations where the soil contains considerable moisture or is even
+saturated, the field may be improved by partially encircling it with a
+tile line laid to serve as a drain. Such a line should be on the high
+side and have surface outlets for removing the water from the soil. It
+should not be laid so close to a disposal tile line that it will drain
+the sewage effluent from the disposal field onto the surface of the
+ground.
+
+[Illustration: Slope of disposal tile 2 to 4 inches per 100 feet. Slope
+of underdrain tile not less than above.
+
+Plug upper end of underdrain tile lines, lower end to discharge into
+rock-filled seepage pit or into other approved outlet.
+
+Figure 10.--Filter trench with underdrains.]
+
+When the tile field is underlain by stratified rock or where
+under-drainage is necessary, advice should be sought from the public
+health authorities, as regulations in some States may not permit the
+use of certain methods.
+
+
+CARE AND MAINTENANCE OF SEPTIC TANKS
+
+A septic tank when first used does not need starters, such as yeast,
+to promote bacterial action. A good septic tank normally requires no
+maintenance other than a yearly inspection and an occasional cleaning.
+Frequency of cleaning depends on the capacity of the tank and the
+quantity and composition of the sewage. Tanks of the size recommended
+in this bulletin may require cleaning at intervals of 3 to 5 years.
+
+The tank should be cleaned when 18 to 20 inches of sludge and scum has
+accumulated. If a drain has not been provided, sludge may be removed by
+bailing or by pumping with a sludge or bilge pump. It is not necessary
+to remove the entire liquid contents. Burial in a shallow pit or trench
+with at least 18 to 24 inches of earth cover at a point remote from
+water sources is the most practical method for disposing of these
+wastes.
+
+A septic tank is intended to handle sewage only. Coffee grounds and
+ground garbage may be included if there is an ample supply of water for
+flushing and the tank is cleaned more frequently than would otherwise
+be done. The size of the tank should be increased at least 25 percent
+if these materials are included in the sewage.
+
+  =_Do not use matches or an open flame to inspect a septic tank, as
+    the gasses produced by decomposing sewage may explode and cause
+    serious injury._=
+
+
+EFFECT OF DRAIN SOLVENTS AND OTHER MATERIALS
+
+Soap, drain solvents, and other mild cleaning or disinfecting solutions
+used for normal household purposes cause no trouble in the tank.
+Constant use in large quantities, however, and disinfected wastes from
+the sickroom may prove harmful.
+
+Wastes from milk rooms, strong chemicals used in sterilizing equipment
+or in photographic work, and the wastes from filters or water softeners
+not only reduce bacterial action but also cause abnormally rapid
+accumulations of sludge and clogging of the tile lines.
+
+
+PROTECTION AGAINST FREEZING
+
+Septic-tank systems seldom freeze when in constant use. Warm water
+and the decomposition of the sewage usually maintain above-freezing
+temperatures. In cold regions there is trouble from freezing if various
+parts of the system are not covered adequately. If the system is to be
+out of service for a period of time or if exposure is severe, it may be
+advisable to mound over the poorly protected parts of the system with
+earth, hay, straw, brush, leaves, manure, snow, or the like.
+
+In cold regions it is not advisable to install the entire system below
+frost depth, as this will remove the effluent from the action of the
+aerobic bacteria in the upper layers of the soil and make the system
+generally less accessible.
+
+New systems put into operation during very cold weather may freeze
+unless large quantities of hot water are discharged during the first
+few weeks.
+
+
+SEPTIC-TANK TROUBLES
+
+In sewage disposal, clogging of the disposal field is the most common
+trouble. This may be caused (1) by a tank too small for the volume of
+sewage, (2) by failure to clean the tank regularly, (3) by interior
+arrangement that does not provide slow flow through the tank or that
+allows scum or sludge to pass out with the effluent, or (4) by a
+disposal field that is too small or is incorrectly built.
+
+The remedy for a clogged disposal field is to dig up and clean the
+tiles and re-lay them 3 or 4 feet to one side or the other of their
+former position. Sometimes a tile line can be cleaned by opening up
+the line at each end and flushing it thoroughly with a hose. With this
+method provision must be made to drain off and safely dispose of the
+water used for flushing.
+
+Tile lines laid with improper slope allow the effluent to collect in a
+limited area and saturate the soil, causing odors. Bacteria cannot work
+in such areas, where the soil becomes sour, or "sewage-sick." These
+lines must be relaid on the correct slope. Odors or a water-logged soil
+may also indicate that the disposal field is too small.
+
+House sewers frequently clog. This is due, in most cases, to roots
+and less frequently to trash, garbage, or other foreign materials
+discharged with the sewage. Greases in the sewer may cause trouble,
+especially when the slope is insufficient to give the sewage a
+cleansing velocity. Drain solvents will sometimes remove the
+obstruction, but more often it is necessary to clean the sewer by
+rodding. In some cases it may be necessary to dig up the line to reach
+the obstruction or, at least, to open the line so that it can be rodded
+from two directions. When it has been cleaned, a manhole could be built
+for use in case of future trouble. If stoppage is due to roots it may
+be necessary to re-lay the sewer with root-tight joints, or to move
+either the sewer or the vegetation so that roots cannot reach the line.
+
+
+
+
+GREASE TRAPS
+
+
+Grease traps (fig. 11) are not recommended for the average farm,
+because they clog easily and require frequent cleaning, but they are
+desirable for boarding houses and tourist camps where large quantities
+of grease are produced. The septic tank if of proper design and size
+will take care of the normal grease from most farm kitchens.
+
+The traps must be several times larger than the quantity of greasy
+water discharged into them at any one time, in order to allow the
+greases to rise, but they should not be of less than 30 gallons'
+capacity.
+
+The trap is best located in an accessible place in the basement or
+under the house close to the source of grease and safe from frost.
+Outdoor locations at shallow depths require a covering for insulation
+against freezing. Grease traps should be connected to the kitchen sink
+only and not to laundry, shower, or water-closet wastes. They must be
+cleaned periodically for satisfactory operation, and the outlet should
+be properly trapped.
+
+[Illustration: Figure 11.--Typical grease trap.]
+
+
+
+
+DISPOSAL OF DRAINAGE FROM FIXTURES OTHER THAN TOILETS
+
+
+When the farmhouse does not have an indoor toilet but does have a
+kitchen sink or other similar fixtures, the drainage can be disposed
+of as shown in figure 12. Even where septic tanks have been installed,
+it is sometimes advisable to have a second disposal field for other
+fixtures than the toilet, to avoid overloading the tank, especially
+where large quantities of laundry water are discharged at one time.
+
+[Illustration: Figure 12.--Disposal of drainage from kitchen fixtures,
+using a line of terra cotta or fiber drain tile surrounded with
+gravel. One or two rock-filled pits at the end of the line increase
+the absorption area and are desirable where there are several fixtures
+or the soil is nonporous. The pits may be lined with boards or masonry
+laid without mortar and provided with a tight cover.]
+
+These wastes are not likely to create serious health hazards, but they
+become nuisances if discharged promiscuously on the ground surface.
+Such drainage should never be permitted on the watershed of a spring.
+
+Coarse sand and gravel, 12 to 18 inches deep, may be placed on the
+bottom of the pit, to strain out small particles of solids, which might
+clog the pores of the soil. If, after a few years, the sand or gravel
+becomes clogged with solids, it should be replaced with clean materials.
+
+If excessive quantities of grease are permitted to enter the sink
+drain, a grease trap may be advisable.
+
+
+
+
+CESSPOOLS
+
+
+Cesspools are cheap in first cost but high in maintenance costs and
+often become nuisances. They should be located at least 150 feet
+from wells, 15 feet from seepage pits and property lines, and 20 feet
+from dwelling foundations. They should never be used in the vicinity
+of shallow wells and, in any case, only where permitted by State
+regulations.
+
+The cesspool depends for its action upon seepage into the surrounding
+soil and consequently is particularly unsatisfactory in tight clay
+soils. In more open sand and gravel soils the seepage is reduced as
+the pores of the soil become clogged with particles of solids, until
+it stops entirely, and overflowing occurs. Emptying and then cleaning
+the walls and floor of a cesspool do not fully open up the clogged soil
+pores, and overflowing can be expected to occur soon again.
+
+Solids in cesspools must be removed from time to time by bailing or
+pumping and should then be buried 18 to 24 inches deep in a trench
+where the water supply will not be endangered. Caustic potash (lye)
+will to some extent liquefy solids in a cesspool. This treatment does
+not eliminate the necessity of removing the contents when periodic
+inspection shows that the cesspool is nearly full. Caustic potash
+converts the greases into soft soap, whereas caustic soda forms a hard
+soap that does not readily dissolve. The chemical treatment is not
+effective in liquefying solids in the pores of the soil surrounding the
+cesspool.
+
+[Illustration: Figure 13.--A neat, whitewashed lattice along the paved
+walkway provides protection from cold wind and rain and gives added
+privacy.]
+
+When clogging continues and cannot be corrected, in most cases the best
+solution to the problem would be to abandon the cesspool and install
+a septic-tank system with tile disposal field. The cesspool should be
+completely filled with stones, earth, or other solid materials to avoid
+possible cave-ins.[8]
+
+[8] See The Septic Tank, p. 8.
+
+
+
+
+PRIVIES
+
+
+A privy when safely located and properly built and maintained is
+satisfactory for its purpose on the farm. Privies should be built 50
+to 150 feet from the farmhouse, preferably on the opposite side of the
+house from prevailing winds, and at least 50 feet from the well. A site
+downhill from the well is generally safest. In some cases, however,
+the ground water may flow in a direction opposite to the slope of the
+surface, in which case the privy should be built on the other side of
+the well. Direction of flow may sometimes be learned from soil surveys,
+well-driller's data, or other similar sources. A distance of at least 6
+feet from fences or other buildings allows for proper mounding of the
+privy and keeps it away from roof drainage from adjacent buildings.
+
+Good, tight construction with screened ventilators keeps insects and
+birds from entering, prevents rapid deterioration of the building, and
+provides greater comfort for the user.
+
+Certain features, while not essential to sanitation and satisfactory
+service, add to personal convenience. A paved walkway, well protected
+from cold winds and rain, is desirable. A neat, whitewashed lattice, as
+shown in figure 13, an arbor covered with vines, or a hedge screen adds
+to privacy.
+
+The earth-pit privy is the simplest to build and the one most widely
+used. It is not generally recommended in localities where underground
+rock has crevices.
+
+For a sanitary type of privy with reinforced concrete[9] floor, riser,
+and supporting sills see figure 14. Because privy units are commonly
+used as urinals, the use of impervious materials for risers and
+floors facilitates cleanliness. In the colder climates, wood treated
+with a preservative is durable and reduces the problem of moisture
+condensation. Therefore, wood could be used if approved by the State
+department of health.
+
+[9] For information on making concrete see Farmers' Bulletin 1772, Use
+of Concrete on the Farm.
+
+When it is considered impracticable to build the slab and riser
+of concrete, these parts may be of wood, as shown in figure 16.
+The building itself may be as shown in either illustration. A wood
+structure is easy to move to a new location.
+
+A pit with a minimum capacity of 50 cubic feet[10] will usually serve
+five people over a period of 5 to 10 years. The privy should be moved
+when the pit is filled to within 18 or 20 inches of the top and a
+strong disinfectant spread in the old pit before covering it with earth.
+
+[10] Recommended by the Committee on Promotion of Rural Sanitation,
+Public Health Engineering Section of the American Public Health
+Association, 1932.
+
+[Illustration: Figure 14.--Sanitary type of privy. Detailed plans and
+a bill of materials for this design can be had from the United States
+Public Health Service, Washington 25, D. C.]
+
+It is important to have the earth-pit privy more than 50 feet from the
+well even where the water table is not near the surface. The ground
+water should flow from the well toward the privy, and it is important
+that this direction of flow be determined in advance.
+
+Wood is most commonly employed for the main part of the building. The
+ground outside should be sloped as shown, to shed water away from the
+building, and the roof should extend beyond the walls to shed water
+away from the pit.
+
+
+CARE AND MAINTENANCE
+
+All privies require periodic attention. Seats and covers should be
+washed weekly with soap and water or with disinfectants, such as
+cresol, pine oil, and hypochlorite or chloride of lime. These have
+deodorant properties and are available at most grocery or drug stores.
+Druggists generally carry a more refined product and consequently the
+price is higher.
+
+During the fly season fly and mosquito eggs will be destroyed by
+pouring half a pint of crude oil, crankcase oil, fuel oil, kerosene, or
+borax solution (1 pound powdered borax dissolved in about 10 gallons of
+water) over the contents of the pit about once a week.
+
+[Illustration: Figure 15.--Pit privy of all-wood construction. The
+sills and riser of this type should either be treated or made of
+cypress, redwood, cedar, locust, fir, or other decay-resistant wood.]
+
+Odors from privy pits and vaults can be reduced by covering the
+contents with dry earth, ashes, manure, or sawdust. These materials
+fill up the pit rather quickly, but can be used where other deodorants
+are not available. Sometimes two cakes of yeast dissolved in 2 gallons
+of water are effective in reducing odors. Commercial deodorants are
+available from suppliers of disinfectants.
+
+If a person in the family has typhoid fever or is a carrier of that
+disease or has dysentery, it is advisable to disinfect the excreta.
+Fire, live steam, boiling water, and such chemicals as caustic
+soda (sodium hydroxide), caustic potash (potassium hydroxide), or
+hypochlorite or chloride of lime may be used. The heat generated by the
+slacking of quicklime is also effective. Best results are obtained if
+the infected material is treated prior to depositing it in the privy.
+Further advice may be obtained from physicians, local health officers,
+or State health departments.
+
+
+
+
+CHEMICAL CLOSETS
+
+
+In general, chemical closets should be used only where there are
+elderly or infirm people unable to get outdoors, particularly in
+winter-time. In some localities their use is forbidden by law because
+of improper maintenance. Strict adherence to the manufacturer's
+directions for making the installation is necessary to obtain
+satisfactory service. The chief advantage of chemical closets is that
+they may be within or adjoining the house and used without regard
+to soil or ground-water conditions. The caustic chemicals required,
+if used properly, reduce the quantity of solid matter by liquefying
+action, disinfect and deodorize the contents, and lessen danger from
+flies. Disadvantages are the cost of the chemicals and necessity for
+careful and constant maintenance.
+
+The chemical-tank closet is generally recommended rather than the
+dry-type chemical closet. Three variations of tanks are available
+commercially. One type contains a clean-out opening in the top of the
+tank, through which the contents are removed by pumping or bailing.
+The second type has, in addition to a clean-out opening, a drain valve
+at the bottom, which is operated by a handle extending to a clean-out
+opening, so that gravity drainage of the tank is possible. The third
+type is self-draining; as the excreta are added an equal volume of
+liquid is spilled out the overflow. The solid matter must be removed
+manually or through the sludge drain.
+
+The last-mentioned type requires frequent addition of chemicals, and
+the others are recharged after each emptying. The presence of odor is
+an indication of insufficient chemical or of the need for emptying
+and recharging. The same precautions apply to selecting an area for
+disposing of the tank wastes as to disposing of the materials removed
+from cesspools.[11] Since the contents of chemical closets are caustic,
+they may kill vegetation with which they come in contact.
+
+[11] For disposal methods in tight soils, see p. 16.
+
+The dry-type chemical closet is cheap, simple, and easy to install
+but requires frequent emptying. Pine tar and coal tar will accomplish
+only partial disinfection and deodorization, but caustic disinfectants
+produce liquefication in addition if used in sufficient quantities.
+The caustic chemicals may cause burns if the receptacle is too full or
+if spilled where they come in contact with the body.
+
+This form of closet is more of an expedient than a permanent
+installation, and daily care is necessary to prevent the development of
+insanitary conditions.
+
+
+
+
+DISPOSAL OF GARBAGE AND TRASH
+
+
+Domestic garbage and trash on farms can be divided into four
+classes--(1) waste of plant or animal origin suitable for animal feed,
+(2) unpalatable plant or animal waste, (3) combustible trash, and (4)
+noncombustible material. The disposal of these wastes is simplified if
+the four classes are kept separate.
+
+Trash to be burned should be kept dry. Coffee grounds, tea leaves,
+citrus rinds, fish heads, entrails, eggshells, and similar material are
+most readily handled if drained and put in paper sacks.
+
+Cans should be placed where they will not collect water and become
+breeding places for mosquitoes. Cans will corrode faster if heated
+sufficiently to burn off all grease. When the trash accumulates it
+should be hauled to some out-of-the-way place, such as a gully, or
+buried.
+
+Neat-appearing garbage containers are desirable for kitchen use and
+should be small enough to require daily emptying. Large containers
+may be placed within easy reach outside the house and screened with a
+lattice fence or shrubbery. Substantial containers of rust-resistant
+metal will not quickly become an eyesore and a nuisance. Tight covers
+should be used to keep out prowling animals and to eliminate the habit
+of tossing wastes from the back door. Open or wooden containers are not
+recommended.
+
+A good way to protect the garbage pail is to place it in a small pit
+that has a manhole frame and a lid that can be raised by foot pedal. A
+gravel bottom in the pit will assist in draining water away.
+
+Outdoor receptacles, if emptied and cleaned once a week, generally do
+not become foul. Grease, coffee grounds, and other similar materials
+that adhere to the sides of containers can be removed by scraping with
+a little sand prior to scalding.
+
+Electrically operated units grind garbage and bones and discharge the
+material through the kitchen-sink drain. They will not handle tin cans,
+glass, and the like. They may be used on farms if the septic tank is
+larger than normal and if sufficient water is available for flushing
+the drain to prevent clogging.
+
+Garbage to be fed to animals should be preserved as carefully as is
+human food. To prevent the spread of trichinosis and other diseases, it
+should be cooked before it is fed to hogs. Garbage left uneaten by the
+animals should be disposed of by one of the methods described above.
+
+Incineration is the most sanitary method of disposing of farm wastes.
+Garbage, however, is not easily burned. Figure 16 shows a type of
+incinerator[12] suitable for farm homes. Details of construction for
+a brick incinerator are given in figure 17. Brick, stone, concrete,
+or other fire-resistant material may be used. Commercial incinerators,
+some of which are designed to be built into the house, also are
+available, although these cost considerably more than the home-made
+type shown.
+
+[12] Blueprints of this design may be obtained from the extension
+agricultural engineers at most of the State colleges.
+
+A limited quantity of refuse may be burned in a kitchen range or a
+furnace, but it may cause accumulations of grease in the flue and
+require frequent cleaning to prevent fire.
+
+Next to burning, burial is the most desirable method of waste disposal.
+Waste material may be deposited in a trench 3 or 4 feet wide, 7 or 8
+feet long, and 4 or 5 feet deep and covered with earth when filled to
+within 18 inches of the top. If there is no fire hazard, the contents
+of the trench may be burned.
+
+Garbage may be included in a compost heap with leaves, peat, manure,
+and similar materials. The compost pile should be in an inconspicuous
+place, built up to the desired height with materials that will rot,
+and then covered with 2 or 3 inches of earth. The top should be
+level and the sides steep sloping. It is necessary that the material
+being composted be kept moist; otherwise it will not rot. Frequently
+commercial fertilizer is added to increase the fertilizing value of the
+compost.
+
+Ashes and clinkers removed from furnaces should be placed in metal
+containers to eliminate fire hazard. Wood ashes may be spread on the
+lawn or garden, as they have some fertilizing value.
+
+[Illustration: Figure 16.--A satisfactory incinerator for household
+use.]
+
+[Illustration: Figure 17.--Details of construction of the household
+incinerator pictured in figure 16.]
+
+Trash burners of various designs suitable for burning small quantities
+of paper and rags are available or may be improvised. The main
+requirements are provision for adequate draft and for preventing the
+escape of burning paper or live embers.
+
+
+
+U. S. GOVERNMENT PRINTING OFFICE: 1948
+
+
+
+For sale by the Superintendent of Documents, U. S. Government Printing
+Office Washington 25. D. C. -- Price 10 cents
+
+
+       *       *       *       *       *
+
+
+Transcriber Note
+
+Illustrations were repositioned so as to not split paragraphs.

@@ -1,0 +1,922 @@
+Transcriber Note
+
+Emphasis denoted as _Italics_.
+
+
+
+
+                     U. S. DEPARTMENT OF AGRICULTURE.
+
+                       FARMERS' BULLETIN ยท No. 43.
+
+
+
+                       SEWAGE DISPOSAL ON THE FARM,
+
+
+
+                                   AND
+
+
+
+                    THE PROTECTION OF DRINKING WATER.
+
+
+
+                                    BY
+
+
+
+                          THEOBALD SMITH, M. D.,
+
+    _Professor in Harvard University, Pathologist to the Massachusetts
+                       State Board of Health, etc._
+
+
+                              [Illustration]
+
+
+              WASHINGTON: GOVERNMENT PRINTING OFFICE. 1896.
+
+
+
+
+CONTENTS.
+
+
+                                                Page.
+
+  Introduction                                     3
+  Disposal of sewage                               5
+    Night soil                                     7
+      The privy                                    7
+      The cesspool                                 7
+      The dry-earth closet                         8
+      The water-closet                            11
+    Liquid sewage                                 11
+      Vaults                                      11
+      Irrigation                                  12
+    Kitchen and chamber slops                     14
+    Waste and garbage                             15
+  Protection of drinking water                    16
+    Ways of contamination                         17
+    Construction of wells                         18
+  Conclusion                                      19
+
+
+
+ILLUSTRATIONS.
+
+
+  Fig. 1. Shallow barnyard well                    6
+       2. Portable earth closet                    8
+       3. Old form of earth closet                 9
+       4. Earth closet and dry catch              10
+       5. Self-acting peat dust closet            11
+       6. Settling chamber and flush tank for
+            irrigation                            12
+       7. Subsurface irrigation of sewage         13
+       8. Garbage cremator                        16
+
+
+
+
+SEWAGE DISPOSAL ON THE FARM AND THE PROTECTION OF DRINKING WATER.
+
+
+
+
+INTRODUCTION.
+
+
+The conditions under which homes and their surroundings are kept healthful
+in the city and in the country differ in many respects, although the
+principles underlying them are essentially the same. In the city the
+sanitary condition of homes is maintained chiefly by a system of
+cooperation and centralization which brings into existence extensive
+sewerage systems, water supplies, and the collection of house waste by
+public authority. Regulations are prescribed and enforced under which
+the individual household must avoid all conditions which are likely to
+prove dangerous to the health of the immediate neighborhood and of the
+entire community. In the country districts, and more particularly in
+isolated homesteads, the conditions affecting the health of the household
+are largely in its own hands, and more individual effort is required to
+maintain healthful surroundings than in cities. The farmer must supply
+himself with his drinking water and must get rid of the waste of the
+household as best he can. On the other hand, the inhabitant of the country
+is in many ways better off than the dweller in large cities. Not only
+has he pure air to draw upon at all times, but he can supply himself
+often with purer food than is possible in large communities. Though he
+must procure for himself drinking water, he is, in most cases, able to
+get a purer water from the ground than the sewage-polluted fluid which
+is the only water accessible in many cities. While he must get rid of
+night soil himself rather than have it disposed of by a water-carriage
+system conveniently located within the house, he may avoid the annoying
+complications of plumbing, bringing with it the leakages of sewer gas, the
+plugging up of soil pipes by the roots of trees or by articles carelessly
+thrown into them. Moreover, he has it often within his power to acquire
+sufficient land around his house to take charge of all sewage and waste
+and to utilize it as a manure for enriching the soil. Nevertheless, it
+must be acknowledged that when the circumstances under which healthful
+surroundings are procurable are under the immediate control of each
+individual household they are apt to be perverted through ignorance and
+neglect. Conditions may then arise which are not only unfavorable to
+health, but which are likely to lead to severe sickness at any time when
+the opportunity presents itself.
+
+Standing between the fortunate inhabitant of a large city whose
+water-supply and sewerage systems are above reproach and the farmer
+who bas it within his power to make them so with reference to his own
+wants, is the half-developed village or town, with its chiefly unsanitary
+conditions. Here the leaky cesspool still exists, close by the family
+well, or by the neighbor's well. The absence of any system of collecting
+garbage and miscellaneous waste shows itself by the littering of the
+yards, the alleys, streets, and even stream beds with all kinds of
+refuse. In some towns the premature introduction of a water-supply system
+causes the ground to become still more thoroughly saturated with diluted
+sewage, so that the wells of those households not yet connected with
+the water-supply are a continual source of danger. In such communities,
+appreciation of the necessity for a public control of sanitation has not
+yet made much headway. The acts of each family violating the laws of
+health not only react upon itself but upon the immediate neighborhood,
+often with disastrous results. When typhoid fever has once gained a
+foothold in such communities it is apt to develop into an epidemic.
+
+The tendency of our population to concentrate in villages and towns makes
+the sanitary improvement of such communities a most important and vital
+condition of national health and prosperity. The following pages are not
+intended for these communities, for they need, in most cases, the advice
+of sanitarians and sanitary engineers, acquainted with local conditions.
+Still, they may be of service in pointing out the dangers which may and do
+actually beset the population that neglects to dispose of refuse and waste
+in a manner which does not clash with the laws of health.
+
+The chief dangers which threaten rural inhabitants are those arising from
+polluted drinking water. This is infected from the household excrement and
+barnyard drainage, as will be described farther on, and its use leads in
+the main to bowel disturbances, typhoid-fever, and dysenteric affections.
+It might be claimed that in an isolated homestead the danger is absent
+because the night soil from the healthy household can not contain the
+germs of typhoid-fever, and, therefore, the well water can not receive
+them from leaky cesspools and surface drainage. This would be true if
+the family lived secluded from other human beings. As the case stands,
+there is much more communication than is at first thought supposed. There
+is more or less coming and going of farm hands and other hired help,
+of tramps, peddlers, etc. The farmer travels more than formerly. He
+frequently visits neighboring communities. The children go to school. As
+it has been shown that there may be mild cases of typhoid-fever passing
+unnoticed, in a farm hand, for example, who leaves on account of ill
+health, perhaps, and who has meanwhile, in his discharges, deposited the
+germs of this disease on the premises, it is evident that isolation
+nowadays does not exist except in remote, thinly settled regions, and that
+disease germs may make themselves suddenly felt in an unexpected manner in
+any farmhouse.
+
+There are other important reasons, however, why rural sanitation should
+not be neglected. The health of the large communities of people who draw
+their food supply from the country is in a measure dependent on the health
+of the farming community. There is scarcely a city child who is not, in a
+degree, dependent for its health on the sanitary conditions prevailing in
+the house of the dairyman. Milk has been repeatedly shown to be the means
+of distributing typhoid-fever and other diseases. Any vegetable foods
+from the farm eaten raw are liable to become carriers of infection under
+unsanitary conditions.
+
+In many parts of our country other causes operate in making the health
+of many people depend on the proprieties of country homes. The thousands
+of city people, who flock every summer to the country and bring to the
+farming community considerable sums of money, should be properly protected
+against the dangers of polluted water and infected milk by the adoption
+of suitable methods of sewage disposal. Too frequently those who left the
+city for the purpose of gaining strength by breathing pure air, drinking
+pure water, and eating pure food, only return with the germs of an often
+fatal disease within them to swell the typhoid statistics of our large
+cities.
+
+
+
+
+DISPOSAL OF SEWAGE.
+
+
+The vital thing which thus presents itself is the disposal of fecal matter
+and other refuse so that the wells, upon which most rural families depend
+for their drinking water, may remain pure. To this matter we will first
+turn our attention.
+
+Every person who tills the soil is acquainted with the remarkable
+transforming power of the superficial layers of the earth upon manure and
+excrement. Out of these offensive wastes harmless substances are produced
+which are essential to the growth of vegetation. This power, known as
+decay, is now generally attributed to very minute organisms (bacteria)
+which are found in immense numbers in the superficial layers of the soil,
+which diminish in number as we go deeper, and which completely disappear
+below a depth of 6 to 12 feet, according to the physical condition of
+the soil. Bacteria are more numerous where waste and excrement are most
+abundant. When night soil and manure are deposited in excavations or
+so-called cesspools in the earth, from which the fluid matter may enter
+the ground at some depth below the surface, where the air or certain kinds
+of bacteria can penetrate only to a slight extent, the substances, which
+under the influence of the air (oxygen) and of bacteria near the surface,
+would have decayed, now undergo partial putrefaction with the setting
+free of disagreeable gases and odors. The deeper layers of the earth
+slowly become saturated with organic matter, which is carried by the
+ground-water into the wells or springs near by. There is also some reason
+to believe that disease germs live longer in the oxygen-free depths of the
+soil than at or near the surface.
+
+The extent to which the filling up of the soil with excrementitious matter
+may go on in densely populated cities has been shown by Fodor for the
+Hungarian city Budapest. By analyzing the soil at different levels from
+the surface to a depth of about 13 feet, he found, over an area comprising
+15 acres, about 1,000,000,000 pounds organic matter, equivalent to the
+excrement of 100,000 people voided during thirty-seven years.
+
+[Illustration: Fig. 1.--The shallow barnyard well, with privy vault and
+manure heaps near by. The water is likely to receive fluid from these at
+any time.]
+
+To the surface of the earth we owe thus a purifying influence whose
+activity furnishes us vegetation and food on the one hand and preservation
+from disease on the other. This purifying power is not possessed by the
+deeper layers, and therefore the percolation of organic refuse into them
+from deep cesspools is wasteful to agriculture and dangerous to our
+storehouse of drinking water.
+
+Even the surface of the soil when overloaded with sewage loses partially
+its power of purifying the organic matter. After sufficient rest, such an
+overloaded soil regains its original power. The purifying activity of the
+soil from a sanitary aspect is the same as that governing fertility from
+an agricultural standpoint, hence any further discussion of this subject
+is unnecessary.
+
+A hint as to the proper disposition of waste, excrement, etc., is
+furnished by what is stated above concerning the purifying capacities of
+the earth's surface. Waste, night soil, etc., should be deposited with
+proper precautions on or immediately below the surface of the soil, where
+it may perform the double function of ridding the household of a nuisance
+and of enriching the soil itself. This leads us to a consideration of the
+best means of taking care of the household wastes. These are, in general,
+of three classes: First, fecal matter; second, kitchen and chamber slops;
+and third, miscellaneous rubbish and ashes.
+
+
+NIGHT SOIL.
+
+The proper disposition of fecal matter or night soil in the country has
+been one of the most pressing and vexatious problems of modern sanitation.
+Many plans have been suggested, much apparatus has been invented to meet
+the difficulty, but opinions not only differ but change from year to year
+and have led to different practices in different countries. Moreover,
+different climatic conditions and the divergent tendencies of rural
+populations in the various sections of our own country make it impossible
+to apply the same scheme to the whole country. Different degrees of
+prosperity and wealth, even in the same locality, will bring into use
+widely different schemes to accomplish the same end. There are in use
+several systems--
+
+_The privy._--The old-fashioned privy, at present still quite a common
+thing even in cities, is, perhaps, the most favored method of disposing of
+fecal matter in the country. A pit is dug and a small building set over
+it. The excrement deposited in it slowly fills it up. The fluids and the
+solids dissolved by them penetrate the subsoil and diffuse themselves in
+the ground. Rarely is such a pit cleaned out. Another is dug and the old
+one covered up. In this way the ground becomes overloaded with refuse
+organic matter. It is even stated on good authority that such collections
+of fecal matter have been found under the dwelling; also, that the privy
+vaults have been dug until the current of ground-water was reached which
+was to facilitate the removal of the excrement. It is difficult to
+conceive a more pernicious custom, or one more certain to pollute the
+drinking water. The privy vault is the most rudimentary way of getting rid
+of night soil, and its dangerous features are too plain to be referred to.
+
+_The cesspool._--Next comes the cesspool, which is usually connected with
+a water-closet, and may also receive the slops from the kitchen.
+
+These are constructed in two ways, either as water-tight receptacles or as
+simple pervious pits differing in no way from the privy vault excepting,
+perhaps, in their more dangerous tendencies. All sanitary authorities
+agree in condemning the leaky cesspool as a most shiftless and dangerous
+method of getting rid of sewage. In most countries they are prohibited
+by law in populous communities. In exceptional cases, leaky cesspools
+may do no harm, as in an isolated house in the country whose cesspool is
+built at a considerable distance both from the house and the well. The
+safe distance from any well it would be difficult to state, because that
+would depend on the character of the subsoil and the general slope of the
+land. In any case, the cesspool should be on lower ground than the well,
+as the current of the ground water feeding the latter, usually but not
+always, conforms to the slope of the surface. A fair estimate of the least
+allowable distance between well and cesspool would be 100 feet. Soluble
+salts from sewage might still find their way into the well water, but it
+is quite improbable that disease germs could penetrate the soil for such a
+distance except where fissures and cracks may be present.
+
+[Illustration: Fig. 2.--Portable earth closet. A, the pail to receive the
+excrement; B, the urine-separating receptacle hanging on the open door; C,
+mouth of the hopper conveying the dry-earth or ashes from reservoir D upon
+the night soil in A.]
+
+In villages, leaky cesspools are still of frequent occurrence. If the
+drinking water is taken from wells, such cesspools are a constant menace,
+and all that is needed in many such towns is a spark in the shape of some
+disease germ to kindle an epidemic. It is true that years may pass by
+without the occurrence of more than the usual amount of illness, but even
+then we have good reason to suppose that in many villages using cesspools
+the average amount of sickness and mortality is far too high, not to
+mention the occasional epidemics of typhoid-fever. We may sum up the
+matter of leaky cesspools by the statement that they may do no harm near
+isolated houses on farms, provided they are sufficiently far away from the
+source of water-supply. In small towns cesspools should be prohibited, or
+only very thoroughly constructed water-tight ones permitted, according to
+circumstances. The same holds true for the well-known privies.
+
+_The dry-earth closet._--The dry conservancy system is a much better
+method of disposal of excrement, and is extensively in use to-day even
+in certain large cities on the Continent of Europe where sewers have not
+yet been introduced. This consists in the main of the frequent removal of
+excreta in the country by some man servant or member of the family; in
+villages and towns according to some cooperative plan. This system has
+taken various directions, according to circumstances. Thus there are what
+is called the pail system, which consists in the daily or less frequent
+removal of a pail receiving the excreta; and the earth closet invented by
+the Rev. Henry Moule, of England, the chief feature of which consists in
+the covering of the excreta with some absorbent substance like dry-earth
+or ashes. In some places the excreta are received into a well-built brick
+or stone receptacle and covered with earth, from which they may be removed
+from time to time. Of these systems the dry-earth closet has received the
+greatest amount of attention and discussion. It consists, essentially, of
+a pail to receive night soil, which is covered either automatically or
+with a scoop with dry-earth (fig. 2). The earth absorbs the fluids and the
+odors and keeps the closet inoffensive.
+
+[Illustration: Fig. 3.--The old form of earth closet with frame and pail
+removed to show the mechanism. The handle on the left when raised throws
+into the pail a certain quantity of dry-earth or ashes from the reservoir
+or hopper in the rear.]
+
+The earth to be used should be a rather fine loam, sifted to remove
+coarse particles, thoroughly dried by spreading out in the sun or under a
+shed, and then stored in barrels. The drier the earth the better it is.
+The finer the particles of earth the greater the capacity for absorbing
+fluids. For this reason sand is not satisfactory. Goal or wood ashes are
+quite satisfactory, as they are, after proper sifting, of the requisite
+fineness and are thoroughly dry. The mixture of earth or ashes and night
+soil should be removed at certain times, depending on the location of
+the closet, the season of the year, and other conditions. The more
+frequent the removal the better. The mixture of soil and excrement is so
+unobjectionable that it has been used over a number of times after being
+dried each time. This can not be recommended, however, as it is generally
+accepted nowadays that disease germs may remain alive in such a mixture
+for some time.
+
+In place of the movable earth closets, a water-tight, concreted area
+may be built in an annex to the house, which is to receive the night
+soil from a closet on the floor above with the necessary quantity of dry
+soil (see fig. 4). Poore, from whose book the illustration is taken,
+recommends, in addition, the construction of the floor of such a pit with
+an inclination sufficient to carry away the urine into some gutter outside
+filled with absorbent soil. The area should have suitable openings for
+inspection and for removal of contents, as well as for ventilation. Waring
+recommended a similar system many years ago. The closet described by him
+discharges into a water-tight vault in the cellar, which requires emptying
+only occasionally. The contents remain inoffensive, provided sufficient
+thoroughly dry earth is used.
+
+[Illustration: Fig. 4.--Earth closet and dry catch (from Poore's
+"Rural hygiene," scale, 1/2 inch equals 1 foot). To prevent drafts the
+earth closet is closed below by a hinged flap which opens and shuts
+automatically by means of a counterpoise. The catch below is provided with
+air bricks and an air shaft leading to a ventilator.]
+
+In cold climates, indoor closets are especially desirable to obviate
+the exposure which can not be avoided when closets are out of doors.
+For invalids there should be a carefully managed earth closet kept in
+a well-aired room set apart for this purpose. In warm climates, earth
+closets should be frequently cleaned. To prevent the attraction of flies
+and insects and the too rapid decomposition of the contents a little
+unslacked lime added with the earth to the excrement will be of value.
+The discharges of persons suffering from typhoid-fever and bowel troubles
+should be mixed with thin slacked lime[1] (milk of lime). One-half to
+one hour after the mixing, such discharges may be put upon the soil,
+always at some distance from a well or spring, a stream, or a field under
+cultivation.
+
+[1] Lime, to be used for disinfection, should not be air-slacked, but kept
+in tightly covered receptacles to prevent this from taking place.
+
+In Europe, the use of earth and ashes has been superseded by peat dust.
+The upper layer of peat is dried in the air and ground in a suitable
+machine. The coarser particles are removed by sifting and used for bedding
+in stables. The fine portion, which has a very high absorbing power for
+fluids and is also capable of preventing odors, is used in dry closets.
+In Germany there are at present about thirty factories engaged in the
+preparation of peat moss for the purposes mentioned. Its great advantages
+over dry earth should bring it into use in our country. (See fig. 5.)
+
+It does not matter from a sanitary standpoint which one of the dry-earth
+systems is adopted, provided the necessary attention be given to it. Every
+system which can be recommended is bad if not properly attended to. The
+conditions to be observed are:
+
+The night soil should be received in water-tight receptacles.
+
+It should be frequently removed.
+
+It should be utilized in the garden or field by being placed under a thin
+layer of soil.
+
+To excreta from the sick, milk of lime or unslacked lime should be added
+before disposal in the soil.
+
+[Illustration: Fig. 5.--Self-acting peat dust closet. The lid is replaced
+by a hinged reservoir containing the peat dust. Whenever this is let down
+a certain quantity of peat dust is discharged automatically and thrown,
+upon the night soil. (From Weyl's Handbuch der Hygiene. II, p. 315.)]
+
+_The water-closet._--There can be no doubt that to-day the water-carriage
+system, as it is called, or, in simpler language, the indoor water-closet,
+is preferred to all other contrivances. This is true for the open country
+as well as for villages and the suburban territories of cities. There
+is much to be said in favor of the present-day perfect contrivance for
+the rapid removal of excreta and the exposure thereby prevented. But
+for all rural inhabitants the cost should be carefully weighed before a
+water-carriage system is introduced into a house, for none but the best
+will answer, as all others are likely to become nuisances.
+
+The supply of water must be sufficient to flush the water-closet
+thoroughly and keep all the pipes clean; the plumbing must conform to
+that in vogue in cities, with its traps and ventilating pipes to prevent
+the odors of the pipes from escaping into the house; and the disposal of
+the large quantity of liquid sewage, the most difficult problem, must
+be properly attended to or it is likely to prove more dangerous to the
+water-supply than the old dry privy pits.
+
+
+LIQUID SEWAGE.
+
+The methods available to dispose of liquid sewage in the country are
+water-tight cesspools and irrigation.
+
+_Vaults._--Water-tight cesspools should be constructed of hard-burned
+brick, laid in cement, and having a similar brick or a concreted bottom.
+The inside and outside surfaces of the brick wall should be coated with
+a thin layer of cement, and clay rammed in around the wall, to increase
+its imperviousness to water. It should be vaulted above, and topped by
+a square or round central opening, covered with stone or iron plate.
+Cesspools are also made of cast or wrought iron, the joints being made
+water-tight. Cesspools must be ventilated by two pipes, one rising several
+feet above ground, the other carried to the roof of the house, barn, or
+other structure near by. The current will, in most cases, tend down the
+short and up the long pipe. The latter may be dispensed with and the soil
+pipe of the house act as a flue, provided all branches are perfectly
+trapped.
+
+[Illustration: Fig. 6.--Settling chamber and flush tank for surface
+and subsurface irrigation of sewage. (From Gerhard's "The Disposal of
+Household Wastes," 1890.)]
+
+_Irrigation._--The disposal of sewage by irrigation is by far the best
+method now within reach. Two methods are in use, viz, surface and subsoil
+irrigation. The first in its most complete form consists in carrying the
+liquid sewage to a piece of ground set apart for the purpose and carefully
+underdrained. The sewage is allowed to flow over the ground in shallow
+channels. The fluid slowly disappears in the soil and enters the drains
+as comparatively pure water, which may be allowed to flow into a stream.
+For villages this is the best means of disposing of sewage. Those who as
+village officials may be interested in this method will find plans of
+such sewage farms, together with faithful accounts of their operation and
+the results obtained, in the annual report of the State Board of Health
+of Massachusetts for 1892, page 559, and same report for 1893, page 563.
+Suggestions for its application to country houses are given farther on.
+
+For isolated rural homes, or village homes commanding a certain amount of
+ground around the house, the liquid sewage from water-closets, the kitchen
+and chamber slops may be disposed of by the simple means of subsoil
+irrigation, first described by Mr. Moule and subsequently elaborated by
+Colonel Waring.
+
+The system as used at present in its most successful form consists,
+outside of the house, of the following parts (see fig. 6):
+
+Two adjoining water-tight receptacles of brick. One of these receives
+the sewage from the house and is intended to act as a settling chamber
+for the coarser particles, paper, etc. This communicates with the second
+receptacle, which receives from it the fluid sewage. This chamber is
+called the flush tank and is provided with a siphon. When the fluid has
+reached a certain level, the siphon is set in operation and discharges the
+contents of the chamber at one time into the subsoil pipes.
+
+[Illustration: Fig. 7.--Subsurface irrigation of sewage: _a_, absorption
+tiles (Gerhard's "The Disposal of Household Wastes"); _b_ and _c_, lines
+of absorption tiles showing their relation to flush tank (From Waring's
+"Sewerage and Land Drainage").]
+
+From the second cistern a system of subsoil pipes laid over a treeless
+piece of ground, preferably a lawn, receives and discharges the sewage
+into the ground. These pipes should consist of porous tiles, 2 inches
+in diameter and about 1 foot long, laid from 8 to 16 inches beneath the
+surface of the ground, and with a gentle inclination of 2 or 3 inches for
+every 100 feet. The tiles should have open joints not less than one-fourth
+of an inch wide. They are laid upon earthen gutters and the joints are
+protected above by caps from being clogged with earth. The intermittent
+discharge of the liquid sewage is quite essential to the successful
+working of this system. If the sewage is allowed to dribble away into the
+pipes certain portions of these will become supersaturated with fluid and
+others will not receive any; the purification of the sewage in the soil is
+thereby rendered imperfect. The discharge of a large quantity of fluid at
+one time, besides scouring the system of pipes, fills it more uniformly
+and distributes the work to all parts of the subsoil system.
+
+The successful construction of such a plant requires the services of
+someone familiar with it, and it is therefore not necessary for me to
+do more than call attention to it here as a highly recommended system
+for homes, especially in villages, where the proper amount of land is
+procurable and where the sewage must be disposed of in a manner both
+inoffensive and safe. In any case the soil of such land must be porous,
+not clayey and retentive. Those who wish to familiarize themselves with
+the details will find descriptions in the Sanitary Engineer for 1883, page
+530, by Philbrick; in "The Disposal of Household Wastes," by Gerhard, and
+in "Sewerage and Land Drainage," by Waring. The entire plant is said to
+cost $200 to $300, the annual expenditures for cleaning, repairs, etc.,
+about $10.
+
+The method of subsurface irrigation just described may be too complex
+and too expensive where land is abundant and neighboring houses at some
+distance. The simpler method of surface irrigation may be resorted to by
+laying out at some distance--at least 100 feet--from the house a small
+sewage farm where the sewage may flow in shallow trenches over the surface
+and slowly sink into the ground. Such an irrigation field must have the
+same qualities demanded by subsurface irrigation. Its surface should have
+sufficient slope and the soil should be porous, not retentive. The liquid
+sewage, including kitchen and chamber slops, is conducted to this field in
+a water-tight tile drain and then allowed to flow into shallow trenches.
+To avoid the overloading of the soil with sewage at any one place the
+main distributing trench should be so arranged that it and the irrigating
+trenches branching from it may be temporarily blocked at any point to
+divert the sewage into one or more different trenches every day. In winter
+the warmth of the sewage will keep it in motion and the filtration will
+go on although the field may be covered with snow and ice. The use of the
+flush tank as described above would cause a more uniform distribution of
+the fluid over the field and make the filtration distinctly intermittent.
+The ground between the trenches may be cultivated to increase the amount
+of evaporation. If conveniently situated, an orchard may be used as the
+irrigation field. It should be distinctly understood, however, that
+marketable fruits and vegetables should not be carelessly allowed to come
+in contact with fresh sewage, nor should the irrigation field be near the
+well unless the latter is fairly deep and tubed or tiled to the surface of
+the water.
+
+
+KITCHEN AND CHAMBER SLOPS.
+
+The removal of kitchen and chamber slops is a matter which also requires
+proper attention, as this liquid frequently gives rise to unhealthful
+conditions, annoying alike to sight and smell when carelessly disposed
+of. The simplest way to utilize kitchen slops is to pour them upon plants
+about the house in summer, in winter upon the soil, each time in another
+spot, so as not to supersaturate the surface layers of soil in any one
+place. A means of less trouble recommended by Waring is to partly fill
+with soil a barrel with leaky bottom and cover this with a layer of stable
+manure to prevent the puddling of the soil. The slops filter through the
+soil and leave the barrel below as a clear fluid. The barrel is emptied
+two or three times a year and the contents used for fertilizer.
+
+House slops may be disposed of by surface irrigation or by subsoil pipes,
+as already described. The originator of this method, Mr. Moule, may here
+be profitably quoted as to its simplicity and success:
+
+  Where there is a garden the house slops and sink water may, in most
+  cases, be made of great value and removed from the house without
+  the least annoyance The only requirement is that there shall be a
+  gradual incline from the house to the garden. Let all the slops fall
+  into a trapped sink, the drain from which to the garden shall be of
+  glazed socket pipes well jointed, and emptying itself into a small
+  tank, 18 inches deep, about a foot wide, and of such length as may
+  be necessary. The surplus rain water from the roof may also enter
+  this. Out of this tank lay 3-inch common drain pipes, 8 feet apart
+  and 12 inches below the surface. Lay mortar at the top and bottom
+  of the joints, leaving the sides open. If these pipes are extended
+  to a considerable length, small tanks about 1 foot square and 18
+  inches deep must be sunk at about every 20 or 40 feet to allow for
+  subsidence. These can be emptied as often as required, and the deposit
+  may be either mixed with dry-earth or be dug in at once as manure. The
+  liquid oozes into the cultivated soil, and the result is something
+  fabulous. * * *
+
+  On a wall 55 feet in length and 16 feet high a vine grows. A 3-inch
+  pipe runs parallel with this at a distance of 6 feet from it for the
+  entire length. The slops flow through this pipe as above described. On
+  this vine year after year had been grown 400 well-ripened bunches of
+  grapes, some of the bunches weighing three-fourths of a pound. During
+  a period of four years, for a certain purpose, the supply was cut off.
+  To the surprise of the gardener scarcely any grapes during those years
+  appeared; but afterwards the supply was restored, and the consequence
+  was an abundant crop, the wood grow fully 16 feet, of good size and
+  well ripened.
+
+In place of an indoor sink, an upright tube or hopper may be constructed
+out of doors in communication with the subsurface pipes into which the
+waste fluids are poured.
+
+
+WASTE AND GARBAGE.
+
+The attractiveness of a rural home depends largely upon the promptness
+with which all kinds of waste material are disposed of. The abundance
+of space around the house is a great temptation for the members of the
+household to use it as a place for storing rubbish and useless, worn-out
+things. Sifted ashes are easily utilized in earth closets and upon walks
+and roads, to make them compact and firm. Other articles of no use,
+such as broken crockery, bottles, tin cans, etc., can be thrown into
+depressions and gullies and covered over with earth, or else buried in
+trenches where subsoil drainage is desirable. The removal of rubbish is a
+very fruitful theme and might be dealt with at length. Its importance as
+related to health and disease is a subordinate one, and the reformer must
+appeal to the love of order, propriety, and beauty in and around the home
+in order to make an impression.
+
+Garbage is of much less annoyance in the country than in the city, where
+its collection and destruction is a great expense, and is frequently very
+unsatisfactorily done. In the country, the household garbage is fed to the
+swine and poultry, and is in this way profitably used. There are, however,
+homes where garbage must be taken care of in other ways. It may be buried
+in the garden or else burned in the kitchen range. Recently a device has
+been patented which enables the housekeeper to place the garbage in a
+section of the smoke pipe of the range, where it dries out rapidly, burns,
+and leaves only a little charcoal behind, which may be used for fuel next
+day. This device has been well recommended by sanitarians (see fig. 8).
+
+[Illustration: Fig. 8.--Garbage cremator. The garbage is placed in the
+perforated frame. The latter is pushed into the smoke pipe, where the
+garbage becomes slowly carbonized.]
+
+
+
+
+PROTECTION OF DRINKING; WATER.
+
+
+The next subject to claim our attention is the protection of the sources
+of drinking water. In the country water is, as a rule, obtained from wells
+and springs. The important bearing upon well water of soil purity demands
+a few explanatory remarks concerning the origin of well water. Wells
+are excavations made into the ground to a variable depth until water is
+reached. This water is denominated ground or subsoil water. Its origin
+may be better understood if, for the moment, we conceive the surface of
+the earth as more or less irregular and entirely impervious to water. The
+rain would collect on this surface and form lakes, ponds, and streams,
+according to the configuration of the surface. If, now, we conceive this
+surface covered with sand or other porous earth to a greater or lesser
+height, and the top of this be considered the earth's actual surface, the
+water will remain in the same position, but it will be buried within and
+fill the pores of the overlying soil as subterranean lakes, ponds, and
+streams. In digging a well we remove this porous layer of earth until we
+reach these subterranean streams or reservoirs of ground-water. If the
+above description be thoroughly understood, the condition under which well
+water may be obtained at different depths will become intelligible, and
+it will also appear plain why ground-water may flow as any surface stream
+and pick up on its way various substances which have percolated into the
+ground.
+
+When the bed of porous soil overlying the impervious layers is very deep,
+wells will have to be dug down to a considerable depth to reach the
+surface of the ground-water. Where this layer of pervious earth is of
+slight thickness wells will be shallow, and the ground-water may appear on
+the bottom of gullies, trenches, and wherever the porous layer has been
+dug or washed away.
+
+The movement of the ground-water depends on the inclination or slope of
+the impervious strata, and has been observed to be quite rapid in some
+instances. By adding common salt to the water in a well its detection
+in other wells at a short distance has been found a guide in the
+determination of the rapidity and direction of the underground current.
+
+When the ground-water resting on the uppermost impervious layers is near
+the surface, and therefore not safe or fit to use as drinking water,
+it may be possible by digging below this layer to find another porous
+bed containing water. This source will, in general, be much purer since
+it is less exposed to pollution from above, and since the water has to
+travel longer distances underground. Such a deep supply must, however, be
+protected from the superficial supply by a water-tight wall extending to
+the surface of the deep supply, otherwise the water from the upper layers
+will simply drain into the well.
+
+
+WAYS OF CONTAMINATION.
+
+Wells are exposed to contamination in two ways. The surface water from
+rain, house slops, and barnyard drainage may find its way into the well at
+or near the surface of the ground. Or the ground-water stream supplying
+the well with water may in its subterranean movements encounter cesspools
+or seepings from cesspools, and carry with it soluble and suspended
+particles, some of which may enter the well. There can be no doubt that
+a large percentage of the wells are exposed to contamination with refuse
+matter in the manner described; and it now remains to gauge the danger
+to health and life which may be carried in the contaminating substance.
+The danger of typhoid-fever bacteria entering the water has already been
+mentioned. These may be washed in from the surface or they may pass from
+cesspools near by through fissures in the ground, passages dug by rats,
+etc. Whether such bacteria can pass through the pores of a compact,
+unbroken soil from a cesspool to a well near it is a matter not fully
+settled. Since, however, the actual condition of the deeper layers of the
+soil between cesspool and well can not be known, it becomes imperative
+to prevent all pollution of the ground-water current supplying wells by
+either abolishing the cesspools or else placing them at a considerable
+distance from all sources of water.
+
+Beside typhoid-fever bacteria, those organisms which cause digestive
+disturbances, and severer troubles, such as diarrhea, dysentery, and
+possibly other unknown diseases, may be carried into well water. During
+cholera epidemics, polluted wells might form centers of infection. Eggs of
+animal parasites may be washed in from the surface. Again, the barnyard
+manure, representing the mixed excrement of various animals, may under
+certain conditions be bearers of disease germs, and such excrement
+should, under no conditions, be looked upon as entirely harmless to human
+beings.[2]
+
+[2] It is probable that the filth which gets into cow's milk and which
+appears to be mainly excrement of cows is largely responsible for the
+severe summer diseases of infants fed on cow's milk.
+
+Besides the protection of the ground-water near the well from pollution
+emanating from cesspools, etc., the surface of the ground about the well
+should be kept free from manure, slops, and other waste water; hence
+the well should not be dug under or close by the house,[3] nor should
+it be located in the barnyard, where the ground is usually saturated
+with manure. It should be surrounded by turf, and not by richly manured,
+cultivated, or irrigated soil. The ground immediately around it should
+slope gently away from it and be paved if possible. The waste water from
+the well should not be allowed to soak into the ground, but should be
+collected in water-tight receptacles or else conducted at least 25 feet
+away in open or closed channels which are water-tight.
+
+[3] The water may be carried into the kitchen by running the pipe from the
+well, horizontally, under ground.
+
+
+CONSTRUCTION OF WELLS.
+
+The well itself must be so constructed that impurities can not get into
+it from above or from the sides. If water can soak into it after passing
+through a few feet of soil only, it can not be regarded as secure from
+pollution. To prevent this, the well may be provided with a water-tight
+wall built of hard-burned brick and cement down to the water level. The
+outside surface of this wall should be covered with a thin layer of
+cement, and clay pounded and puddled in around it. Or, tile may be used
+to line the well and the joints made water-tight with cement down to the
+water level. Driven wells, i. e., wells constructed of iron tubing driven
+into the ground, are, perhaps, the safest where the quantity of water
+needed is not large and where other conditions are favorable.
+
+These different devices are all designed to keep water near the surface
+of the soil from percolating into the well. To keep impurities from
+entering the well directly from the top considerable care is necessary.
+Such impurities are likely to prove the most dangerous because there is
+no earth niter to hold them back and destroy them before they can reach
+the water. Adequate protection above may be provided in several ways.
+The sides of the tiled wells should project above the surface and be
+securely covered with a water-tight lid. The ordinary well should also
+have its sides project above the surface and a water-tight cover of heavy
+planks provided, which should not be disturbed excepting for repairing or
+cleansing the well. Under no circumstances should objects be let down into
+the well to cool. A still better method of protecting the water from above
+is to have the lining wall of the well end 3 feet below the surface of the
+ground and to be topped there with a vaulted roof, closed in the center
+with a removable iron or stone plate. The top should be covered with 12
+inches of clay or loam; above this there should be a layer of sand, and
+lastly a pavement sloping away in all directions.
+
+Too much care can not be bestowed upon the household well. It should
+be guarded jealously and all means applied to put the water above any
+suspicion of being impure. This is especially true in dairies where well
+water is used in cleaning the milk cans, and where steam and boiling water
+have not yet found their way for this end. Polluted wells in such houses
+not only endanger the health of the inmates but that of a more or less
+numerous body of city customers.
+
+In those regions where rain water is the only safe drinking water, the
+same care is necessary to protect the stored supply from contamination,
+and no suggestions beyond those already given are necessary here.
+
+
+
+
+CONCLUSION.
+
+
+In the foregoing pages it has been the aim of the writer to give a few
+facts and supply a certain number of ideas which, in the mind of any
+person who has thoroughly understood them and who thinks for himself,
+may be safely left to ripen into schemes adapted to his own wants and
+surroundings. How many resources a man armed with correct views may find
+in the simplest appliances the reader may judge for himself by consulting
+Chapters IX, X, and XI of Dr. Vivian Poore's very interesting volume on
+rural hygiene. Whether the means for utilizing household wastes there
+described and adopted by him would be adequate outside of a limited
+territory of our own country, I am not prepared to state. For the same
+reason no definite suggestions can be made in these pages, owing to the
+wide diversity in the climatic and other conditions obtaining over the
+vast territory of our country. The writer has, furthermore, omitted all
+statements of detail which properly belong to the sanitary engineer. The
+works referred to will, however, supply those more directly interested
+with the facts and figures desired.
+
+The principles to be kept in the foreground are the disposal of sewage
+in the superficial layers of the soil in not too great quantity, the
+disinfection of the stools of the sick with lime before such disposition
+is made, the digging of wells in places kept permanently in grass and at
+some distance from barnyards, and, above all, their thorough protection
+from contamination from the surface and from the soil immediately below
+the surface.
+
+In every community there are public-spirited citizens who could do much
+good by taking hold of the simplest and safest methods of disposing of
+sewage and refuse, putting them into practice, and showing the rest of
+the community just what good can be accomplished and what harm avoided
+by a little continuous attention to sanitary matters. In this way many
+may be led to undertake improvements who, with no definite knowledge of
+the expense involved and with misgivings as to the final success of the
+undertaking, would otherwise hesitate to make a beginning.
+
+
+       *       *       *       *       *
+
+
+FARMERS' BULLETINS.
+
+These bulletins fire sent free of charge to any address upon application
+to the Secretary of Agriculture, Washington, D. C.
+
+[Only the bulletins named below are available for distribution.]
+
+  No. 15. Some Destructive Potato Diseases: What They Are and How to
+            Prevent Them. Pp. 8.
+  No. 16. Leguminous Plants for Green Manuring and for Feeding. Pp. 24.
+  No. 18. Forage Plants for the South. Pp. 30.
+  No. 19. Important Insecticides: Directions for Their Preparation and
+            Use. Pp. 20.
+  No. 20. Washed Soils: How to Prevent and Reclaim Them. Pp. 22.
+  No. 21. Barnyard Manure. Pp. 32.
+  No. 22. Feeding Farm Animals. Pp. 32.
+  No. 23. Foods: Nutritive Value and Cost. Pp. 32.
+  No. 24. Hog Cholera and Swine Plague. Pp. 16.
+  No. 26. Sweet Potatoes: Culture and Uses. Pp. 30.
+  No. 27. Flax for Seed and Fiber. Pp. 10.
+  No. 28. Weeds; and How to Kill Them. Pp. 30.
+  No. 29. Souring of Milk and Other Changes in Milk Products. Pp. 23.
+  No. 30. Grape Diseases on the Pacific Coast. Pp. 16.
+  No. 31. Alfalfa, or Lucern. Pp. 23.
+  No. 32. Silos and Silage. Pp. 31.
+  No. 33. Peach Growing for Market. Pp. 24.
+  No. 34. Meats: Composition and Cooking. Pp. 29.
+  No. 35. Potato Culture. Pp. 23.
+  No. 36. Cotton Seed and Its Products. Pp. 16.
+  No. 37. Kafir Corn: Characteristics, Culture, and Uses. Pp. 12.
+  No. 38. Spraying for Fruit Diseases. Pp. 12.
+  No. 39. Onion Culture. Pp. 31.
+  No. 40. Farm Drainage. Pp. 24.
+  No. 41. Fowls: Care and Feeding. Pp. 24.
+  No. 42. Facts about Milk. Pp. 29.
+  No. 43. Sewage Disposal on the Farm. Pp. 22.
+  No. 44. Commercial Fertilizers. Pp. 24.
+  No. 45. Some Insects Injurious to Stored Grain. Pp. 32.
+  No. 46. Irrigation in Humid Climates. Pp. 27.
+  No. 47. Insects Affecting the Cotton Plant. Pp. 32.
+  No. 48. The Manuring of Cotton. Pp. 16.
+  No. 49. Sheep Feeding. Pp. 24.
+  No. 50. Sorghum as a Forage Crop. Pp. 24.
+  No. 51. Standard Varieties of Chickens. Pp. 48.
+  No. 52. The Sugar Beet. Pp. 48.
+  No. 53. How to Grow Mushrooms. Pp. 20.
+  No. 51. Some Common Birds in Their Relation to Agriculture. Pp. 40.
+  No. 55. The Dairy Herd: Its Formation and Management. Pp. 21.
+  No. 56. Experiment Station Work--I. Pp. 30.
+  No. 57. Butter Making on the Farm. Pp. 15.
+  No. 58. The Soy Bean as a Forage Crop. Pg. 24.
+  No. 59. Bee Keeping. Pp. 32.
+  No. 60. Methods of Curing Tobacco. Pp. 16.
+  No. 61. Asparagus Culture. Pp. 40.
+  No. 62. Marketing Farm Produce. Pp. 28.
+  No. 63. Care of Milk on the Farm. Pp. 40.
+  No. 64. Ducks and Geese. Pp. 48.
+  No. 65. Experiment Station Work--II. Pp. 32.
+  No. 66. Meadows and Pastures. Pp. 24.
+  No. 67. Forestry for Farmers. Pp. 48.
+  No. 68. The Black Rot of the Cabbage. Pp. 22.
+
+
+       *       *       *       *       *
+
+
+Transcriber Note
+
+Illustrations were moved to prevent splitting paragraphs.
+
+
+
+
+
+
+
+
+End of Project Gutenberg's USDA Farmers' Bulletin No. 43, by Theobald Smith
