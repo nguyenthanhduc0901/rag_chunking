@@ -1,0 +1,36 @@
+{
+  "num_chunks": 3516,
+  "num_documents": 100,
+  "chars": {
+    "min": 28.0,
+    "median": 1365.0,
+    "mean": 1425.6478953356086,
+    "max": 5462.0
+  },
+  "estimated_tokens": {
+    "min": 5.0,
+    "median": 288.0,
+    "mean": 295.48976109215016,
+    "max": 724.0
+  },
+  "sentences_per_chunk": {
+    "min": 1.0,
+    "median": 13.0,
+    "mean": 15.427758816837315,
+    "max": 142.0
+  },
+  "chunks_over_512_estimated_tokens": 8,
+  "chunks_under_80_chars": 6,
+  "boundary_similarity": {
+    "min": 0.38853734731674194,
+    "median": 0.7535669803619385,
+    "mean": 0.746682615032621,
+    "max": 1.0
+  },
+  "doc_chunk_counts": {
+    "min": 8.0,
+    "median": 34.0,
+    "mean": 35.16,
+    "max": 61.0
+  }
+}

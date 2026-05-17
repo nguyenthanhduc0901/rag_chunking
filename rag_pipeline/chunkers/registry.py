@@ -6,9 +6,11 @@ from typing import Any
 from .adjacent import (
     AdaptiveParagraphChunker,
     AdjacentSimilarityChunker,
+    AgenticGeminiChunker,
     FeedbackOptimizedChunker,
     FeedbackOptimizedV2Chunker,
     HierarchicalAutoMergeChunker,
+    ParentChildChunker,
 )
 from .base import BaseChunker
 from .fixed import FixedSentenceChunker
@@ -21,6 +23,8 @@ CHUNKERS: dict[str, type[BaseChunker]] = {
     HierarchicalAutoMergeChunker.name: HierarchicalAutoMergeChunker,
     FeedbackOptimizedChunker.name: FeedbackOptimizedChunker,
     FeedbackOptimizedV2Chunker.name: FeedbackOptimizedV2Chunker,
+    ParentChildChunker.name: ParentChildChunker,
+    AgenticGeminiChunker.name: AgenticGeminiChunker,
 }
 
 

@@ -8,6 +8,10 @@ from .io_utils import read_chunks_jsonl, read_json, write_json
 from .text_utils import estimate_tokens
 
 
+def default_evaluation_dir(artifact_dir: Path) -> Path:
+    return artifact_dir.parent / "evaluations" / artifact_dir.name
+
+
 def build_feedback_report(
     artifact_dir: Path,
     retrieval_eval_path: Path | None,
@@ -84,13 +88,17 @@ def main() -> None:
     parser.add_argument("--max-token-budget", type=int, default=512)
     parser.add_argument("--out", type=Path, default=None)
     args = parser.parse_args()
+    retrieval_eval_path = args.retrieval_eval
+    if retrieval_eval_path is None:
+        candidate = default_evaluation_dir(args.artifact_dir) / "retrieval_eval.json"
+        retrieval_eval_path = candidate if candidate.exists() else None
 
     report = build_feedback_report(
         artifact_dir=args.artifact_dir,
-        retrieval_eval_path=args.retrieval_eval,
+        retrieval_eval_path=retrieval_eval_path,
         max_token_budget=args.max_token_budget,
     )
-    out = args.out or args.artifact_dir / "feedback_report.json"
+    out = args.out or default_evaluation_dir(args.artifact_dir) / "feedback_report.json"
     write_json(out, report)
     print(f"Wrote {out}")
 

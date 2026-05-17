@@ -1,0 +1,413 @@
+{
+  "ranking": "overall_avg desc",
+  "reports": [
+    {
+      "chunker": "paragraph_semantic",
+      "artifact_dir": "artifacts/paragraph_semantic",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.95,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.35,
+        "faithfulness_avg": 4.8,
+        "completeness_avg": 4.35,
+        "context_usefulness_avg": 4.45,
+        "citation_support_avg": 4.8,
+        "overall_avg": 4.55,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.8333333333333334,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.6666666666666665,
+            "faithfulness_avg": 4.333333333333333,
+            "completeness_avg": 3.6666666666666665,
+            "context_usefulness_avg": 3.8333333333333335,
+            "citation_support_avg": 4.333333333333333,
+            "overall_avg": 3.9666666666666663
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 5.0,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 5.0,
+            "context_usefulness_avg": 5.0,
+            "citation_support_avg": 5.0,
+            "overall_avg": 5.0
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.285714285714286,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 4.285714285714286,
+            "context_usefulness_avg": 4.428571428571429,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.6
+          }
+        }
+      }
+    },
+    {
+      "chunker": "agentic_gemini",
+      "artifact_dir": "artifacts/agentic_gemini",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.85,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.1,
+        "faithfulness_avg": 4.7,
+        "completeness_avg": 4.0,
+        "context_usefulness_avg": 4.25,
+        "citation_support_avg": 4.8,
+        "overall_avg": 4.37,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.8333333333333335,
+            "faithfulness_avg": 4.333333333333333,
+            "completeness_avg": 3.6666666666666665,
+            "context_usefulness_avg": 4.0,
+            "citation_support_avg": 4.333333333333333,
+            "overall_avg": 4.033333333333333
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.714285714285714,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 4.714285714285714,
+            "context_usefulness_avg": 4.714285714285714,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.828571428571429
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.8571428571428571,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.7142857142857144,
+            "faithfulness_avg": 4.714285714285714,
+            "completeness_avg": 3.5714285714285716,
+            "context_usefulness_avg": 4.0,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.2
+          }
+        }
+      }
+    },
+    {
+      "chunker": "adaptive_paragraph",
+      "artifact_dir": "artifacts/adaptive_paragraph",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.85,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.1,
+        "faithfulness_avg": 4.65,
+        "completeness_avg": 4.1,
+        "context_usefulness_avg": 4.3,
+        "citation_support_avg": 4.7,
+        "overall_avg": 4.369999999999999,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.8333333333333335,
+            "faithfulness_avg": 4.333333333333333,
+            "completeness_avg": 3.8333333333333335,
+            "context_usefulness_avg": 4.0,
+            "citation_support_avg": 4.333333333333333,
+            "overall_avg": 4.066666666666666
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 0.8571428571428571,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.285714285714286,
+            "faithfulness_avg": 4.714285714285714,
+            "completeness_avg": 4.285714285714286,
+            "context_usefulness_avg": 4.571428571428571,
+            "citation_support_avg": 4.714285714285714,
+            "overall_avg": 4.514285714285714
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.142857142857143,
+            "faithfulness_avg": 4.857142857142857,
+            "completeness_avg": 4.142857142857143,
+            "context_usefulness_avg": 4.285714285714286,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.485714285714286
+          }
+        }
+      }
+    },
+    {
+      "chunker": "feedback_optimized",
+      "artifact_dir": "artifacts/feedback_optimized",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.8,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.15,
+        "faithfulness_avg": 4.55,
+        "completeness_avg": 4.1,
+        "context_usefulness_avg": 4.35,
+        "citation_support_avg": 4.6,
+        "overall_avg": 4.35,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.6666666666666665,
+            "faithfulness_avg": 4.333333333333333,
+            "completeness_avg": 3.5,
+            "context_usefulness_avg": 3.8333333333333335,
+            "citation_support_avg": 4.333333333333333,
+            "overall_avg": 3.9333333333333336
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.714285714285714,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 4.714285714285714,
+            "context_usefulness_avg": 5.0,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.885714285714286
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.7142857142857143,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.0,
+            "faithfulness_avg": 4.285714285714286,
+            "completeness_avg": 4.0,
+            "context_usefulness_avg": 4.142857142857143,
+            "citation_support_avg": 4.428571428571429,
+            "overall_avg": 4.171428571428571
+          }
+        }
+      }
+    },
+    {
+      "chunker": "feedback_optimized_v2",
+      "artifact_dir": "artifacts/feedback_optimized_v2",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.75,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.15,
+        "faithfulness_avg": 4.6,
+        "completeness_avg": 4.15,
+        "context_usefulness_avg": 4.25,
+        "citation_support_avg": 4.6,
+        "overall_avg": 4.35,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.6666666666666665,
+            "faithfulness_avg": 3.6666666666666665,
+            "completeness_avg": 3.6666666666666665,
+            "context_usefulness_avg": 3.6666666666666665,
+            "citation_support_avg": 3.6666666666666665,
+            "overall_avg": 3.6666666666666665
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 0.8571428571428571,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.714285714285714,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 4.714285714285714,
+            "context_usefulness_avg": 4.714285714285714,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.828571428571429
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.7142857142857143,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.0,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 4.0,
+            "context_usefulness_avg": 4.285714285714286,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.457142857142857
+          }
+        }
+      }
+    },
+    {
+      "chunker": "fixed_sentence",
+      "artifact_dir": "artifacts/fixed_sentence",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.85,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.15,
+        "faithfulness_avg": 4.5,
+        "completeness_avg": 4.15,
+        "context_usefulness_avg": 4.3,
+        "citation_support_avg": 4.55,
+        "overall_avg": 4.33,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.1666666666666665,
+            "faithfulness_avg": 3.5,
+            "completeness_avg": 3.1666666666666665,
+            "context_usefulness_avg": 3.3333333333333335,
+            "citation_support_avg": 3.5,
+            "overall_avg": 3.333333333333333
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 1.0,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 5.0,
+            "faithfulness_avg": 5.0,
+            "completeness_avg": 5.0,
+            "context_usefulness_avg": 5.0,
+            "citation_support_avg": 5.0,
+            "overall_avg": 5.0
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.8571428571428571,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 4.142857142857143,
+            "faithfulness_avg": 4.857142857142857,
+            "completeness_avg": 4.142857142857143,
+            "context_usefulness_avg": 4.428571428571429,
+            "citation_support_avg": 5.0,
+            "overall_avg": 4.514285714285714
+          }
+        }
+      }
+    },
+    {
+      "chunker": "hierarchical_auto_merge",
+      "artifact_dir": "artifacts/hierarchical_auto_merge",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.7,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 3.35,
+        "faithfulness_avg": 3.95,
+        "completeness_avg": 3.3,
+        "context_usefulness_avg": 3.7,
+        "citation_support_avg": 4.0,
+        "overall_avg": 3.66,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.3333333333333335,
+            "faithfulness_avg": 4.166666666666667,
+            "completeness_avg": 3.1666666666666665,
+            "context_usefulness_avg": 3.6666666666666665,
+            "citation_support_avg": 4.333333333333333,
+            "overall_avg": 3.733333333333333
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 0.7142857142857143,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.7142857142857144,
+            "faithfulness_avg": 4.142857142857143,
+            "completeness_avg": 3.7142857142857144,
+            "context_usefulness_avg": 4.0,
+            "citation_support_avg": 4.142857142857143,
+            "overall_avg": 3.942857142857143
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.7142857142857143,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.0,
+            "faithfulness_avg": 3.5714285714285716,
+            "completeness_avg": 3.0,
+            "context_usefulness_avg": 3.4285714285714284,
+            "citation_support_avg": 3.5714285714285716,
+            "overall_avg": 3.3142857142857145
+          }
+        }
+      }
+    },
+    {
+      "chunker": "parent_child_chunk",
+      "artifact_dir": "artifacts/parent_child_chunk",
+      "question_count": 20,
+      "summary": {
+        "samples": 20,
+        "pass_rate": 0.75,
+        "hallucination_rate": 0.05,
+        "correctness_avg": 3.5,
+        "faithfulness_avg": 3.6,
+        "completeness_avg": 3.5,
+        "context_usefulness_avg": 3.65,
+        "citation_support_avg": 3.7,
+        "overall_avg": 3.59,
+        "by_scope": {
+          "book_theme": {
+            "samples": 6,
+            "pass_rate": 0.6666666666666666,
+            "hallucination_rate": 0.16666666666666666,
+            "correctness_avg": 3.0,
+            "faithfulness_avg": 3.1666666666666665,
+            "completeness_avg": 3.0,
+            "context_usefulness_avg": 3.3333333333333335,
+            "citation_support_avg": 3.1666666666666665,
+            "overall_avg": 3.1333333333333333
+          },
+          "local": {
+            "samples": 7,
+            "pass_rate": 0.7142857142857143,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.5714285714285716,
+            "faithfulness_avg": 3.5714285714285716,
+            "completeness_avg": 3.5714285714285716,
+            "context_usefulness_avg": 3.5714285714285716,
+            "citation_support_avg": 3.5714285714285716,
+            "overall_avg": 3.5714285714285716
+          },
+          "multi_paragraph": {
+            "samples": 7,
+            "pass_rate": 0.8571428571428571,
+            "hallucination_rate": 0.0,
+            "correctness_avg": 3.857142857142857,
+            "faithfulness_avg": 4.0,
+            "completeness_avg": 3.857142857142857,
+            "context_usefulness_avg": 4.0,
+            "citation_support_avg": 4.285714285714286,
+            "overall_avg": 4.0
+          }
+        }
+      }
+    }
+  ]
+}

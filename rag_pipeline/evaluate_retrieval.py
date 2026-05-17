@@ -23,6 +23,28 @@ def _source_span(row: dict) -> tuple[int, int] | None:
     return start_i, end_i
 
 
+def _source_spans(row: dict) -> list[tuple[int, int]]:
+    spans = row.get("expected_source_spans")
+    parsed: list[tuple[int, int]] = []
+    if isinstance(spans, list):
+        for span in spans:
+            if not isinstance(span, dict):
+                continue
+            start = span.get("start")
+            end = span.get("end")
+            try:
+                start_i = int(start)
+                end_i = int(end)
+            except (TypeError, ValueError):
+                continue
+            if end_i > start_i:
+                parsed.append((start_i, end_i))
+    if parsed:
+        return parsed
+    single_span = _source_span(row)
+    return [single_span] if single_span else []
+
+
 def _overlap_ratio(
     chunk_start: int,
     chunk_end: int,
@@ -57,6 +79,8 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
     doc_hits_at_k = 0
     source_hits_at_1 = 0
     source_hits_at_k = 0
+    full_source_hits_at_k = 0
+    source_span_recall_sum = 0.0
     doc_reciprocal_ranks: list[float] = []
     source_reciprocal_ranks: list[float] = []
     details = []
@@ -64,7 +88,7 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
     for row in questions:
         question = row["question"]
         expected_doc_id = str(row.get("expected_doc_id", ""))
-        source_span = _source_span(row)
+        source_spans = _source_spans(row)
         expected_keywords = [kw.lower() for kw in row.get("expected_keywords", [])]
         results = retriever.search(question, top_k=top_k)
 
@@ -83,29 +107,41 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
             doc_reciprocal_ranks.append(0.0)
 
         source_matches = []
-        if expected_doc_id and source_span:
-            source_start, source_end = source_span
-            for result in results:
-                if result.chunk.doc_id != expected_doc_id:
-                    continue
-                overlap = _overlap_ratio(
-                    result.chunk.start_char,
-                    result.chunk.end_char,
-                    source_start,
-                    source_end,
-                )
-                if overlap > 0:
-                    source_matches.append((result.rank, overlap))
+        covered_source_spans: set[int] = set()
+        best_source_overlap = 0.0
+        if expected_doc_id and source_spans:
+            for span_index, (source_start, source_end) in enumerate(source_spans):
+                for result in results:
+                    if result.chunk.doc_id != expected_doc_id:
+                        continue
+                    overlap = _overlap_ratio(
+                        result.chunk.start_char,
+                        result.chunk.end_char,
+                        source_start,
+                        source_end,
+                    )
+                    if overlap > 0:
+                        source_matches.append((result.rank, overlap, span_index))
+                        covered_source_spans.add(span_index)
+                        best_source_overlap = max(best_source_overlap, overlap)
 
-        best_source_rank = min((rank for rank, _overlap in source_matches), default=None)
-        best_source_overlap = max((overlap for _rank, overlap in source_matches), default=0.0)
+        best_source_rank = min((rank for rank, _overlap, _span_index in source_matches), default=None)
+        source_span_recall = (
+            len(covered_source_spans) / len(source_spans)
+            if source_spans
+            else None
+        )
         if best_source_rank == 1:
             source_hits_at_1 += 1
         if best_source_rank is not None and best_source_rank <= top_k:
             source_hits_at_k += 1
             source_reciprocal_ranks.append(1.0 / best_source_rank)
-        elif source_span:
+        elif source_spans:
             source_reciprocal_ranks.append(0.0)
+        if source_span_recall is not None:
+            source_span_recall_sum += source_span_recall
+            if source_span_recall >= 1.0:
+                full_source_hits_at_k += 1
 
         top_text = "\n".join(result.chunk.text.lower() for result in results)
         keyword_hits = sum(1 for kw in expected_keywords if kw in top_text)
@@ -113,12 +149,19 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
             {
                 "question_id": row.get("question_id"),
                 "question": question,
+                "question_scope": row.get("question_scope"),
                 "expected_doc_id": expected_doc_id,
-                "source_start_char": source_span[0] if source_span else None,
-                "source_end_char": source_span[1] if source_span else None,
+                "source_start_char": source_spans[0][0] if source_spans else None,
+                "source_end_char": source_spans[0][1] if source_spans else None,
+                "expected_source_spans": [
+                    {"start": start, "end": end}
+                    for start, end in source_spans
+                ],
+                "source_span_count": len(source_spans),
                 "best_doc_rank": best_doc_rank,
                 "best_source_rank": best_source_rank,
                 "best_source_overlap": best_source_overlap,
+                "source_span_recall": source_span_recall,
                 "keyword_recall": (
                     keyword_hits / len(expected_keywords)
                     if expected_keywords
@@ -145,13 +188,15 @@ def evaluate(retriever: Retriever, questions: list[dict], top_k: int) -> dict:
         "doc_mrr": sum(doc_reciprocal_ranks) / n,
         "details": details,
     }
-    source_question_count = sum(1 for row in questions if _source_span(row))
+    source_question_count = sum(1 for row in questions if _source_spans(row))
     if source_question_count:
         report.update(
             {
                 "source_questions": source_question_count,
                 "source_hit_at_1": source_hits_at_1 / source_question_count,
                 f"source_hit_at_{top_k}": source_hits_at_k / source_question_count,
+                f"full_source_hit_at_{top_k}": full_source_hits_at_k / source_question_count,
+                f"source_span_recall_at_{top_k}": source_span_recall_sum / source_question_count,
                 "source_mrr": sum(source_reciprocal_ranks) / source_question_count,
             }
         )
@@ -178,7 +223,13 @@ def main() -> None:
 
     retriever = Retriever(args.artifact_dir, device=args.device)
     report = evaluate(retriever, load_questions(args.questions), top_k=args.top_k)
-    out = args.out or args.artifact_dir / "retrieval_eval.json"
+    if args.out:
+        out = args.out
+    else:
+        artifacts_dir = args.artifact_dir.parent
+        eval_dir = artifacts_dir / "evaluations" / args.artifact_dir.name
+        out_name = "retrieval_eval_top10.json" if args.top_k == 10 else "retrieval_eval.json"
+        out = eval_dir / out_name
     write_json(out, report)
     print(f"Wrote {out}")
 

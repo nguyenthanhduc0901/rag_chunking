@@ -44,12 +44,20 @@ def build_prompt(
         chunk = result.chunk
         parent_id = chunk.metadata.get("parent_id")
         parent_text = chunk.metadata.get("parent_text")
+        parent_context_policy = chunk.metadata.get("parent_context_policy")
         sibling_hits = (
             sum(1 for item in results if item.chunk.metadata.get("parent_id") == parent_id)
             if parent_id
             else 0
         )
-        if parent_id and parent_text and sibling_hits >= 2:
+        should_use_parent = (
+            bool(parent_id and parent_text)
+            and (
+                parent_context_policy == "always"
+                or sibling_hits >= int(os.environ.get("RAG_PARENT_MERGE_MIN_HITS", "2"))
+            )
+        )
+        if should_use_parent:
             if parent_id in used_parent_ids:
                 continue
             used_parent_ids.add(parent_id)

@@ -22,26 +22,43 @@ def _metric(row: dict[str, Any], key: str) -> float:
     return float(value) if isinstance(value, (int, float)) else 0.0
 
 
+def _evaluation_dir(artifacts_dir: Path, chunker_name: str) -> Path:
+    return artifacts_dir / "evaluations" / chunker_name
+
+
+def _first_existing(*paths: Path) -> Path | None:
+    for path in paths:
+        if path.exists():
+            return path
+    return None
+
+
 def collect_rows(artifacts_dir: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for artifact_dir in sorted(artifacts_dir.iterdir() if artifacts_dir.exists() else []):
+        if artifact_dir.name in {"evaluations", "answer_quality", "answer_quality_smoke"}:
+            continue
         manifest_path = artifact_dir / "manifest.json"
-        chunk_eval_path = artifact_dir / "chunk_eval.json"
-        retrieval_path = artifact_dir / "retrieval_eval.json"
-        retrieval_top10_path = artifact_dir / "retrieval_eval_top10.json"
-        feedback_path = artifact_dir / "feedback_report.json"
-        if not manifest_path.exists() or not retrieval_path.exists():
+        eval_dir = _evaluation_dir(artifacts_dir, artifact_dir.name)
+        chunk_eval_path = _first_existing(eval_dir / "chunk_eval.json", artifact_dir / "chunk_eval.json")
+        retrieval_path = _first_existing(eval_dir / "retrieval_eval.json", artifact_dir / "retrieval_eval.json")
+        retrieval_top10_path = _first_existing(
+            eval_dir / "retrieval_eval_top10.json",
+            artifact_dir / "retrieval_eval_top10.json",
+        )
+        feedback_path = _first_existing(eval_dir / "feedback_report.json", artifact_dir / "feedback_report.json")
+        if not manifest_path.exists() or retrieval_path is None:
             continue
 
         manifest = _load_json(manifest_path)
-        chunk_eval = _load_json(chunk_eval_path) if chunk_eval_path.exists() else {}
+        chunk_eval = _load_json(chunk_eval_path) if chunk_eval_path else {}
         retrieval = _load_json(retrieval_path)
         retrieval_top10 = (
             _load_json(retrieval_top10_path)
-            if retrieval_top10_path.exists()
+            if retrieval_top10_path
             else {}
         )
-        feedback = _load_json(feedback_path) if feedback_path.exists() else {}
+        feedback = _load_json(feedback_path) if feedback_path else {}
 
         top10_key = "source_hit_at_10"
         doc_top10_key = "doc_hit_at_10"
@@ -57,7 +74,11 @@ def collect_rows(artifacts_dir: Path) -> list[dict[str, Any]]:
                 "doc_mrr": retrieval.get("doc_mrr"),
                 "source_hit_at_1": retrieval.get("source_hit_at_1"),
                 "source_hit_at_5": retrieval.get("source_hit_at_5"),
+                "full_source_hit_at_5": retrieval.get("full_source_hit_at_5"),
+                "source_span_recall_at_5": retrieval.get("source_span_recall_at_5"),
                 "source_hit_at_10": retrieval_top10.get(top10_key),
+                "full_source_hit_at_10": retrieval_top10.get("full_source_hit_at_10"),
+                "source_span_recall_at_10": retrieval_top10.get("source_span_recall_at_10"),
                 "source_mrr": retrieval.get("source_mrr"),
                 "retrieval_issues": feedback.get("summary", {}).get("retrieval_issue_count"),
             }
@@ -97,6 +118,8 @@ def write_reports(rows: list[dict[str, Any]], out_dir: Path, questions_file: str
         "src@1",
         "src@5",
         "src@10",
+        "span_recall@5",
+        "full_src@5",
         "src_mrr",
         "issues",
     ]
@@ -125,6 +148,8 @@ def write_reports(rows: list[dict[str, Any]], out_dir: Path, questions_file: str
                     _pct(row.get("source_hit_at_1")),
                     _pct(row.get("source_hit_at_5")),
                     _pct(row.get("source_hit_at_10")),
+                    _pct(row.get("source_span_recall_at_5")),
+                    _pct(row.get("full_source_hit_at_5")),
                     f"{row['source_mrr']:.3f}"
                     if row.get("source_mrr") is not None
                     else "",
@@ -150,7 +175,7 @@ def main() -> None:
     if not rows:
         print("No retrieval reports found.")
         return
-    write_reports(rows, args.artifacts_dir, questions_file=args.questions)
+    write_reports(rows, args.artifacts_dir / "evaluations", questions_file=args.questions)
 
 
 if __name__ == "__main__":

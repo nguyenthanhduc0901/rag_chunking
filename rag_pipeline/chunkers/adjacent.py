@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import json
+import os
 import re
 import statistics
 from dataclasses import replace
+from typing import Any
 
 import numpy as np
 
@@ -616,3 +619,473 @@ class FeedbackOptimizedV2Chunker(FeedbackOptimizedChunker):
                 break
             start = end + 1 - self.sentence_window_overlap
         return chunks
+
+
+class ParentChildChunker(ParagraphBlockSemanticMixin, BaseChunker):
+    """Small retrievable child chunks with larger parent context for generation."""
+
+    name = "parent_child_chunk"
+
+    def __init__(
+        self,
+        sentence_window_size: int = 8,
+        sentence_window_overlap: int = 2,
+        parent_target_words: int = 700,
+        parent_max_words: int = 950,
+        parent_child_count: int = 5,
+    ) -> None:
+        super().__init__(
+            sentence_window_size=sentence_window_size,
+            sentence_window_overlap=sentence_window_overlap,
+            parent_target_words=parent_target_words,
+            parent_max_words=parent_max_words,
+            parent_child_count=parent_child_count,
+        )
+        if sentence_window_size < 1:
+            raise ValueError("sentence_window_size must be >= 1")
+        if sentence_window_overlap < 0 or sentence_window_overlap >= sentence_window_size:
+            raise ValueError(
+                "sentence_window_overlap must be >= 0 and < sentence_window_size"
+            )
+        if parent_target_words < 1 or parent_max_words < parent_target_words:
+            raise ValueError("parent_max_words must be >= parent_target_words >= 1")
+        if parent_child_count < 1:
+            raise ValueError("parent_child_count must be >= 1")
+
+        self.sentence_window_size = sentence_window_size
+        self.sentence_window_overlap = sentence_window_overlap
+        self.parent_target_words = parent_target_words
+        self.parent_max_words = parent_max_words
+        self.parent_child_count = parent_child_count
+
+    def _child_chunks(self, document: Document) -> list[Chunk]:
+        spans = self.sentence_spans(document)
+        if not spans:
+            return []
+
+        chunks: list[Chunk] = []
+        start = 0
+        while start < len(spans):
+            end = min(start + self.sentence_window_size, len(spans)) - 1
+            text = document.text[spans[start][1] : spans[end][2]]
+            metadata = {
+                "unit_type": "sentence_window_child",
+                "hierarchy_level": "child",
+                "estimated_words": word_count(text),
+                "embedding_prefix": self._metadata_prefix(document),
+                "metadata_prefix_enabled": True,
+                "parent_context_policy": "always",
+            }
+            chunks.append(
+                self.make_chunk(
+                    document,
+                    len(chunks),
+                    spans,
+                    start,
+                    end,
+                    metadata,
+                )
+            )
+            if end == len(spans) - 1:
+                break
+            start = end + 1 - self.sentence_window_overlap
+        return chunks
+
+    def _attach_parent_metadata(
+        self,
+        chunks: list[Chunk],
+        document: Document,
+    ) -> list[Chunk]:
+        enriched: list[Chunk] = []
+        group: list[Chunk] = []
+        group_words = 0
+        parent_index = 0
+
+        def flush_group() -> None:
+            nonlocal group, group_words, parent_index
+            if not group:
+                return
+            parent_id = f"{self.name}:{document.doc_id}:parent:{parent_index:06d}"
+            parent_start = min(chunk.start_char for chunk in group)
+            parent_end = max(chunk.end_char for chunk in group)
+            parent_text = document.text[parent_start:parent_end].strip()
+            parent_words = word_count(parent_text)
+            for child_position, chunk in enumerate(group):
+                metadata = dict(chunk.metadata)
+                metadata.update(
+                    {
+                        "parent_id": parent_id,
+                        "parent_index": parent_index,
+                        "parent_child_count": len(group),
+                        "parent_child_position": child_position,
+                        "parent_start_char": parent_start,
+                        "parent_end_char": parent_end,
+                        "parent_estimated_words": parent_words,
+                        "parent_text": parent_text,
+                        "parent_strategy": "sentence_child_contiguous_parent",
+                    }
+                )
+                enriched.append(replace(chunk, metadata=metadata))
+            parent_index += 1
+            group = []
+            group_words = 0
+
+        for chunk in chunks:
+            chunk_words = word_count(chunk.text)
+            if group and (
+                len(group) >= self.parent_child_count
+                or group_words + chunk_words > self.parent_max_words
+            ):
+                flush_group()
+            group.append(chunk)
+            group_words += chunk_words
+            if group_words >= self.parent_target_words:
+                flush_group()
+        flush_group()
+        return enriched
+
+    def chunk(self, document: Document, model=None, batch_size: int = 64) -> list[Chunk]:
+        return self._attach_parent_metadata(self._child_chunks(document), document)
+
+
+class AgenticGeminiChunker(ParagraphBlockSemanticMixin, BaseChunker):
+    """Gemini-driven semantic boundary selection with deterministic safeguards.
+
+    This is agentic chunking without OpenAI: Gemini proposes paragraph-block
+    boundaries, then local code validates min/max size constraints so the build
+    remains reproducible enough for benchmarking.
+    """
+
+    name = "agentic_gemini"
+
+    def __init__(
+        self,
+        min_words: int = 120,
+        target_words: int = 190,
+        max_words: int = 300,
+        long_paragraph_words: int = 260,
+        agent_window_words: int = 1300,
+        agent_max_units: int = 12,
+        agent_max_input_chars: int = 7000,
+        agent_max_output_tokens: int = 512,
+        agent_temperature: float = 0.0,
+        agent_model: str | None = None,
+        use_agent: bool = True,
+        fallback_threshold: float = 0.54,
+    ) -> None:
+        super().__init__(
+            min_words=min_words,
+            target_words=target_words,
+            max_words=max_words,
+            long_paragraph_words=long_paragraph_words,
+            agent_window_words=agent_window_words,
+            agent_max_units=agent_max_units,
+            agent_max_input_chars=agent_max_input_chars,
+            agent_max_output_tokens=agent_max_output_tokens,
+            agent_temperature=agent_temperature,
+            agent_model=agent_model,
+            use_agent=use_agent,
+            fallback_threshold=fallback_threshold,
+        )
+        if min_words < 1 or target_words < min_words or max_words < target_words:
+            raise ValueError("Expected 1 <= min_words <= target_words <= max_words")
+        if agent_window_words < target_words:
+            raise ValueError("agent_window_words should be >= target_words")
+        if agent_max_units < 2:
+            raise ValueError("agent_max_units must be >= 2")
+        self.min_words = min_words
+        self.target_words = target_words
+        self.max_words = max_words
+        self.long_paragraph_words = long_paragraph_words
+        self.agent_window_words = agent_window_words
+        self.agent_max_units = agent_max_units
+        self.agent_max_input_chars = agent_max_input_chars
+        self.agent_max_output_tokens = agent_max_output_tokens
+        self.agent_temperature = agent_temperature
+        self.agent_model = agent_model
+        self.use_agent = use_agent
+        self.fallback_threshold = fallback_threshold
+        self._client: Any | None = None
+        self._client_failed = False
+
+    def _fallback_chunker(self) -> AdaptiveParagraphChunker:
+        return AdaptiveParagraphChunker(
+            threshold=self.fallback_threshold,
+            min_words=self.min_words,
+            target_words=self.target_words,
+            max_words=self.max_words,
+            long_paragraph_words=self.long_paragraph_words,
+        )
+
+    def _get_client(self) -> Any | None:
+        if not self.use_agent or self._client_failed:
+            return None
+        if self._client is not None:
+            return self._client
+        try:
+            from google import genai
+
+            project_id = os.environ.get(
+                "VERTEX_PROJECT_ID",
+                "project-ccf4c6cc-ed33-46e5-acf",
+            )
+            location = os.environ.get("VERTEX_LOCATION", "global")
+            self._client = genai.Client(
+                vertexai=True,
+                project=project_id,
+                location=location,
+            )
+            return self._client
+        except Exception:
+            self._client_failed = True
+            return None
+
+    def _agent_model_name(self) -> str:
+        return self.agent_model or os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+    def _agent_windows(
+        self,
+        units: list[tuple[str, int, int]],
+    ) -> list[tuple[int, int]]:
+        windows: list[tuple[int, int]] = []
+        start = 0
+        while start < len(units):
+            words = 0
+            end = start
+            while end < len(units):
+                next_words = word_count(units[end][0])
+                if end > start and (
+                    words + next_words > self.agent_window_words
+                    or end - start + 1 > self.agent_max_units
+                ):
+                    break
+                words += next_words
+                end += 1
+            windows.append((start, max(start, end - 1)))
+            start = max(start + 1, end)
+        return windows
+
+    def _prompt_for_window(
+        self,
+        document: Document,
+        units: list[tuple[str, int, int]],
+        start: int,
+        end: int,
+    ) -> str:
+        blocks: list[str] = []
+        used_chars = 0
+        for local_index, unit_index in enumerate(range(start, end + 1)):
+            text = " ".join(units[unit_index][0].split())
+            max_unit_chars = 700
+            if len(text) > max_unit_chars:
+                text = text[:max_unit_chars].rstrip() + "..."
+            block = f"[{local_index}] words={word_count(units[unit_index][0])}: {text}"
+            if used_chars + len(block) > self.agent_max_input_chars:
+                break
+            blocks.append(block)
+            used_chars += len(block)
+
+        return f"""
+You are doing semantic chunking for a RAG pipeline over Project Gutenberg books.
+Use meaning, topic shifts, and paragraph continuity to choose chunk boundaries.
+Do not use OpenAI tools. Return strict JSON only.
+
+Goal:
+- Prefer chunks around {self.target_words} words.
+- Avoid chunks below {self.min_words} words unless the source is very short.
+- Avoid chunks above {self.max_words} words.
+- Preserve coherent ideas, examples, lists, and explanations together.
+
+Book title: {document.title or "Untitled"}
+Author: {document.author or "Unknown"}
+
+Paragraph blocks:
+{chr(10).join(blocks)}
+
+Return schema:
+{{
+  "break_after": [0],
+  "reason": "short explanation"
+}}
+
+`break_after` must contain local paragraph block indexes after which a chunk should end.
+Do not include the final paragraph block index.
+""".strip()
+
+    def _call_agent(self, client: Any, prompt: str) -> dict[str, Any]:
+        from google.genai import types
+
+        response = client.models.generate_content(
+            model=self._agent_model_name(),
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                max_output_tokens=self.agent_max_output_tokens,
+                temperature=self.agent_temperature,
+                thinking_config=types.ThinkingConfig(thinking_budget=0),
+            ),
+        )
+        text = response.text.strip() if isinstance(response.text, str) else str(response).strip()
+        start = text.find("{")
+        end = text.rfind("}")
+        if start == -1 or end == -1 or end <= start:
+            raise ValueError(f"Agent returned non-JSON response: {text[:200]}")
+        return json.loads(text[start : end + 1])
+
+    def _agent_boundaries(
+        self,
+        document: Document,
+        units: list[tuple[str, int, int]],
+        client: Any,
+    ) -> tuple[set[int], int]:
+        boundaries: set[int] = set()
+        failed_windows = 0
+        for start, end in self._agent_windows(units):
+            if end <= start:
+                continue
+            try:
+                payload = self._call_agent(
+                    client,
+                    self._prompt_for_window(document, units, start, end),
+                )
+                proposed = payload.get("break_after", [])
+                if not isinstance(proposed, list):
+                    raise ValueError("break_after is not a list")
+                for value in proposed:
+                    try:
+                        local_index = int(value)
+                    except (TypeError, ValueError):
+                        continue
+                    global_index = start + local_index
+                    if start <= global_index < end:
+                        boundaries.add(global_index)
+            except Exception:
+                failed_windows += 1
+        return boundaries, failed_windows
+
+    def _build_chunks(
+        self,
+        document: Document,
+        units: list[tuple[str, int, int]],
+        boundaries: set[int],
+        failed_windows: int,
+    ) -> list[Chunk]:
+        chunks: list[Chunk] = []
+        start = 0
+        current_words = 0
+        boundary_count = 0
+        unit_texts = [unit[0] for unit in units]
+
+        for index, text in enumerate(unit_texts):
+            current_words += word_count(text)
+            agent_break = index in boundaries
+            can_break = current_words >= self.min_words
+            must_break = current_words >= self.max_words
+            should_break = index < len(units) - 1 and can_break and (agent_break or must_break)
+            if should_break:
+                metadata = {
+                    "unit_type": "agentic_paragraph_block",
+                    "agentic": True,
+                    "agent_provider": "gemini_vertex",
+                    "agent_model": self._agent_model_name(),
+                    "agent_boundary_used": agent_break,
+                    "agent_failed_windows": failed_windows,
+                    "estimated_words": current_words,
+                    "embedding_prefix": self._metadata_prefix(document),
+                    "metadata_prefix_enabled": True,
+                }
+                chunks.append(
+                    self.make_chunk(document, len(chunks), units, start, index, metadata)
+                )
+                boundary_count += int(agent_break)
+                start = index + 1
+                current_words = 0
+
+        if start < len(units):
+            final_words = sum(word_count(text) for text in unit_texts[start:])
+            metadata = {
+                "unit_type": "agentic_paragraph_block",
+                "agentic": True,
+                "agent_provider": "gemini_vertex",
+                "agent_model": self._agent_model_name(),
+                "agent_boundary_used": False,
+                "agent_boundary_count": boundary_count,
+                "agent_failed_windows": failed_windows,
+                "estimated_words": final_words,
+                "embedding_prefix": self._metadata_prefix(document),
+                "metadata_prefix_enabled": True,
+            }
+            chunks.append(
+                self.make_chunk(
+                    document,
+                    len(chunks),
+                    units,
+                    start,
+                    len(units) - 1,
+                    metadata,
+                )
+            )
+        return chunks
+
+    def chunk(self, document: Document, model=None, batch_size: int = 64) -> list[Chunk]:
+        units = self._paragraph_units(document)
+        if not units:
+            return []
+        if len(units) == 1:
+            return self._make_single_unit_chunk(
+                document,
+                units,
+                {
+                    "agentic": True,
+                    "agent_provider": "gemini_vertex",
+                    "agent_model": self._agent_model_name(),
+                    "agent_boundary_count": 0,
+                    "embedding_prefix": self._metadata_prefix(document),
+                    "metadata_prefix_enabled": True,
+                },
+            )
+
+        client = self._get_client()
+        if client is None:
+            if model is None:
+                return self._build_chunks(document, units, set(), failed_windows=0)
+            chunks = self._fallback_chunker().chunk(document, model=model, batch_size=batch_size)
+            return [
+                replace(
+                    chunk,
+                    chunk_id=chunk.chunk_id.replace("adaptive_paragraph:", f"{self.name}:", 1),
+                    chunker=self.name,
+                    metadata={
+                        **chunk.metadata,
+                        "chunker_params": self.params,
+                        "agentic": True,
+                        "agent_provider": "gemini_vertex",
+                        "agent_fallback": "adaptive_paragraph",
+                        "agent_model": self._agent_model_name(),
+                    },
+                )
+                for chunk in chunks
+            ]
+
+        boundaries, failed_windows = self._agent_boundaries(document, units, client)
+        if not boundaries and failed_windows:
+            if model is None:
+                return self._build_chunks(document, units, set(), failed_windows)
+            chunks = self._fallback_chunker().chunk(document, model=model, batch_size=batch_size)
+            return [
+                replace(
+                    chunk,
+                    chunk_id=chunk.chunk_id.replace("adaptive_paragraph:", f"{self.name}:", 1),
+                    chunker=self.name,
+                    metadata={
+                        **chunk.metadata,
+                        "chunker_params": self.params,
+                        "agentic": True,
+                        "agent_provider": "gemini_vertex",
+                        "agent_fallback": "adaptive_paragraph_after_agent_failure",
+                        "agent_failed_windows": failed_windows,
+                        "agent_model": self._agent_model_name(),
+                    },
+                )
+                for chunk in chunks
+            ]
+        return self._build_chunks(document, units, boundaries, failed_windows)

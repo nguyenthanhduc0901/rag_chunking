@@ -14,7 +14,9 @@ env/
 .env.*
 
 # Generated RAG artifacts
-artifacts/
+artifacts/*
+!artifacts/evaluations/
+!artifacts/evaluations/**
 *.faiss
 *.index
 *.npy

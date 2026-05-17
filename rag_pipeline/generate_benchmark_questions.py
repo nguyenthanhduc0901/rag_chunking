@@ -16,7 +16,8 @@ from .text_utils import normalize_inline_text, split_paragraphs_with_offsets, wo
 
 QUESTION_TYPES = ("fact", "concept", "summary", "why_how")
 DIFFICULTIES = ("easy", "medium", "hard")
-GENERATOR_VERSION = "source-paragraph-v2-gemini"
+QUESTION_SCOPES = ("local", "multi_paragraph", "book_theme")
+GENERATOR_VERSION = "source-balanced-v3-gemini"
 
 
 @dataclass(frozen=True)
@@ -30,6 +31,8 @@ class SourcePassage:
     text: str
     position_ratio: float
     bucket: str
+    question_scope: str = "local"
+    source_spans: tuple[tuple[int, int], ...] = ()
 
 
 def _jsonl_write(path: Path, rows: list[dict[str, Any]]) -> None:
@@ -95,6 +98,157 @@ def _bucket_for_position(position_ratio: float) -> str:
     return "late"
 
 
+def _make_source_passage(
+    *,
+    document,
+    text: str,
+    start_char: int,
+    end_char: int,
+    position_ratio: float,
+    bucket: str,
+    question_scope: str,
+    source_spans: list[tuple[int, int]] | None = None,
+) -> SourcePassage:
+    spans = tuple(source_spans or [(start_char, end_char)])
+    return SourcePassage(
+        doc_id=document.doc_id,
+        source_file=document.source_file,
+        title=document.title,
+        author=document.author,
+        start_char=start_char,
+        end_char=end_char,
+        text=text,
+        position_ratio=position_ratio,
+        bucket=bucket,
+        question_scope=question_scope,
+        source_spans=spans,
+    )
+
+
+def _sample_local_passage(
+    document,
+    candidates: dict[str, list[tuple[str, int, int, float]]],
+    min_words: int,
+    max_words: int,
+    rng: random.Random,
+) -> SourcePassage | None:
+    bucket_order = ["early", "middle", "late"]
+    rng.shuffle(bucket_order)
+    for bucket in bucket_order:
+        if not candidates[bucket]:
+            continue
+        paragraph, start, _end, position_ratio = rng.choice(candidates[bucket])
+        passage_text, passage_start, passage_end = _trim_to_word_window(
+            paragraph,
+            absolute_start=start,
+            max_words=max_words,
+            rng=rng,
+        )
+        if word_count(passage_text) < min_words:
+            continue
+        return _make_source_passage(
+            document=document,
+            text=passage_text,
+            start_char=passage_start,
+            end_char=passage_end,
+            position_ratio=position_ratio,
+            bucket=bucket,
+            question_scope="local",
+        )
+    return None
+
+
+def _sample_multi_paragraph_passage(
+    document,
+    ordered_candidates: list[tuple[str, int, int, float, str]],
+    min_words: int,
+    max_words: int,
+    paragraph_count: int,
+    rng: random.Random,
+) -> SourcePassage | None:
+    if len(ordered_candidates) < 2:
+        return None
+
+    group_size = max(2, paragraph_count)
+    starts = list(range(0, max(1, len(ordered_candidates) - group_size + 1)))
+    rng.shuffle(starts)
+    for start_index in starts:
+        group = ordered_candidates[start_index : start_index + group_size]
+        snippets: list[str] = []
+        spans: list[tuple[int, int]] = []
+        per_snippet_words = max(50, max_words // len(group))
+        for paragraph, paragraph_start, _paragraph_end, _ratio, _bucket in group:
+            snippet_text, snippet_start, snippet_end = _trim_to_word_window(
+                paragraph,
+                absolute_start=paragraph_start,
+                max_words=per_snippet_words,
+                rng=rng,
+            )
+            snippets.append(snippet_text)
+            spans.append((snippet_start, snippet_end))
+        combined_text = "\n\n".join(snippets)
+        if word_count(combined_text) < min_words:
+            continue
+        source_start = min(start for start, _end in spans)
+        source_end = max(end for _start, end in spans)
+        position_ratio = group[0][3]
+        bucket = group[0][4]
+        return _make_source_passage(
+            document=document,
+            text=combined_text,
+            start_char=source_start,
+            end_char=source_end,
+            position_ratio=position_ratio,
+            bucket=bucket,
+            question_scope="multi_paragraph",
+            source_spans=spans,
+        )
+    return None
+
+
+def _sample_book_theme_passage(
+    document,
+    candidates: dict[str, list[tuple[str, int, int, float]]],
+    min_words: int,
+    max_words: int,
+    rng: random.Random,
+) -> SourcePassage | None:
+    selected: list[tuple[str, int, int, float, str]] = []
+    for bucket in ("early", "middle", "late"):
+        if candidates[bucket]:
+            paragraph, start, end, position_ratio = rng.choice(candidates[bucket])
+            selected.append((paragraph, start, end, position_ratio, bucket))
+    if len(selected) < 2:
+        return None
+
+    snippets: list[str] = []
+    spans: list[tuple[int, int]] = []
+    per_snippet_words = max(60, max_words // len(selected))
+    for paragraph, start, _end, _position_ratio, bucket in selected:
+        snippet_text, snippet_start, snippet_end = _trim_to_word_window(
+            paragraph,
+            absolute_start=start,
+            max_words=per_snippet_words,
+            rng=rng,
+        )
+        snippets.append(f"[{bucket}] {snippet_text}")
+        spans.append((snippet_start, snippet_end))
+
+    combined_text = "\n\n".join(snippets)
+    if word_count(combined_text) < min_words:
+        return None
+    return _make_source_passage(
+        document=document,
+        text=combined_text,
+        start_char=min(start for start, _end in spans),
+        end_char=max(end for _start, end in spans),
+        position_ratio=0.5,
+        bucket="distributed",
+        question_scope="book_theme",
+        source_spans=spans,
+    )
+
+
 def sample_source_passages(
     data_dir: Path,
     questions_per_doc: int,
@@ -102,16 +256,19 @@ def sample_source_passages(
     max_words: int,
     seed: int,
     limit_docs: int | None,
+    scopes: tuple[str, ...],
+    multi_paragraph_count: int,
 ) -> list[SourcePassage]:
     rng = random.Random(seed)
     passages: list[SourcePassage] = []
 
-    for document in load_documents(data_dir, limit=limit_docs):
+    for doc_index, document in enumerate(load_documents(data_dir, limit=limit_docs)):
         candidates: dict[str, list[tuple[str, int, int, float]]] = {
             "early": [],
             "middle": [],
             "late": [],
         }
+        ordered_candidates: list[tuple[str, int, int, float, str]] = []
         text_length = max(1, len(document.text))
         for paragraph, start, end in split_paragraphs_with_offsets(document.text):
             if not _is_good_source_paragraph(paragraph, min_words=min_words):
@@ -119,46 +276,47 @@ def sample_source_passages(
             position_ratio = start / text_length
             bucket = _bucket_for_position(position_ratio)
             candidates[bucket].append((paragraph, start, end, position_ratio))
+            ordered_candidates.append((paragraph, start, end, position_ratio, bucket))
+        ordered_candidates.sort(key=lambda row: row[1])
 
-        selected: list[tuple[str, int, int, float, str]] = []
-        bucket_order = ["early", "middle", "late"]
-        rng.shuffle(bucket_order)
-        for bucket in bucket_order:
-            if len(selected) >= questions_per_doc:
-                break
-            if candidates[bucket]:
-                paragraph, start, end, position_ratio = rng.choice(candidates[bucket])
-                selected.append((paragraph, start, end, position_ratio, bucket))
-
-        remaining = [
-            (paragraph, start, end, position_ratio, bucket)
-            for bucket, rows in candidates.items()
-            for paragraph, start, end, position_ratio in rows
-            if (paragraph, start, end, position_ratio, bucket) not in selected
-        ]
-        rng.shuffle(remaining)
-        selected.extend(remaining[: max(0, questions_per_doc - len(selected))])
-
-        for paragraph, start, _end, position_ratio, bucket in selected[:questions_per_doc]:
-            passage_text, passage_start, passage_end = _trim_to_word_window(
-                paragraph,
-                absolute_start=start,
-                max_words=max_words,
-                rng=rng,
-            )
-            passages.append(
-                SourcePassage(
-                    doc_id=document.doc_id,
-                    source_file=document.source_file,
-                    title=document.title,
-                    author=document.author,
-                    start_char=passage_start,
-                    end_char=passage_end,
-                    text=passage_text,
-                    position_ratio=position_ratio,
-                    bucket=bucket,
+        for question_index in range(questions_per_doc):
+            scope = scopes[(doc_index * questions_per_doc + question_index) % len(scopes)]
+            passage: SourcePassage | None
+            if scope == "multi_paragraph":
+                passage = _sample_multi_paragraph_passage(
+                    document=document,
+                    ordered_candidates=ordered_candidates,
+                    min_words=min_words,
+                    max_words=max_words,
+                    paragraph_count=multi_paragraph_count,
+                    rng=rng,
                 )
-            )
+            elif scope == "book_theme":
+                passage = _sample_book_theme_passage(
+                    document=document,
+                    candidates=candidates,
+                    min_words=min_words,
+                    max_words=max_words,
+                    rng=rng,
+                )
+            else:
+                passage = _sample_local_passage(
+                    document=document,
+                    candidates=candidates,
+                    min_words=min_words,
+                    max_words=max_words,
+                    rng=rng,
+                )
+            if passage is None and scope != "local":
+                passage = _sample_local_passage(
+                    document=document,
+                    candidates=candidates,
+                    min_words=min_words,
+                    max_words=max_words,
+                    rng=rng,
+                )
+            if passage is not None:
+                passages.append(passage)
 
     rng.shuffle(passages)
     return passages
@@ -288,6 +446,22 @@ def _normalize_generated_question(
     }
 
 
+def _scope_instruction(question_scope: str) -> str:
+    if question_scope == "multi_paragraph":
+        return (
+            "Create a synthesis question that needs evidence from multiple nearby "
+            "paragraphs in the excerpt, not a single isolated fact."
+        )
+    if question_scope == "book_theme":
+        return (
+            "Create a broader thematic question that asks about a recurring idea, "
+            "relationship, or contrast visible across the provided snippets."
+        )
+    return (
+        "Create a local evidence question answerable from a focused part of the excerpt."
+    )
+
+
 def _ask_gemini(
     passage: SourcePassage,
     question_type: str,
@@ -298,18 +472,20 @@ def _ask_gemini(
     from google.genai import types
 
     prompt = f"""
-Create one fair retrieval benchmark question from the source excerpt.
+Create one fair retrieval benchmark question from the source material.
 
 Rules:
-- The question must be answerable from the excerpt.
+- The question must be answerable from the provided source material.
 - The question must be in English.
-- Do not mention "excerpt", "passage", "paragraph", or "source text".
-- Do not copy a phrase longer than 8 consecutive words from the excerpt.
+- Do not mention "excerpt", "passage", "paragraph", "snippets", or "source text".
+- Do not copy a phrase longer than 8 consecutive words from the source material.
 - Prefer paraphrasing, especially for medium and hard questions.
 - Return strict JSON only, no markdown.
 
 Target question_type: {question_type}
 Target difficulty: {difficulty}
+Target question_scope: {passage.question_scope}
+Scope instruction: {_scope_instruction(passage.question_scope)}
 
 Return schema:
 {{
@@ -323,7 +499,7 @@ Return schema:
 Book title: {passage.title or "Unknown"}
 Author: {passage.author or "Unknown"}
 
-Excerpt:
+Source material:
 {passage.text[:2600]}
 """.strip()
     response = client.models.generate_content(
@@ -354,6 +530,8 @@ def generate_benchmark_questions(
     gemini_model: str,
     no_llm: bool,
     fail_on_llm_error: bool,
+    scopes: tuple[str, ...],
+    multi_paragraph_count: int,
 ) -> list[dict[str, Any]]:
     passages = sample_source_passages(
         data_dir=data_dir,
@@ -362,6 +540,8 @@ def generate_benchmark_questions(
         max_words=max_words,
         seed=seed,
         limit_docs=limit_docs,
+        scopes=scopes,
+        multi_paragraph_count=multi_paragraph_count,
     )
     if limit_questions is not None:
         passages = passages[:limit_questions]
@@ -385,7 +565,7 @@ def generate_benchmark_questions(
                 keywords = _fallback_keywords(passage.text)
                 generated = {
                     "question": (
-                        f"What does {passage.title or 'the selected book'} discuss "
+                        f"What does {passage.title or 'the selected book'} show "
                         f"about {', '.join(keywords[:3])}?"
                     ),
                     "answer_hint": normalize_inline_text(passage.text[:260]),
@@ -409,7 +589,7 @@ def generate_benchmark_questions(
                     keywords = _fallback_keywords(passage.text)
                     generated = {
                         "question": (
-                            f"What does {passage.title or 'the selected book'} discuss "
+                            f"What does {passage.title or 'the selected book'} show "
                             f"about {', '.join(keywords[:3])}?"
                         ),
                         "answer_hint": normalize_inline_text(passage.text[:260]),
@@ -428,6 +608,7 @@ def generate_benchmark_questions(
             row = {
                 "question_id": f"q{index:05d}",
                 "generator_version": GENERATOR_VERSION,
+                "question_scope": passage.question_scope,
                 **question_fields,
                 "expected_doc_id": passage.doc_id,
                 "source_file": passage.source_file,
@@ -438,6 +619,11 @@ def generate_benchmark_questions(
                 "source_position": passage.bucket,
                 "source_position_ratio": round(passage.position_ratio, 4),
                 "source_word_count": word_count(passage.text),
+                "expected_source_spans": [
+                    {"start": start, "end": end}
+                    for start, end in passage.source_spans
+                ],
+                "source_span_count": len(passage.source_spans),
                 "source_excerpt": passage.text,
             }
             rows.append(row)
@@ -445,6 +631,7 @@ def generate_benchmark_questions(
                 f.write(json.dumps(row, ensure_ascii=False) + "\n")
             print(
                 f"[{index}/{len(passages)}] doc={passage.doc_id} "
+                f"scope={row['question_scope']} "
                 f"type={row['question_type']} difficulty={row['difficulty']} "
                 f"status={row['generator_status']} -> {row['question']}",
                 flush=True,
@@ -471,6 +658,12 @@ def main() -> None:
     parser.add_argument("--max-words", type=int, default=260)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument(
+        "--scopes",
+        default="local,multi_paragraph,book_theme",
+        help="Comma-separated mix from: local,multi_paragraph,book_theme.",
+    )
+    parser.add_argument("--multi-paragraph-count", type=int, default=3)
+    parser.add_argument(
         "--gemini-model",
         default=None,
         help="Gemini model name. Defaults to GEMINI_MODEL or gemini-2.5-flash.",
@@ -478,6 +671,12 @@ def main() -> None:
     parser.add_argument("--no-llm", action="store_true")
     parser.add_argument("--fail-on-llm-error", action="store_true")
     args = parser.parse_args()
+    scopes = tuple(scope.strip() for scope in args.scopes.split(",") if scope.strip())
+    invalid_scopes = [scope for scope in scopes if scope not in QUESTION_SCOPES]
+    if invalid_scopes:
+        raise ValueError(f"Invalid scopes: {invalid_scopes}. Valid: {QUESTION_SCOPES}")
+    if not scopes:
+        raise ValueError("--scopes must include at least one scope")
 
     rows = generate_benchmark_questions(
         data_dir=args.data_dir,
@@ -493,6 +692,8 @@ def main() -> None:
         ),
         no_llm=args.no_llm,
         fail_on_llm_error=args.fail_on_llm_error,
+        scopes=scopes,
+        multi_paragraph_count=args.multi_paragraph_count,
     )
     print(f"Wrote {len(rows)} benchmark questions to {args.out}", flush=True)
 

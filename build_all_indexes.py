@@ -41,6 +41,19 @@ def main() -> None:
     parser.add_argument("--repair-margin", type=float, default=None)
     parser.add_argument("--sentence-window-size", type=int, default=None)
     parser.add_argument("--sentence-window-overlap", type=int, default=None)
+    parser.add_argument("--parent-child-count", type=int, default=None)
+    parser.add_argument("--agent-window-words", type=int, default=None)
+    parser.add_argument("--agent-max-units", type=int, default=None)
+    parser.add_argument("--agent-max-input-chars", type=int, default=None)
+    parser.add_argument("--agent-max-output-tokens", type=int, default=None)
+    parser.add_argument("--agent-temperature", type=float, default=None)
+    parser.add_argument("--agent-model", default=None)
+    parser.add_argument(
+        "--disable-agent",
+        action="store_true",
+        help="Build agentic_gemini with deterministic fallback instead of Gemini calls.",
+    )
+    parser.add_argument("--fallback-threshold", type=float, default=None)
     args = parser.parse_args()
 
     for chunker in args.chunkers:
@@ -69,6 +82,15 @@ def main() -> None:
             repair_margin=args.repair_margin,
             sentence_window_size=args.sentence_window_size,
             sentence_window_overlap=args.sentence_window_overlap,
+            parent_child_count=args.parent_child_count,
+            agent_window_words=args.agent_window_words,
+            agent_max_units=args.agent_max_units,
+            agent_max_input_chars=args.agent_max_input_chars,
+            agent_max_output_tokens=args.agent_max_output_tokens,
+            agent_temperature=args.agent_temperature,
+            agent_model=args.agent_model,
+            use_agent=False if args.disable_agent else None,
+            fallback_threshold=args.fallback_threshold,
             fixed_size=None,
             fixed_overlap=None,
         )

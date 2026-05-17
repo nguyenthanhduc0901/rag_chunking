@@ -1,0 +1,4876 @@
+{
+  "artifact_dir": "artifacts/fixed_sentence",
+  "chunker": "fixed_sentence",
+  "num_chunks": 7815,
+  "max_token_budget": 512,
+  "overlong_chunks": [
+    {
+      "chunk_id": "fixed_sentence:2922:000001",
+      "doc_id": "2922",
+      "estimated_tokens": 583,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2922:000004",
+      "doc_id": "2922",
+      "estimated_tokens": 669,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2922:000005",
+      "doc_id": "2922",
+      "estimated_tokens": 605,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2922:000009",
+      "doc_id": "2922",
+      "estimated_tokens": 526,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2922:000016",
+      "doc_id": "2922",
+      "estimated_tokens": 522,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2937:000001",
+      "doc_id": "2937",
+      "estimated_tokens": 547,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:2937:000009",
+      "doc_id": "2937",
+      "estimated_tokens": 647,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:4525:000029",
+      "doc_id": "4525",
+      "estimated_tokens": 536,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:4525:000066",
+      "doc_id": "4525",
+      "estimated_tokens": 591,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:12036:000006",
+      "doc_id": "12036",
+      "estimated_tokens": 538,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:12298:000031",
+      "doc_id": "12298",
+      "estimated_tokens": 566,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:17039:000011",
+      "doc_id": "17039",
+      "estimated_tokens": 594,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:25970:000065",
+      "doc_id": "25970",
+      "estimated_tokens": 612,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:25975:000018",
+      "doc_id": "25975",
+      "estimated_tokens": 562,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:26074:000011",
+      "doc_id": "26074",
+      "estimated_tokens": 516,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:32472:000044",
+      "doc_id": "32472",
+      "estimated_tokens": 520,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:33545:000079",
+      "doc_id": "33545",
+      "estimated_tokens": 617,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:33545:000098",
+      "doc_id": "33545",
+      "estimated_tokens": 542,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:40051:000008",
+      "doc_id": "40051",
+      "estimated_tokens": 533,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:40051:000020",
+      "doc_id": "40051",
+      "estimated_tokens": 555,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:40051:000042",
+      "doc_id": "40051",
+      "estimated_tokens": 612,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:40051:000047",
+      "doc_id": "40051",
+      "estimated_tokens": 539,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:47579:000022",
+      "doc_id": "47579",
+      "estimated_tokens": 520,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:48126:000005",
+      "doc_id": "48126",
+      "estimated_tokens": 794,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:62117:000006",
+      "doc_id": "62117",
+      "estimated_tokens": 572,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000013",
+      "doc_id": "67634",
+      "estimated_tokens": 622,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000021",
+      "doc_id": "67634",
+      "estimated_tokens": 553,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000022",
+      "doc_id": "67634",
+      "estimated_tokens": 556,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000023",
+      "doc_id": "67634",
+      "estimated_tokens": 517,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000026",
+      "doc_id": "67634",
+      "estimated_tokens": 639,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000038",
+      "doc_id": "67634",
+      "estimated_tokens": 574,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:67634:000043",
+      "doc_id": "67634",
+      "estimated_tokens": 534,
+      "suggested_action": "split"
+    },
+    {
+      "chunk_id": "fixed_sentence:68805:000034",
+      "doc_id": "68805",
+      "estimated_tokens": 522,
+      "suggested_action": "split"
+    }
+  ],
+  "near_boundary_chunks": [],
+  "retrieval_findings": [
+    {
+      "question": "Which specific varieties of hickory are mentioned in the text?",
+      "expected_doc_id": "53535",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6695761680603027,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        },
+        {
+          "rank": 2,
+          "score": 0.6601839065551758,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        },
+        {
+          "rank": 3,
+          "score": 0.6531833410263062,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        },
+        {
+          "rank": 4,
+          "score": 0.6403089761734009,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        },
+        {
+          "rank": 5,
+          "score": 0.6260052919387817,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        }
+      ]
+    },
+    {
+      "question": "How do environmental factors and the availability of suitable cover influence the spatial distribution and movement patterns of Eastern Cottontails?",
+      "expected_doc_id": "29688",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7339890003204346,
+          "doc_id": "29688",
+          "title": "Home Range and Movements of the Eastern Cottontail in Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7217867374420166,
+          "doc_id": "29688",
+          "title": "Home Range and Movements of the Eastern Cottontail in Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.7204526662826538,
+          "doc_id": "29688",
+          "title": "Home Range and Movements of the Eastern Cottontail in Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.7146896123886108,
+          "doc_id": "29688",
+          "title": "Home Range and Movements of the Eastern Cottontail in Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.7120264768600464,
+          "doc_id": "29688",
+          "title": "Home Range and Movements of the Eastern Cottontail in Kansas"
+        }
+      ]
+    },
+    {
+      "question": "How does the geographical configuration of the garden valley contribute to its unique visual characteristics, particularly in relation to the surrounding landscape and water features?",
+      "expected_doc_id": "40051",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5860098600387573,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.5845038294792175,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 3,
+          "score": 0.5833812952041626,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 4,
+          "score": 0.5825414657592773,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.5816859006881714,
+          "doc_id": "62831",
+          "title": "Glaciers and Glaciation in Glacier National Park"
+        }
+      ]
+    },
+    {
+      "question": "What is a common theme regarding animal distribution and classification in this text?",
+      "expected_doc_id": "31280",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6224037408828735,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 2,
+          "score": 0.6162920594215393,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.6142235398292542,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 4,
+          "score": 0.6139431595802307,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 5,
+          "score": 0.6112335920333862,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        }
+      ]
+    },
+    {
+      "question": "How do the provided texts illustrate the tension between established rules and human actions driven by immediate gain or perceived necessity?",
+      "expected_doc_id": "16030",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5621459484100342,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 2,
+          "score": 0.5337985157966614,
+          "doc_id": "47580",
+          "title": "Birds and All Nature, Vol. 4, No. 2, August 1898"
+        },
+        {
+          "rank": 3,
+          "score": 0.5322703123092651,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        },
+        {
+          "rank": 4,
+          "score": 0.5321986675262451,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 5,
+          "score": 0.5242559909820557,
+          "doc_id": "31240",
+          "title": "Natural History of the Salamander, Aneides hardii"
+        }
+      ]
+    },
+    {
+      "question": "How does the proposed design for the Central Park balance aesthetic unity with practical considerations?",
+      "expected_doc_id": "73830",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6563583016395569,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.6346049308776855,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        },
+        {
+          "rank": 3,
+          "score": 0.625633716583252,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.6110539436340332,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.6098939180374146,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        }
+      ]
+    },
+    {
+      "question": "How has the approach to waterfowl management evolved, balancing conservation efforts with recreational hunting practices?",
+      "expected_doc_id": "54487",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6900891661643982,
+          "doc_id": "54487",
+          "title": "Waterfowl Identification Guide"
+        },
+        {
+          "rank": 2,
+          "score": 0.6737622618675232,
+          "doc_id": "54487",
+          "title": "Waterfowl Identification Guide"
+        },
+        {
+          "rank": 3,
+          "score": 0.6695764064788818,
+          "doc_id": "54487",
+          "title": "Waterfowl Identification Guide"
+        },
+        {
+          "rank": 4,
+          "score": 0.6685242056846619,
+          "doc_id": "54487",
+          "title": "Waterfowl Identification Guide"
+        },
+        {
+          "rank": 5,
+          "score": 0.6660785675048828,
+          "doc_id": "54487",
+          "title": "Waterfowl Identification Guide"
+        }
+      ]
+    },
+    {
+      "question": "What is a recurring problem encountered in the construction projects described?",
+      "expected_doc_id": "18748",
+      "best_rank": null,
+      "best_doc_rank": 2,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5292755961418152,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 2,
+          "score": 0.5242777466773987,
+          "doc_id": "18748",
+          "title": "Transactions of the American Society of Civil Engineers, Vol. LXX, Dec. 1910"
+        },
+        {
+          "rank": 3,
+          "score": 0.521122395992279,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 4,
+          "score": 0.5172425508499146,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        },
+        {
+          "rank": 5,
+          "score": 0.5098403692245483,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        }
+      ]
+    },
+    {
+      "question": "What common characteristic is shared by the Raccoon, Fox, and Flat-fish, despite their differing appearances and behaviors?",
+      "expected_doc_id": "47581",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.619466245174408,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6147023439407349,
+          "doc_id": "33648",
+          "title": "The Mammals of Warren Woods, Berrien County, Michigan"
+        },
+        {
+          "rank": 3,
+          "score": 0.6094889640808105,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 4,
+          "score": 0.5994105935096741,
+          "doc_id": "33507",
+          "title": "The Mammals of Washtenaw County, Michigan"
+        },
+        {
+          "rank": 5,
+          "score": 0.5963806509971619,
+          "doc_id": "47580",
+          "title": "Birds and All Nature, Vol. 4, No. 2, August 1898"
+        }
+      ]
+    },
+    {
+      "question": "How does the geological record, particularly the succession of strata, illustrate the principle that older life forms diverge more significantly from present-day species?",
+      "expected_doc_id": "2922",
+      "best_rank": null,
+      "best_doc_rank": 3,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6806600689888,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 2,
+          "score": 0.6499058604240417,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 3,
+          "score": 0.635731041431427,
+          "doc_id": "2922",
+          "title": "The Past Condition of Organic Nature"
+        },
+        {
+          "rank": 4,
+          "score": 0.6315293312072754,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 5,
+          "score": 0.6312563419342041,
+          "doc_id": "59836",
+          "title": "The Geologic Story of Glacier National Park"
+        }
+      ]
+    },
+    {
+      "question": "What makes the soil in this area particularly suitable for agriculture, and what natural advantage does the region possess?",
+      "expected_doc_id": "40051",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6366369724273682,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 2,
+          "score": 0.6279716491699219,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 3,
+          "score": 0.6183128952980042,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 4,
+          "score": 0.6175844669342041,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 5,
+          "score": 0.6172913312911987,
+          "doc_id": "63671",
+          "title": "Conservation Archaeology of the Richland/Chambers Dam and Reservoir"
+        }
+      ]
+    },
+    {
+      "question": "What contrasting elements are presented in the text regarding human interaction with the natural environment?",
+      "expected_doc_id": "48993",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6035901308059692,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 2,
+          "score": 0.5977680683135986,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 3,
+          "score": 0.5898975133895874,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5862234830856323,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 5,
+          "score": 0.5850962400436401,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "What recurring conflict is evident in the process of establishing regulations for slaughterhouses in London?",
+      "expected_doc_id": "67634",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6252951622009277,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 2,
+          "score": 0.6182796955108643,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 3,
+          "score": 0.6092578172683716,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 4,
+          "score": 0.6070265173912048,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 5,
+          "score": 0.601668119430542,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        }
+      ]
+    },
+    {
+      "question": "How did human intervention and natural adaptations influence the survival and visibility of different animal species in the Rockies?",
+      "expected_doc_id": "59885",
+      "best_rank": 2,
+      "best_doc_rank": 1,
+      "best_source_rank": 2,
+      "best_source_overlap": 0.21764705882352942,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6437822580337524,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6294716596603394,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.6238741874694824,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 4,
+          "score": 0.6187679767608643,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 5,
+          "score": 0.6160492300987244,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        }
+      ]
+    },
+    {
+      "question": "What role did indigenous communities play in the initial discovery and naming of the Rainbow Bridge National Monument?",
+      "expected_doc_id": "59811",
+      "best_rank": 5,
+      "best_doc_rank": 1,
+      "best_source_rank": 5,
+      "best_source_overlap": 0.4875239923224568,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6728487014770508,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6642369627952576,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        },
+        {
+          "rank": 3,
+          "score": 0.6518017053604126,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6410071849822998,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        },
+        {
+          "rank": 5,
+          "score": 0.6305447816848755,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        }
+      ]
+    },
+    {
+      "question": "What is a common theme regarding the classification and distribution of mammal species discussed in the text?",
+      "expected_doc_id": "31683",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6454204320907593,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6451665163040161,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.6274821758270264,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.617651104927063,
+          "doc_id": "31280",
+          "title": "Mammals of the Grand Mesa, Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.6150725483894348,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        }
+      ]
+    },
+    {
+      "question": "What are some of the topics discussed in this publication?",
+      "expected_doc_id": "70983",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5832788944244385,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 2,
+          "score": 0.5788782238960266,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 3,
+          "score": 0.575088381767273,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 4,
+          "score": 0.5742339491844177,
+          "doc_id": "59810",
+          "title": "Shenandoah National Park, Virginia"
+        },
+        {
+          "rank": 5,
+          "score": 0.5737911462783813,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        }
+      ]
+    },
+    {
+      "question": "How has the perception and application of atomic energy evolved, transitioning from initial discoveries of its fundamental components and destructive potential to its eventual integration into peaceful and beneficial societal uses?",
+      "expected_doc_id": "66246",
+      "best_rank": null,
+      "best_doc_rank": 2,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6543708443641663,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 2,
+          "score": 0.6413058042526245,
+          "doc_id": "66246",
+          "title": "Our Atomic World: The Story of Atomic Energy"
+        },
+        {
+          "rank": 3,
+          "score": 0.6400412917137146,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.6248413920402527,
+          "doc_id": "66246",
+          "title": "Our Atomic World: The Story of Atomic Energy"
+        },
+        {
+          "rank": 5,
+          "score": 0.623639702796936,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "What recurring geological process is evident in the formation and transformation of the prominent volcanic features described?",
+      "expected_doc_id": "53539",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6657602190971375,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 2,
+          "score": 0.6521782875061035,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 3,
+          "score": 0.6500728130340576,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 4,
+          "score": 0.6481736898422241,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 5,
+          "score": 0.645268440246582,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        }
+      ]
+    },
+    {
+      "question": "What is a recurring theme regarding human interaction with the natural world?",
+      "expected_doc_id": "47580",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5618260502815247,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 2,
+          "score": 0.5603945255279541,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.5533475875854492,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5491435527801514,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 5,
+          "score": 0.547337532043457,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "What is a primary challenge in managing freshwater mussel populations?",
+      "expected_doc_id": "43177",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6715015769004822,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        },
+        {
+          "rank": 2,
+          "score": 0.6423671245574951,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        },
+        {
+          "rank": 3,
+          "score": 0.6309276819229126,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        },
+        {
+          "rank": 4,
+          "score": 0.6303113698959351,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        },
+        {
+          "rank": 5,
+          "score": 0.6284686923027039,
+          "doc_id": "43177",
+          "title": "The Protection of Fresh-Water Mussels"
+        }
+      ]
+    },
+    {
+      "question": "Considering the logistical challenges of the ark and the scientific limitations of rainfall, what are the primary arguments presented against the biblical flood narrative?",
+      "expected_doc_id": "25975",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.4,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6658115386962891,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        },
+        {
+          "rank": 2,
+          "score": 0.6599781513214111,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        },
+        {
+          "rank": 3,
+          "score": 0.6465778350830078,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        },
+        {
+          "rank": 4,
+          "score": 0.6390358209609985,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        },
+        {
+          "rank": 5,
+          "score": 0.6372924447059631,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        }
+      ]
+    },
+    {
+      "question": "What geological processes are primarily responsible for shaping the landscape of Zion National Park?",
+      "expected_doc_id": "59867",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7105820178985596,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6967963576316833,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 3,
+          "score": 0.685492753982544,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6836733818054199,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 5,
+          "score": 0.6766084432601929,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        }
+      ]
+    },
+    {
+      "question": "Describe the construction method for the roof of the large room, detailing the sequence of layers and structural components used by the Salado people.?",
+      "expected_doc_id": "49192",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 0.37377690802348335,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6626715660095215,
+          "doc_id": "49192",
+          "title": "Tonto Cliff Dwellings Guide: Tonto National Monument, Arizona"
+        },
+        {
+          "rank": 2,
+          "score": 0.614663302898407,
+          "doc_id": "57422",
+          "title": "Cliff Dwellings of the Mesa Verde: A Study in Pictures"
+        },
+        {
+          "rank": 3,
+          "score": 0.6080884337425232,
+          "doc_id": "49192",
+          "title": "Tonto Cliff Dwellings Guide: Tonto National Monument, Arizona"
+        },
+        {
+          "rank": 4,
+          "score": 0.6063761711120605,
+          "doc_id": "49192",
+          "title": "Tonto Cliff Dwellings Guide: Tonto National Monument, Arizona"
+        },
+        {
+          "rank": 5,
+          "score": 0.6018215417861938,
+          "doc_id": "49192",
+          "title": "Tonto Cliff Dwellings Guide: Tonto National Monument, Arizona"
+        }
+      ]
+    },
+    {
+      "question": "What are some of the ways water flow can be managed or altered to generate power?",
+      "expected_doc_id": "62117",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6486973762512207,
+          "doc_id": "62117",
+          "title": "Water Power for the Farm and Country Home"
+        },
+        {
+          "rank": 2,
+          "score": 0.644294023513794,
+          "doc_id": "62117",
+          "title": "Water Power for the Farm and Country Home"
+        },
+        {
+          "rank": 3,
+          "score": 0.6339080333709717,
+          "doc_id": "62117",
+          "title": "Water Power for the Farm and Country Home"
+        },
+        {
+          "rank": 4,
+          "score": 0.6337971687316895,
+          "doc_id": "62117",
+          "title": "Water Power for the Farm and Country Home"
+        },
+        {
+          "rank": 5,
+          "score": 0.6333699226379395,
+          "doc_id": "62117",
+          "title": "Water Power for the Farm and Country Home"
+        }
+      ]
+    },
+    {
+      "question": "What items are being transported by the brigade, and what methods are used for their conveyance?",
+      "expected_doc_id": "38933",
+      "best_rank": 3,
+      "best_doc_rank": 3,
+      "best_source_rank": 3,
+      "best_source_overlap": 0.9245689655172413,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5892360210418701,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 2,
+          "score": 0.5717662572860718,
+          "doc_id": "12036",
+          "title": "Hygeia, a City of Health"
+        },
+        {
+          "rank": 3,
+          "score": 0.5423897504806519,
+          "doc_id": "38933",
+          "title": "By Canadian Streams"
+        },
+        {
+          "rank": 4,
+          "score": 0.5341229438781738,
+          "doc_id": "18748",
+          "title": "Transactions of the American Society of Civil Engineers, Vol. LXX, Dec. 1910"
+        },
+        {
+          "rank": 5,
+          "score": 0.5268270969390869,
+          "doc_id": "51068",
+          "title": "Agatized Rainbows: A Story of the Petrified Forest"
+        }
+      ]
+    },
+    {
+      "question": "Describe the process of assembling the BYU Funnel Cooker, focusing on the steps for both the cooking pot setup and the funnel construction.?",
+      "expected_doc_id": "5889",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7368525266647339,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 2,
+          "score": 0.71326744556427,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 3,
+          "score": 0.6998500823974609,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 4,
+          "score": 0.6866794228553772,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 5,
+          "score": 0.6662258505821228,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        }
+      ]
+    },
+    {
+      "question": "What are some examples of animals that are protected by local populations or laws, but are still hunted by certain groups?",
+      "expected_doc_id": "15134",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6753950715065002,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6718109846115112,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        },
+        {
+          "rank": 3,
+          "score": 0.6499462723731995,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        },
+        {
+          "rank": 4,
+          "score": 0.636235237121582,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 5,
+          "score": 0.6357093453407288,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        }
+      ]
+    },
+    {
+      "question": "What recurring role do waterways play in the historical narratives presented, beyond mere geographical features?",
+      "expected_doc_id": "38933",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5811483860015869,
+          "doc_id": "38933",
+          "title": "By Canadian Streams"
+        },
+        {
+          "rank": 2,
+          "score": 0.5735346674919128,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 3,
+          "score": 0.572109580039978,
+          "doc_id": "38933",
+          "title": "By Canadian Streams"
+        },
+        {
+          "rank": 4,
+          "score": 0.5660760402679443,
+          "doc_id": "63671",
+          "title": "Conservation Archaeology of the Richland/Chambers Dam and Reservoir"
+        },
+        {
+          "rank": 5,
+          "score": 0.5656633377075195,
+          "doc_id": "38933",
+          "title": "By Canadian Streams"
+        }
+      ]
+    },
+    {
+      "question": "What geological and geophysical phenomena indicate potential volcanic unrest within a caldera, and how might these signs necessitate continuous scientific observation?",
+      "expected_doc_id": "57530",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7329480648040771,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 2,
+          "score": 0.7186943888664246,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 3,
+          "score": 0.7005767822265625,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.6881053447723389,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.6752314567565918,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        }
+      ]
+    },
+    {
+      "question": "Why are various methods, from physical barriers to poisons and organized clubs, employed to control rats and sparrows?",
+      "expected_doc_id": "35542",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 0.8683127572016461,
+      "keyword_recall": 0.4,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6882017254829407,
+          "doc_id": "35542",
+          "title": "House Rats and Mice"
+        },
+        {
+          "rank": 2,
+          "score": 0.6804968118667603,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        },
+        {
+          "rank": 3,
+          "score": 0.6750905513763428,
+          "doc_id": "35542",
+          "title": "House Rats and Mice"
+        },
+        {
+          "rank": 4,
+          "score": 0.6745672821998596,
+          "doc_id": "35542",
+          "title": "House Rats and Mice"
+        },
+        {
+          "rank": 5,
+          "score": 0.673123836517334,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        }
+      ]
+    },
+    {
+      "question": "What is a common theme regarding the relationship between plants and animals described in the text?",
+      "expected_doc_id": "60709",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6129922866821289,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 2,
+          "score": 0.6060388684272766,
+          "doc_id": "1022",
+          "title": "Walking"
+        },
+        {
+          "rank": 3,
+          "score": 0.5980291962623596,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5875623226165771,
+          "doc_id": "25975",
+          "title": "The Deluge in the Light of Modern Science: A Discourse"
+        },
+        {
+          "rank": 5,
+          "score": 0.5861639380455017,
+          "doc_id": "2922",
+          "title": "The Past Condition of Organic Nature"
+        }
+      ]
+    },
+    {
+      "question": "What is the central conflict regarding the Hetch-Hetchy Valley described in the text?",
+      "expected_doc_id": "68805",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6433343887329102,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.5822957754135132,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        },
+        {
+          "rank": 3,
+          "score": 0.5643396973609924,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.5592846870422363,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.5578598976135254,
+          "doc_id": "68805",
+          "title": "Water and power for San Francisco from Hetch-Hetchy Valley in Yosemite National Park"
+        }
+      ]
+    },
+    {
+      "question": "What is a common characteristic of many Hawaiian fern species, particularly regarding their growth habits?",
+      "expected_doc_id": "59913",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7463443875312805,
+          "doc_id": "59913",
+          "title": "Ferns of Hawaii National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.7110156416893005,
+          "doc_id": "59913",
+          "title": "Ferns of Hawaii National Park"
+        },
+        {
+          "rank": 3,
+          "score": 0.6851762533187866,
+          "doc_id": "59913",
+          "title": "Ferns of Hawaii National Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.6845969557762146,
+          "doc_id": "59913",
+          "title": "Ferns of Hawaii National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.6816139817237854,
+          "doc_id": "59913",
+          "title": "Ferns of Hawaii National Park"
+        }
+      ]
+    },
+    {
+      "question": "How does the author's approach to public discourse and personal conduct, as exemplified by his own caution and his description of the Cardinal, contrast with the perceived behavior of those he opposes?",
+      "expected_doc_id": "26074",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5848574638366699,
+          "doc_id": "26074",
+          "title": "Great Testimony against scientific cruelty"
+        },
+        {
+          "rank": 2,
+          "score": 0.5845972299575806,
+          "doc_id": "26074",
+          "title": "Great Testimony against scientific cruelty"
+        },
+        {
+          "rank": 3,
+          "score": 0.5807893872261047,
+          "doc_id": "26074",
+          "title": "Great Testimony against scientific cruelty"
+        },
+        {
+          "rank": 4,
+          "score": 0.5746865272521973,
+          "doc_id": "26074",
+          "title": "Great Testimony against scientific cruelty"
+        },
+        {
+          "rank": 5,
+          "score": 0.5699249505996704,
+          "doc_id": "26074",
+          "title": "Great Testimony against scientific cruelty"
+        }
+      ]
+    },
+    {
+      "question": "How does the composition of the forest's canopy and understory contribute to the limited presence of diverse plant life on the forest floor?",
+      "expected_doc_id": "33648",
+      "best_rank": 3,
+      "best_doc_rank": 3,
+      "best_source_rank": 3,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.4,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6582444310188293,
+          "doc_id": "60709",
+          "title": "Burton Island State Park: Guide to the Interpretive Nature Trail and Hiking Trail"
+        },
+        {
+          "rank": 2,
+          "score": 0.6418731212615967,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 3,
+          "score": 0.6371564865112305,
+          "doc_id": "33648",
+          "title": "The Mammals of Warren Woods, Berrien County, Michigan"
+        },
+        {
+          "rank": 4,
+          "score": 0.6309239864349365,
+          "doc_id": "60709",
+          "title": "Burton Island State Park: Guide to the Interpretive Nature Trail and Hiking Trail"
+        },
+        {
+          "rank": 5,
+          "score": 0.6211124658584595,
+          "doc_id": "31994",
+          "title": "The Forests of Mount Rainier National Park"
+        }
+      ]
+    },
+    {
+      "question": "What overarching trend in salmon populations can be inferred from the varying catch numbers across different locations and timeframes mentioned in the text?",
+      "expected_doc_id": "17039",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.4,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6315627098083496,
+          "doc_id": "17039",
+          "title": "The Salmon Fishery of Penobscot Bay and River in 1895-96"
+        },
+        {
+          "rank": 2,
+          "score": 0.6254016757011414,
+          "doc_id": "17039",
+          "title": "The Salmon Fishery of Penobscot Bay and River in 1895-96"
+        },
+        {
+          "rank": 3,
+          "score": 0.6188602447509766,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 4,
+          "score": 0.60960853099823,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.6073766946792603,
+          "doc_id": "17039",
+          "title": "The Salmon Fishery of Penobscot Bay and River in 1895-96"
+        }
+      ]
+    },
+    {
+      "question": "Why do Rocky Mountain Goats prefer high altitudes and cliffs?",
+      "expected_doc_id": "48430",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6870831251144409,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        },
+        {
+          "rank": 2,
+          "score": 0.6784766912460327,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        },
+        {
+          "rank": 3,
+          "score": 0.6707292199134827,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        },
+        {
+          "rank": 4,
+          "score": 0.6696121096611023,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 5,
+          "score": 0.6613425016403198,
+          "doc_id": "48430",
+          "title": "The Rocky Mountain Goat"
+        }
+      ]
+    },
+    {
+      "question": "What are some of the factors that contribute to the unique water conditions and food availability in Glacier Bay?",
+      "expected_doc_id": "37101",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6969866752624512,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 2,
+          "score": 0.6923326849937439,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 3,
+          "score": 0.6911106705665588,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 4,
+          "score": 0.6871774196624756,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.671607255935669,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        }
+      ]
+    },
+    {
+      "question": "Beyond resource assessment and conservation, what unique demographic responsibilities does the Department of the Interior hold?",
+      "expected_doc_id": "47108",
+      "best_rank": 5,
+      "best_doc_rank": 5,
+      "best_source_rank": 5,
+      "best_source_overlap": 0.9810526315789474,
+      "keyword_recall": 0.75,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7249172925949097,
+          "doc_id": "59810",
+          "title": "Shenandoah National Park, Virginia"
+        },
+        {
+          "rank": 2,
+          "score": 0.7156792879104614,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 3,
+          "score": 0.7079955339431763,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 4,
+          "score": 0.7012802362442017,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.6963502764701843,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        }
+      ]
+    },
+    {
+      "question": "What recurring environmental factor significantly influences the distribution and survival of plant life in this region?",
+      "expected_doc_id": "51640",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6303913593292236,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6266802549362183,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.5889533162117004,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5887155532836914,
+          "doc_id": "60709",
+          "title": "Burton Island State Park: Guide to the Interpretive Nature Trail and Hiking Trail"
+        },
+        {
+          "rank": 5,
+          "score": 0.5812480449676514,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "What overarching natural phenomena are depicted as catalysts for significant movement and change across different species and environments?",
+      "expected_doc_id": "47579",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5978419780731201,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 2,
+          "score": 0.5968185663223267,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 3,
+          "score": 0.5935491323471069,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5931000709533691,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.585875391960144,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        }
+      ]
+    },
+    {
+      "question": "How do environmental factors and human interventions interact to influence the deterioration and preservation of stone structures in Washington D.C.?",
+      "expected_doc_id": "57972",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7280974388122559,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 2,
+          "score": 0.7097321152687073,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 3,
+          "score": 0.7072084546089172,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 4,
+          "score": 0.6837977766990662,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 5,
+          "score": 0.6645282506942749,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        }
+      ]
+    },
+    {
+      "question": "What is a common characteristic of the trees mentioned in the park?",
+      "expected_doc_id": "31994",
+      "best_rank": null,
+      "best_doc_rank": 2,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6972416639328003,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 2,
+          "score": 0.687386155128479,
+          "doc_id": "31994",
+          "title": "The Forests of Mount Rainier National Park"
+        },
+        {
+          "rank": 3,
+          "score": 0.6722851991653442,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6651867032051086,
+          "doc_id": "31994",
+          "title": "The Forests of Mount Rainier National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.6594036817550659,
+          "doc_id": "31994",
+          "title": "The Forests of Mount Rainier National Park"
+        }
+      ]
+    },
+    {
+      "question": "What were the primary methods employed to reconstruct the path and characteristics of the storm, and what specific observations were made regarding its impact on trees and structures?",
+      "expected_doc_id": "25970",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6479595303535461,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 2,
+          "score": 0.6381105184555054,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 3,
+          "score": 0.6358749866485596,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 4,
+          "score": 0.6143862009048462,
+          "doc_id": "38072",
+          "title": "Wind and Weather"
+        },
+        {
+          "rank": 5,
+          "score": 0.6113406419754028,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        }
+      ]
+    },
+    {
+      "question": "Why might a visitor choose to stay overnight at Sperry Chalet when planning to see Sperry Glacier?",
+      "expected_doc_id": "62831",
+      "best_rank": 5,
+      "best_doc_rank": 4,
+      "best_source_rank": 5,
+      "best_source_overlap": 0.4813119755911518,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6920474171638489,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        },
+        {
+          "rank": 2,
+          "score": 0.6845031976699829,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        },
+        {
+          "rank": 3,
+          "score": 0.6526145339012146,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        },
+        {
+          "rank": 4,
+          "score": 0.6303583383560181,
+          "doc_id": "62831",
+          "title": "Glaciers and Glaciation in Glacier National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.6261088848114014,
+          "doc_id": "62831",
+          "title": "Glaciers and Glaciation in Glacier National Park"
+        }
+      ]
+    },
+    {
+      "question": "Describe the general distribution patterns of fish species within the Wakarusa River basin, considering both those found in upstream areas and those with more restricted or historically limited presence.?",
+      "expected_doc_id": "31513",
+      "best_rank": 2,
+      "best_doc_rank": 1,
+      "best_source_rank": 2,
+      "best_source_overlap": 0.35834896810506567,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7276442646980286,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7211267352104187,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.7078771591186523,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.6995095014572144,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6991130113601685,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        }
+      ]
+    },
+    {
+      "question": "Why are geographic barriers significant in the classification of new subspecies of pocket gophers?",
+      "expected_doc_id": "37317",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6856887340545654,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 2,
+          "score": 0.6800188422203064,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 3,
+          "score": 0.6697391867637634,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 4,
+          "score": 0.6524825096130371,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.6478724479675293,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        }
+      ]
+    },
+    {
+      "question": "What geological formations, described as sharp and angular, constitute the spiry, jagged, and gloriously colored mountain-range within the sunken landscape?",
+      "expected_doc_id": "12298",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6451929807662964,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6304118633270264,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 3,
+          "score": 0.6283886432647705,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6228445768356323,
+          "doc_id": "59836",
+          "title": "The Geologic Story of Glacier National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.6189181208610535,
+          "doc_id": "59810",
+          "title": "Shenandoah National Park, Virginia"
+        }
+      ]
+    },
+    {
+      "question": "What do coral reefs indicate about the Earth's surface?",
+      "expected_doc_id": "2937",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.6383467278989667,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6755471229553223,
+          "doc_id": "2937",
+          "title": "Coral and Coral Reefs"
+        },
+        {
+          "rank": 2,
+          "score": 0.6565027236938477,
+          "doc_id": "2937",
+          "title": "Coral and Coral Reefs"
+        },
+        {
+          "rank": 3,
+          "score": 0.6537541151046753,
+          "doc_id": "2937",
+          "title": "Coral and Coral Reefs"
+        },
+        {
+          "rank": 4,
+          "score": 0.6515542268753052,
+          "doc_id": "2937",
+          "title": "Coral and Coral Reefs"
+        },
+        {
+          "rank": 5,
+          "score": 0.6495518684387207,
+          "doc_id": "2937",
+          "title": "Coral and Coral Reefs"
+        }
+      ]
+    },
+    {
+      "question": "How do the geological processes described in the text contribute to both the distinctive visual characteristics and the educational focus of Bryce Canyon National Park?",
+      "expected_doc_id": "59881",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7029826641082764,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6993778944015503,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 3,
+          "score": 0.6981137990951538,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6871030926704407,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 5,
+          "score": 0.6843661069869995,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        }
+      ]
+    },
+    {
+      "question": "How do the described folk practices and beliefs reflect a connection between human actions and supernatural or predictive outcomes?",
+      "expected_doc_id": "17269",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5554282665252686,
+          "doc_id": "68145",
+          "title": "Use of tobacco among North American Indians"
+        },
+        {
+          "rank": 2,
+          "score": 0.5486961603164673,
+          "doc_id": "68145",
+          "title": "Use of tobacco among North American Indians"
+        },
+        {
+          "rank": 3,
+          "score": 0.5442474484443665,
+          "doc_id": "68145",
+          "title": "Use of tobacco among North American Indians"
+        },
+        {
+          "rank": 4,
+          "score": 0.5422940850257874,
+          "doc_id": "63671",
+          "title": "Conservation Archaeology of the Richland/Chambers Dam and Reservoir"
+        },
+        {
+          "rank": 5,
+          "score": 0.5398682355880737,
+          "doc_id": "1022",
+          "title": "Walking"
+        }
+      ]
+    },
+    {
+      "question": "How does the play explore the relationship between humanity and nature, particularly concerning the impact of human actions on the natural world?",
+      "expected_doc_id": "56704",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5948849320411682,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        },
+        {
+          "rank": 2,
+          "score": 0.5724936723709106,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        },
+        {
+          "rank": 3,
+          "score": 0.5699965953826904,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        },
+        {
+          "rank": 4,
+          "score": 0.5389187335968018,
+          "doc_id": "1022",
+          "title": "Walking"
+        },
+        {
+          "rank": 5,
+          "score": 0.5351092219352722,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        }
+      ]
+    },
+    {
+      "question": "How do both geological forces and biological elements contribute to shaping the landscape and ecosystems described?",
+      "expected_doc_id": "65891",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6852554678916931,
+          "doc_id": "59836",
+          "title": "The Geologic Story of Glacier National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.6420024633407593,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 3,
+          "score": 0.6408551931381226,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 4,
+          "score": 0.6364961862564087,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 5,
+          "score": 0.6295078992843628,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        }
+      ]
+    },
+    {
+      "question": "What percentage of the thrushes' diet consists of ants?",
+      "expected_doc_id": "33935",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.75,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7731605172157288,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 2,
+          "score": 0.7670288681983948,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 3,
+          "score": 0.7533559799194336,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.7222633957862854,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.7128735780715942,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        }
+      ]
+    },
+    {
+      "question": "How do the dietary preferences and adaptability of thrushes, as exemplified by the solitaire and olive-back, illustrate the complex relationship between their food sources and potential impact on human agriculture?",
+      "expected_doc_id": "33935",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7294682264328003,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 2,
+          "score": 0.7264126539230347,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 3,
+          "score": 0.7189999222755432,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.7081819176673889,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.6986536979675293,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        }
+      ]
+    },
+    {
+      "question": "What overarching factor consistently influences the dietary choices of crows, as evidenced by their consumption patterns of various food sources?",
+      "expected_doc_id": "33545",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7026002407073975,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.6991277933120728,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.696333110332489,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.6937597393989563,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6849804520606995,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        }
+      ]
+    },
+    {
+      "question": "What overarching design principles or recurring challenges are evident in the development and operation of the solar funnel cooker, as suggested by the various modifications and considerations described?",
+      "expected_doc_id": "5889",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7278661727905273,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 2,
+          "score": 0.7274613380432129,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 3,
+          "score": 0.7215572595596313,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 4,
+          "score": 0.715843677520752,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        },
+        {
+          "rank": 5,
+          "score": 0.710604727268219,
+          "doc_id": "5889",
+          "title": "The BYU Solar Cooker/Cooler"
+        }
+      ]
+    },
+    {
+      "question": "Beyond the sheer scale, what primary characteristics contribute to the Grand Canyon's overwhelming visual impact, making it difficult for visitors to fully comprehend or for artists to adequately represent?",
+      "expected_doc_id": "12298",
+      "best_rank": null,
+      "best_doc_rank": 3,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6123643517494202,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 2,
+          "score": 0.6082839965820312,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 3,
+          "score": 0.6030280590057373,
+          "doc_id": "12298",
+          "title": "The Grand Cañon of the Colorado"
+        },
+        {
+          "rank": 4,
+          "score": 0.5947744846343994,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 5,
+          "score": 0.5937231779098511,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        }
+      ]
+    },
+    {
+      "question": "How do the various human interactions with wildlife described in the text, ranging from traditional hunting practices to modern recreational killing, collectively illustrate a conflict between sustainable resource management and exploitative consumption?",
+      "expected_doc_id": "14866",
+      "best_rank": null,
+      "best_doc_rank": 4,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6554816365242004,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6286282539367676,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.6263101696968079,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 4,
+          "score": 0.6106795072555542,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 5,
+          "score": 0.6063843369483948,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        }
+      ]
+    },
+    {
+      "question": "What are some considerations for birdhouse design and placement to ensure both ease of maintenance and the safety of the birds?",
+      "expected_doc_id": "61796",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6737932562828064,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 2,
+          "score": 0.6570614576339722,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 3,
+          "score": 0.6435460448265076,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 4,
+          "score": 0.6402446031570435,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 5,
+          "score": 0.6384025812149048,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        }
+      ]
+    },
+    {
+      "question": "What is a primary challenge in interpreting geological records?",
+      "expected_doc_id": "2922",
+      "best_rank": 5,
+      "best_doc_rank": 1,
+      "best_source_rank": 5,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6583158373832703,
+          "doc_id": "2922",
+          "title": "The Past Condition of Organic Nature"
+        },
+        {
+          "rank": 2,
+          "score": 0.6169598698616028,
+          "doc_id": "63671",
+          "title": "Conservation Archaeology of the Richland/Chambers Dam and Reservoir"
+        },
+        {
+          "rank": 3,
+          "score": 0.6164199113845825,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 4,
+          "score": 0.6157108545303345,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 5,
+          "score": 0.6116869449615479,
+          "doc_id": "2922",
+          "title": "The Past Condition of Organic Nature"
+        }
+      ]
+    },
+    {
+      "question": "How did the Wind Gap moose meet its end, and what efforts were made to save it?",
+      "expected_doc_id": "47224",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7070086598396301,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 2,
+          "score": 0.6963425874710083,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 3,
+          "score": 0.6826171875,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 4,
+          "score": 0.6732335090637207,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 5,
+          "score": 0.6701257228851318,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        }
+      ]
+    },
+    {
+      "question": "What evidence suggests that woodrat dwellings, even after being abandoned by their original builders, can still serve as significant habitats for other species, and what factors might influence a woodrat's decision to alter its established living area?",
+      "expected_doc_id": "33566",
+      "best_rank": 2,
+      "best_doc_rank": 1,
+      "best_source_rank": 2,
+      "best_source_overlap": 0.8911290322580645,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7311737537384033,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 2,
+          "score": 0.7171390056610107,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 3,
+          "score": 0.7145341634750366,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 4,
+          "score": 0.7066841125488281,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 5,
+          "score": 0.6945033073425293,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        }
+      ]
+    },
+    {
+      "question": "How does the narrative portray the evolving relationship between humans and the natural environment, particularly concerning the moose, across different historical periods and cultural perspectives?",
+      "expected_doc_id": "47224",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6470827460289001,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 2,
+          "score": 0.6364560127258301,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 3,
+          "score": 0.6250779628753662,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 4,
+          "score": 0.6221110224723816,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        },
+        {
+          "rank": 5,
+          "score": 0.6213341951370239,
+          "doc_id": "47224",
+          "title": "The Black Moose in Pennsylvania"
+        }
+      ]
+    },
+    {
+      "question": "What is the primary responsibility of both the National Park Service and the public regarding natural wonders like the Petrified Forest?",
+      "expected_doc_id": "51068",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7115834951400757,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 2,
+          "score": 0.7100708484649658,
+          "doc_id": "61402",
+          "title": "Sand dunes story"
+        },
+        {
+          "rank": 3,
+          "score": 0.7039303779602051,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 4,
+          "score": 0.6938604116439819,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.6807717680931091,
+          "doc_id": "59810",
+          "title": "Shenandoah National Park, Virginia"
+        }
+      ]
+    },
+    {
+      "question": "What overarching challenges and potential solutions are presented for effective wildlife protection and management across different geographical and cultural contexts?",
+      "expected_doc_id": "15134",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6134581565856934,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 2,
+          "score": 0.6104083061218262,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 3,
+          "score": 0.6056147813796997,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 4,
+          "score": 0.5958077907562256,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 5,
+          "score": 0.5926333665847778,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        }
+      ]
+    },
+    {
+      "question": "What are some ways individuals and organizations can contribute to preserving Louisiana's historical sites and artifacts?",
+      "expected_doc_id": "62235",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.789561927318573,
+          "doc_id": "62235",
+          "title": "Preserving Louisiana's Legacy: Everyone Can Help"
+        },
+        {
+          "rank": 2,
+          "score": 0.7464768290519714,
+          "doc_id": "62235",
+          "title": "Preserving Louisiana's Legacy: Everyone Can Help"
+        },
+        {
+          "rank": 3,
+          "score": 0.7458886504173279,
+          "doc_id": "62235",
+          "title": "Preserving Louisiana's Legacy: Everyone Can Help"
+        },
+        {
+          "rank": 4,
+          "score": 0.7228926420211792,
+          "doc_id": "62235",
+          "title": "Preserving Louisiana's Legacy: Everyone Can Help"
+        },
+        {
+          "rank": 5,
+          "score": 0.7146936655044556,
+          "doc_id": "62235",
+          "title": "Preserving Louisiana's Legacy: Everyone Can Help"
+        }
+      ]
+    },
+    {
+      "question": "How do the varied manifestations of volcanic activity, from subtle thermal shifts to catastrophic eruptions, influence the perception of risk and the scientific understanding of these geological phenomena across different regions?",
+      "expected_doc_id": "57530",
+      "best_rank": null,
+      "best_doc_rank": 3,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.703780472278595,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 2,
+          "score": 0.6749594211578369,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 3,
+          "score": 0.6670675277709961,
+          "doc_id": "57530",
+          "title": "Volcanoes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.6642429828643799,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        },
+        {
+          "rank": 5,
+          "score": 0.6636582612991333,
+          "doc_id": "46894",
+          "title": "Volcanoes"
+        }
+      ]
+    },
+    {
+      "question": "How does the Bureau of Biological Survey attempt to balance its mission of controlling injurious animals with the broader goal of protecting non-target wildlife and public interests?",
+      "expected_doc_id": "48709",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.6071428571428571,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7463372349739075,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        },
+        {
+          "rank": 2,
+          "score": 0.7409302592277527,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        },
+        {
+          "rank": 3,
+          "score": 0.7061185240745544,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        },
+        {
+          "rank": 4,
+          "score": 0.6466388702392578,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        },
+        {
+          "rank": 5,
+          "score": 0.6356520652770996,
+          "doc_id": "48709",
+          "title": "Information for the Guidance of Field Men and Cooperators of the Bureau of Biological Survey Engaged in the Control of Injurious Rodents and Predatory Animals"
+        }
+      ]
+    },
+    {
+      "question": "What primary environmental factor significantly influences both the developmental stages of a house fly and effective manure management strategies?",
+      "expected_doc_id": "18050",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6883935928344727,
+          "doc_id": "18050",
+          "title": "The House Fly and How to Suppress It"
+        },
+        {
+          "rank": 2,
+          "score": 0.679751992225647,
+          "doc_id": "18050",
+          "title": "The House Fly and How to Suppress It"
+        },
+        {
+          "rank": 3,
+          "score": 0.6739382743835449,
+          "doc_id": "18050",
+          "title": "The House Fly and How to Suppress It"
+        },
+        {
+          "rank": 4,
+          "score": 0.6528427600860596,
+          "doc_id": "18050",
+          "title": "The House Fly and How to Suppress It"
+        },
+        {
+          "rank": 5,
+          "score": 0.6417098045349121,
+          "doc_id": "18050",
+          "title": "The House Fly and How to Suppress It"
+        }
+      ]
+    },
+    {
+      "question": "What are some of the common animals found in Crater Lake National Park?",
+      "expected_doc_id": "65917",
+      "best_rank": null,
+      "best_doc_rank": 5,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7374994158744812,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6700109243392944,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 3,
+          "score": 0.6686241626739502,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6572185754776001,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 5,
+          "score": 0.6523224115371704,
+          "doc_id": "65917",
+          "title": "Crater Lake National Park, Oregon (1958)"
+        }
+      ]
+    },
+    {
+      "question": "How do the physical characteristics of Thomomys bottae specimens from Mesa Verde compare to those found near Durango and the Mancos River, and what might account for any observed differences?",
+      "expected_doc_id": "37317",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7441688179969788,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 2,
+          "score": 0.7393888831138611,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 3,
+          "score": 0.736763060092926,
+          "doc_id": "31280",
+          "title": "Mammals of the Grand Mesa, Colorado"
+        },
+        {
+          "rank": 4,
+          "score": 0.7338504791259766,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.7277187705039978,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        }
+      ]
+    },
+    {
+      "question": "What are the primary differences between the illegal hunting practices of seals and the consequences of excommunication within the Church, considering both the methods employed and the resulting impact on the affected parties?",
+      "expected_doc_id": "16030",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6018033027648926,
+          "doc_id": "16030",
+          "title": "The Great Round World and What Is Going On In It, Vol. 1, No. 49, October 14, 1897"
+        },
+        {
+          "rank": 2,
+          "score": 0.5807109475135803,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 3,
+          "score": 0.5715968608856201,
+          "doc_id": "16030",
+          "title": "The Great Round World and What Is Going On In It, Vol. 1, No. 49, October 14, 1897"
+        },
+        {
+          "rank": 4,
+          "score": 0.5695343613624573,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.565265953540802,
+          "doc_id": "17039",
+          "title": "The Salmon Fishery of Penobscot Bay and River in 1895-96"
+        }
+      ]
+    },
+    {
+      "question": "Why is documenting the current fish species in the Wakarusa River important?",
+      "expected_doc_id": "31513",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7268126010894775,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7204803824424744,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.7147648930549622,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.7047308087348938,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6964159607887268,
+          "doc_id": "31513",
+          "title": "Fishes of the Wakarusa River in Kansas"
+        }
+      ]
+    },
+    {
+      "question": "What is a recurring theme regarding organization and authority in the provided text?",
+      "expected_doc_id": "32124",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.529666006565094,
+          "doc_id": "57972",
+          "title": "Acid Rain and Our Nation's Capital: A Guide to Effects on Buildings and Monuments"
+        },
+        {
+          "rank": 2,
+          "score": 0.5216246247291565,
+          "doc_id": "63671",
+          "title": "Conservation Archaeology of the Richland/Chambers Dam and Reservoir"
+        },
+        {
+          "rank": 3,
+          "score": 0.5210586190223694,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.519961416721344,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.5168484449386597,
+          "doc_id": "73830",
+          "title": "Description of a plan for the improvement of the Central Park"
+        }
+      ]
+    },
+    {
+      "question": "How does the author characterize the potential for economic development in Labrador, considering both its natural resources and environmental challenges?",
+      "expected_doc_id": "14866",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.647956132888794,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 2,
+          "score": 0.6439793109893799,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 3,
+          "score": 0.6234463453292847,
+          "doc_id": "14866",
+          "title": "Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 4,
+          "score": 0.6226303577423096,
+          "doc_id": "15003",
+          "title": "Draft of a Plan for Beginning Animal Sanctuaries in Labrador"
+        },
+        {
+          "rank": 5,
+          "score": 0.6218053102493286,
+          "doc_id": "15134",
+          "title": "Supplement to Animal Sanctuaries in Labrador"
+        }
+      ]
+    },
+    {
+      "question": "What geological formations characterize the landscape along the southeastern boundary of Bryce Canyon National Park?",
+      "expected_doc_id": "59881",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7517107129096985,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 2,
+          "score": 0.7323142290115356,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 3,
+          "score": 0.7283910512924194,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6984970569610596,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 5,
+          "score": 0.6863880157470703,
+          "doc_id": "59881",
+          "title": "Bryce Canyon National Park, Utah (1952)"
+        }
+      ]
+    },
+    {
+      "question": "Why do woodrats prefer specific locations for their houses?",
+      "expected_doc_id": "33566",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7227392196655273,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 2,
+          "score": 0.7087852954864502,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 3,
+          "score": 0.7084717750549316,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 4,
+          "score": 0.7008263468742371,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        },
+        {
+          "rank": 5,
+          "score": 0.6817664504051208,
+          "doc_id": "33566",
+          "title": "Ecological Observations on the Woodrat, Neotoma floridana"
+        }
+      ]
+    },
+    {
+      "question": "What is a recurring theme regarding human interaction with the Teton region?",
+      "expected_doc_id": "59869",
+      "best_rank": null,
+      "best_doc_rank": 2,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.62957763671875,
+          "doc_id": "36128",
+          "title": "Grand Teton [Wyoming] National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.6274608373641968,
+          "doc_id": "59869",
+          "title": "Grand Teton National Park, Wyoming (1952)"
+        },
+        {
+          "rank": 3,
+          "score": 0.6227940917015076,
+          "doc_id": "36128",
+          "title": "Grand Teton [Wyoming] National Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.599867582321167,
+          "doc_id": "36128",
+          "title": "Grand Teton [Wyoming] National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.5944767594337463,
+          "doc_id": "59869",
+          "title": "Grand Teton National Park, Wyoming (1952)"
+        }
+      ]
+    },
+    {
+      "question": "How did the landscape of Glacier National Park evolve from its initial stream-eroded state to its present-day appearance, considering the impact of glacial activity?",
+      "expected_doc_id": "59836",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7130985260009766,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        },
+        {
+          "rank": 2,
+          "score": 0.7120741605758667,
+          "doc_id": "61400",
+          "title": "The Geology of Calvin Coolidge State Forest"
+        },
+        {
+          "rank": 3,
+          "score": 0.7105412483215332,
+          "doc_id": "62831",
+          "title": "Glaciers and Glaciation in Glacier National Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.7072665691375732,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        },
+        {
+          "rank": 5,
+          "score": 0.6898900270462036,
+          "doc_id": "36463",
+          "title": "Glacier National Park [Montana]"
+        }
+      ]
+    },
+    {
+      "question": "Compare the professional trajectories and posthumous legacies of the two botanists mentioned, highlighting their academic backgrounds, primary botanical focus, and the fate of their collections and research materials.?",
+      "expected_doc_id": "70983",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5674052238464355,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 2,
+          "score": 0.553776741027832,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 3,
+          "score": 0.5351952314376831,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 4,
+          "score": 0.5303376913070679,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 5,
+          "score": 0.5260820984840393,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "What should be avoided when installing a birdhouse to prevent predators from waiting for prey?",
+      "expected_doc_id": "61796",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6947453022003174,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 2,
+          "score": 0.666893720626831,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 3,
+          "score": 0.6651590466499329,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 4,
+          "score": 0.6622914671897888,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 5,
+          "score": 0.6613771915435791,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        }
+      ]
+    },
+    {
+      "question": "How does the National Park Service's dual mission to preserve both natural and historical elements manifest in the Mammoth Hot Springs area, considering the dynamic geological processes at play?",
+      "expected_doc_id": "66403",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.48118811881188117,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6959778070449829,
+          "doc_id": "66403",
+          "title": "Mammoth Hot Springs Area: Yellowstone National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.6441182494163513,
+          "doc_id": "66403",
+          "title": "Mammoth Hot Springs Area: Yellowstone National Park"
+        },
+        {
+          "rank": 3,
+          "score": 0.6368457078933716,
+          "doc_id": "66403",
+          "title": "Mammoth Hot Springs Area: Yellowstone National Park"
+        },
+        {
+          "rank": 4,
+          "score": 0.6321397423744202,
+          "doc_id": "66403",
+          "title": "Mammoth Hot Springs Area: Yellowstone National Park"
+        },
+        {
+          "rank": 5,
+          "score": 0.628557562828064,
+          "doc_id": "66403",
+          "title": "Mammoth Hot Springs Area: Yellowstone National Park"
+        }
+      ]
+    },
+    {
+      "question": "How does the author characterize the geographical and spiritual significance of the Garden of Eden within the context of the United States, and what parallels are drawn to other historically significant lands?",
+      "expected_doc_id": "40051",
+      "best_rank": 5,
+      "best_doc_rank": 1,
+      "best_source_rank": 5,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6389210820198059,
+          "doc_id": "40051",
+          "title": "Found at Last: the Veritable Garden of Eden"
+        },
+        {
+          "rank": 2,
+          "score": 0.6253362894058228,
+          "doc_id": "40051",
+          "title": "Found at Last: the Veritable Garden of Eden"
+        },
+        {
+          "rank": 3,
+          "score": 0.6219537258148193,
+          "doc_id": "40051",
+          "title": "Found at Last: the Veritable Garden of Eden"
+        },
+        {
+          "rank": 4,
+          "score": 0.6149691939353943,
+          "doc_id": "40051",
+          "title": "Found at Last: the Veritable Garden of Eden"
+        },
+        {
+          "rank": 5,
+          "score": 0.6124432682991028,
+          "doc_id": "40051",
+          "title": "Found at Last: the Veritable Garden of Eden"
+        }
+      ]
+    },
+    {
+      "question": "What common characteristic describes the destruction caused by the tornado across different locations?",
+      "expected_doc_id": "25970",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6263892650604248,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 2,
+          "score": 0.623801589012146,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 3,
+          "score": 0.6229713559150696,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 4,
+          "score": 0.6133556365966797,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        },
+        {
+          "rank": 5,
+          "score": 0.6131613254547119,
+          "doc_id": "25970",
+          "title": "A Full Description of the Great Tornado in Chester County, Pa."
+        }
+      ]
+    },
+    {
+      "question": "What is a primary concern when designing and maintaining a sewage disposal system on a farm?",
+      "expected_doc_id": "62605",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6975394487380981,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        },
+        {
+          "rank": 2,
+          "score": 0.6830122470855713,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        },
+        {
+          "rank": 3,
+          "score": 0.6811004877090454,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        },
+        {
+          "rank": 4,
+          "score": 0.661491870880127,
+          "doc_id": "62676",
+          "title": "Sewage Disposal on the Farm, and Protection of Drinking Water"
+        },
+        {
+          "rank": 5,
+          "score": 0.6573346853256226,
+          "doc_id": "62605",
+          "title": "Sewage and Garbage Disposal on the Farm"
+        }
+      ]
+    },
+    {
+      "question": "How does the author describe the relationship between human constructs and the natural grandeur of the Grand Canyon?",
+      "expected_doc_id": "12298",
+      "best_rank": null,
+      "best_doc_rank": 4,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6315841674804688,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 2,
+          "score": 0.6275027990341187,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 3,
+          "score": 0.614655613899231,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 4,
+          "score": 0.611079216003418,
+          "doc_id": "12298",
+          "title": "The Grand Cañon of the Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.6106451749801636,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        }
+      ]
+    },
+    {
+      "question": "What common theme emerges when considering the various methods for attracting and supporting birds, as well as the potential challenges in maintaining their habitats?",
+      "expected_doc_id": "61796",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6437830924987793,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 2,
+          "score": 0.6284456849098206,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 3,
+          "score": 0.6230505108833313,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 4,
+          "score": 0.617603063583374,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        },
+        {
+          "rank": 5,
+          "score": 0.6143296360969543,
+          "doc_id": "61796",
+          "title": "For the Birds"
+        }
+      ]
+    },
+    {
+      "question": "What is the primary nutritional focus for sustaining human energy and productivity, especially during challenging times?",
+      "expected_doc_id": "32472",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.5474308300395256,
+      "keyword_recall": 0.6666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6134072542190552,
+          "doc_id": "32472",
+          "title": "Food in War Time"
+        },
+        {
+          "rank": 2,
+          "score": 0.5892858505249023,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 3,
+          "score": 0.582228422164917,
+          "doc_id": "32472",
+          "title": "Food in War Time"
+        },
+        {
+          "rank": 4,
+          "score": 0.5756799578666687,
+          "doc_id": "32472",
+          "title": "Food in War Time"
+        },
+        {
+          "rank": 5,
+          "score": 0.5676047205924988,
+          "doc_id": "32472",
+          "title": "Food in War Time"
+        }
+      ]
+    },
+    {
+      "question": "What overarching themes are explored in these diverse writings?",
+      "expected_doc_id": "47728",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5530687570571899,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        },
+        {
+          "rank": 2,
+          "score": 0.5451849699020386,
+          "doc_id": "1022",
+          "title": "Walking"
+        },
+        {
+          "rank": 3,
+          "score": 0.5424273014068604,
+          "doc_id": "1022",
+          "title": "Walking"
+        },
+        {
+          "rank": 4,
+          "score": 0.5366870164871216,
+          "doc_id": "1022",
+          "title": "Walking"
+        },
+        {
+          "rank": 5,
+          "score": 0.5334365963935852,
+          "doc_id": "1022",
+          "title": "Walking"
+        }
+      ]
+    },
+    {
+      "question": "What percentage of corn was found in the pellets collected between December 14th and 27th?",
+      "expected_doc_id": "33545",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6547607183456421,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.631659746170044,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.6308172941207886,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.6215132474899292,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6087746620178223,
+          "doc_id": "33545",
+          "title": "Food of the Crow, Corvus brachyrhynchos Brehm, in South-central Kansas"
+        }
+      ]
+    },
+    {
+      "question": "What is the scientific name for the Golden-mantled Ground Squirrel?",
+      "expected_doc_id": "31280",
+      "best_rank": 4,
+      "best_doc_rank": 4,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.908289241622575,
+      "keyword_recall": 0.8,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.684677243232727,
+          "doc_id": "53539",
+          "title": "Road Guide to Lassen Volcanic National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.6783994436264038,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 3,
+          "score": 0.6473390460014343,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        },
+        {
+          "rank": 4,
+          "score": 0.6421716213226318,
+          "doc_id": "31280",
+          "title": "Mammals of the Grand Mesa, Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.6407128572463989,
+          "doc_id": "59885",
+          "title": "Wild Animals of the Rockies"
+        }
+      ]
+    },
+    {
+      "question": "How does the author illustrate the importance of strategic investment in soil nutrients for agricultural profitability and sustainability?",
+      "expected_doc_id": "4525",
+      "best_rank": 4,
+      "best_doc_rank": 1,
+      "best_source_rank": 4,
+      "best_source_overlap": 0.8389830508474576,
+      "keyword_recall": 0.8333333333333334,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6615745425224304,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 2,
+          "score": 0.6504344940185547,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 3,
+          "score": 0.6421223282814026,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 4,
+          "score": 0.6359387040138245,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 5,
+          "score": 0.634144127368927,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        }
+      ]
+    },
+    {
+      "question": "Describe the typical breeding patterns of opossums in northeastern Kansas, including the timing of first litters and how environmental factors or individual variations might influence this schedule.?",
+      "expected_doc_id": "37199",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7176732420921326,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7143968343734741,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.6867551803588867,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.683131754398346,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6776376366615295,
+          "doc_id": "37199",
+          "title": "Ecology of the Opossum on a Natural Area in Northeastern Kansas"
+        }
+      ]
+    },
+    {
+      "question": "Why did Ganier's observations in Mississippi differ from the typical clutch size reported for Mississippi Kites?",
+      "expected_doc_id": "33412",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7145420908927917,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7057241201400757,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.6987380981445312,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.6900795698165894,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6833961009979248,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        }
+      ]
+    },
+    {
+      "question": "What are two primary food-fuels for the human body, and what is a readily available substitute for one of them that can also be found in fruits?",
+      "expected_doc_id": "32472",
+      "best_rank": null,
+      "best_doc_rank": 3,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6350606679916382,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 2,
+          "score": 0.624880313873291,
+          "doc_id": "4525",
+          "title": "The Farm That Won't Wear Out"
+        },
+        {
+          "rank": 3,
+          "score": 0.6210359334945679,
+          "doc_id": "32472",
+          "title": "Food in War Time"
+        },
+        {
+          "rank": 4,
+          "score": 0.6105560660362244,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 5,
+          "score": 0.6096720695495605,
+          "doc_id": "66246",
+          "title": "Our Atomic World: The Story of Atomic Energy"
+        }
+      ]
+    },
+    {
+      "question": "What geological processes are indicated by the presence of a 'nick point' and how do these processes contribute to the formation and development of natural bridges?",
+      "expected_doc_id": "51640",
+      "best_rank": 2,
+      "best_doc_rank": 2,
+      "best_source_rank": 2,
+      "best_source_overlap": 1.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6410683989524841,
+          "doc_id": "59811",
+          "title": "Rainbow Bridge National Monument, Utah (1951)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6306724548339844,
+          "doc_id": "51640",
+          "title": "A Guide to Natural Bridges National Monument, Utah"
+        },
+        {
+          "rank": 3,
+          "score": 0.6239258050918579,
+          "doc_id": "51640",
+          "title": "A Guide to Natural Bridges National Monument, Utah"
+        },
+        {
+          "rank": 4,
+          "score": 0.6194874048233032,
+          "doc_id": "65917",
+          "title": "Crater Lake National Park, Oregon (1958)"
+        },
+        {
+          "rank": 5,
+          "score": 0.6116535067558289,
+          "doc_id": "59262",
+          "title": "The Underworld of Oregon Caves National Monument"
+        }
+      ]
+    },
+    {
+      "question": "What is the primary subject discussed across the provided text?",
+      "expected_doc_id": "68145",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5435413122177124,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 2,
+          "score": 0.5413213968276978,
+          "doc_id": "70983",
+          "title": "The Ohio naturalist, Vol. 1, No. 3, January, 1901"
+        },
+        {
+          "rank": 3,
+          "score": 0.539658784866333,
+          "doc_id": "33935",
+          "title": "Food Habits of the Thrushes of the United States"
+        },
+        {
+          "rank": 4,
+          "score": 0.5283251404762268,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.5275312662124634,
+          "doc_id": "56704",
+          "title": "Sanctuary: A Bird Masque"
+        }
+      ]
+    },
+    {
+      "question": "Why should the entire wall surface of slaughterhouses be covered with a hard, smooth, and impervious material?",
+      "expected_doc_id": "67634",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7314128875732422,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 2,
+          "score": 0.6837360858917236,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 3,
+          "score": 0.6700304746627808,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 4,
+          "score": 0.6531930565834045,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        },
+        {
+          "rank": 5,
+          "score": 0.6517684459686279,
+          "doc_id": "67634",
+          "title": "Report of the Sanitary Committee of the Commissioners of Sewers of the City of London, together with a report of the Medical Officer of Health on the objections raised by the Butchers' Trade Society to the bye-laws proposed for the regulation of slaughter-houses"
+        }
+      ]
+    },
+    {
+      "question": "Describe the distinguishing physical characteristics of Thomomys bottae specimens found near Durango, specifically focusing on their cranial features and dorsal markings.?",
+      "expected_doc_id": "37317",
+      "best_rank": 1,
+      "best_doc_rank": 1,
+      "best_source_rank": 1,
+      "best_source_overlap": 0.18509316770186335,
+      "keyword_recall": 0.2,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7370144128799438,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 2,
+          "score": 0.7135098576545715,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 3,
+          "score": 0.7123219966888428,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 4,
+          "score": 0.7026724815368652,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 5,
+          "score": 0.702511727809906,
+          "doc_id": "31683",
+          "title": "Noteworthy Mammals from Sinaloa, Mexico"
+        }
+      ]
+    },
+    {
+      "question": "What recurring challenges are highlighted regarding the management and understanding of humpback whale populations in the region?",
+      "expected_doc_id": "37101",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7040641903877258,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 2,
+          "score": 0.6924625635147095,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 3,
+          "score": 0.6761534214019775,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 4,
+          "score": 0.6724982261657715,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        },
+        {
+          "rank": 5,
+          "score": 0.6723728775978088,
+          "doc_id": "37101",
+          "title": "Humpback Whales in Glacier Bay National Monument, Alaska"
+        }
+      ]
+    },
+    {
+      "question": "How does the author illustrate the conflict between immediate human desires and long-term environmental and societal well-being across different contexts?",
+      "expected_doc_id": "15003",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5824328660964966,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 2,
+          "score": 0.5604522228240967,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 3,
+          "score": 0.5539963245391846,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        },
+        {
+          "rank": 4,
+          "score": 0.5497632026672363,
+          "doc_id": "684",
+          "title": "Worldwide Effects of Nuclear War: Some Perspectives"
+        },
+        {
+          "rank": 5,
+          "score": 0.542816162109375,
+          "doc_id": "48038",
+          "title": "Atoms, Nature, and Man: Man-made Radioactivity in the Environment"
+        }
+      ]
+    },
+    {
+      "question": "How do both astronomical factors and human activities contribute to the formation and expansion of arid regions?",
+      "expected_doc_id": "47108",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6502645611763,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 2,
+          "score": 0.6189641356468201,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 3,
+          "score": 0.6180847883224487,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 4,
+          "score": 0.6137547492980957,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 5,
+          "score": 0.6112706661224365,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        }
+      ]
+    },
+    {
+      "question": "What is a notable behavioral characteristic of the Mississippi Kite mentioned in the observations?",
+      "expected_doc_id": "33412",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.3333333333333333,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7292373180389404,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 2,
+          "score": 0.7247005701065063,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.7024737596511841,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 4,
+          "score": 0.6910849809646606,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 5,
+          "score": 0.6905657052993774,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        }
+      ]
+    },
+    {
+      "question": "Why is the Grand Canyon considered an extreme example of erosion?",
+      "expected_doc_id": "48126",
+      "best_rank": null,
+      "best_doc_rank": 2,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.6,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7178663611412048,
+          "doc_id": "36128",
+          "title": "Grand Teton [Wyoming] National Park"
+        },
+        {
+          "rank": 2,
+          "score": 0.7169816493988037,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 3,
+          "score": 0.7102559208869934,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        },
+        {
+          "rank": 4,
+          "score": 0.7088382244110107,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 5,
+          "score": 0.704582929611206,
+          "doc_id": "48126",
+          "title": "Ancient Landscapes of the Grand Canyon Region"
+        }
+      ]
+    },
+    {
+      "question": "What is a primary benefit of the proposed barrage projects mentioned in the text?",
+      "expected_doc_id": "62224",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.16666666666666666,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.6868008375167847,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 2,
+          "score": 0.6407723426818848,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 3,
+          "score": 0.6172943711280823,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 4,
+          "score": 0.61479651927948,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        },
+        {
+          "rank": 5,
+          "score": 0.5984558463096619,
+          "doc_id": "62224",
+          "title": "The Great Thames Barrage"
+        }
+      ]
+    },
+    {
+      "question": "What is a recurring theme regarding adaptation to the desert environment in the provided text?",
+      "expected_doc_id": "49192",
+      "best_rank": null,
+      "best_doc_rank": null,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5985622406005859,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 2,
+          "score": 0.5951347351074219,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 3,
+          "score": 0.5867366790771484,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 4,
+          "score": 0.5812237858772278,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 5,
+          "score": 0.5781857967376709,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        }
+      ]
+    },
+    {
+      "question": "How do the various natural elements described, such as wind, sand, and animal movement, collectively contribute to the dynamic and ever-changing landscape of the dunes?",
+      "expected_doc_id": "61402",
+      "best_rank": null,
+      "best_doc_rank": 1,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.7064965963363647,
+          "doc_id": "61402",
+          "title": "Sand dunes story"
+        },
+        {
+          "rank": 2,
+          "score": 0.6716955900192261,
+          "doc_id": "61402",
+          "title": "Sand dunes story"
+        },
+        {
+          "rank": 3,
+          "score": 0.6713239550590515,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 4,
+          "score": 0.6685972213745117,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        },
+        {
+          "rank": 5,
+          "score": 0.6515727043151855,
+          "doc_id": "47108",
+          "title": "Deserts: Geology and Resources"
+        }
+      ]
+    },
+    {
+      "question": "What are the primary natural and man-made elements that define the accessibility and geological history of Crater Lake National Park?",
+      "expected_doc_id": "65917",
+      "best_rank": null,
+      "best_doc_rank": 4,
+      "best_source_rank": null,
+      "best_source_overlap": 0.0,
+      "keyword_recall": 0.5,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.699647068977356,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 2,
+          "score": 0.6802983283996582,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 3,
+          "score": 0.6786007881164551,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        },
+        {
+          "rank": 4,
+          "score": 0.6766023635864258,
+          "doc_id": "65917",
+          "title": "Crater Lake National Park, Oregon (1958)"
+        },
+        {
+          "rank": 5,
+          "score": 0.6625117063522339,
+          "doc_id": "48993",
+          "title": "Crater Lake National Park, Oregon (1938)"
+        }
+      ]
+    },
+    {
+      "question": "Describe the characteristics of a catkin, including its composition and typical gender presentation.?",
+      "expected_doc_id": "53535",
+      "best_rank": 5,
+      "best_doc_rank": 4,
+      "best_source_rank": 5,
+      "best_source_overlap": 0.22870813397129186,
+      "keyword_recall": 1.0,
+      "suggested_action": "inspect_top_results_and_split_or_merge",
+      "top_results": [
+        {
+          "rank": 1,
+          "score": 0.5291430950164795,
+          "doc_id": "37317",
+          "title": "Geographic Variation in the Pocket Gopher, Thomomys bottae, in Colorado"
+        },
+        {
+          "rank": 2,
+          "score": 0.5138188600540161,
+          "doc_id": "33412",
+          "title": "Observations on the Mississippi Kite in Southwestern Kansas"
+        },
+        {
+          "rank": 3,
+          "score": 0.5037161707878113,
+          "doc_id": "24568",
+          "title": "Aboriginal American Weaving"
+        },
+        {
+          "rank": 4,
+          "score": 0.5028963685035706,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        },
+        {
+          "rank": 5,
+          "score": 0.5019834041595459,
+          "doc_id": "53535",
+          "title": "Common trees of Pennsylvania"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "overlong_count": 33,
+    "near_boundary_count": 0,
+    "retrieval_issue_count": 111
+  }
+}

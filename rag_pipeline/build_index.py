@@ -62,6 +62,15 @@ def build_artifacts(
     repair_margin: float | None,
     sentence_window_size: int | None,
     sentence_window_overlap: int | None,
+    parent_child_count: int | None,
+    agent_window_words: int | None,
+    agent_max_units: int | None,
+    agent_max_input_chars: int | None,
+    agent_max_output_tokens: int | None,
+    agent_temperature: float | None,
+    agent_model: str | None,
+    use_agent: bool | None,
+    fallback_threshold: float | None,
     fixed_size: int | None,
     fixed_overlap: int | None,
 ) -> Path:
@@ -83,12 +92,23 @@ def build_artifacts(
         "repair_margin": repair_margin,
         "sentence_window_size": sentence_window_size,
         "sentence_window_overlap": sentence_window_overlap,
+        "parent_child_count": parent_child_count,
+        "agent_window_words": agent_window_words,
+        "agent_max_units": agent_max_units,
+        "agent_max_input_chars": agent_max_input_chars,
+        "agent_max_output_tokens": agent_max_output_tokens,
+        "agent_temperature": agent_temperature,
+        "agent_model": agent_model,
+        "use_agent": use_agent,
+        "fallback_threshold": fallback_threshold,
         "size": fixed_size,
         "overlap": fixed_overlap,
     }
     chunker = create_chunker(chunker_name, **chunker_params)
     out_dir = artifacts_dir / chunker.name
+    eval_dir = artifacts_dir / "evaluations" / chunker.name
     out_dir.mkdir(parents=True, exist_ok=True)
+    eval_dir.mkdir(parents=True, exist_ok=True)
 
     started = time.perf_counter()
     documents = load_documents(data_dir, limit=limit)
@@ -180,7 +200,8 @@ def build_artifacts(
 
     print("Evaluating chunks...", flush=True)
     chunk_eval = evaluate_chunks_file(chunks_path)
-    write_json(out_dir / "chunk_eval.json", chunk_eval)
+    chunk_eval_path = eval_dir / "chunk_eval.json"
+    write_json(chunk_eval_path, chunk_eval)
 
     manifest = {
         "chunker": chunker.name,
@@ -198,7 +219,7 @@ def build_artifacts(
             "chunks": str(chunks_path),
             "embeddings": str(embeddings_path),
             "faiss_index": str(index_path),
-            "chunk_eval": str(out_dir / "chunk_eval.json"),
+            "chunk_eval": str(chunk_eval_path),
         },
     }
     write_json(out_dir / "manifest.json", manifest)
@@ -237,6 +258,19 @@ def main() -> None:
     parser.add_argument("--repair-margin", type=float, default=None)
     parser.add_argument("--sentence-window-size", type=int, default=None)
     parser.add_argument("--sentence-window-overlap", type=int, default=None)
+    parser.add_argument("--parent-child-count", type=int, default=None)
+    parser.add_argument("--agent-window-words", type=int, default=None)
+    parser.add_argument("--agent-max-units", type=int, default=None)
+    parser.add_argument("--agent-max-input-chars", type=int, default=None)
+    parser.add_argument("--agent-max-output-tokens", type=int, default=None)
+    parser.add_argument("--agent-temperature", type=float, default=None)
+    parser.add_argument("--agent-model", default=None)
+    parser.add_argument(
+        "--disable-agent",
+        action="store_true",
+        help="Build agentic_gemini with deterministic fallback instead of Gemini calls.",
+    )
+    parser.add_argument("--fallback-threshold", type=float, default=None)
     parser.add_argument("--fixed-size", type=int, default=None)
     parser.add_argument("--fixed-overlap", type=int, default=None)
     args = parser.parse_args()
@@ -265,6 +299,15 @@ def main() -> None:
         repair_margin=args.repair_margin,
         sentence_window_size=args.sentence_window_size,
         sentence_window_overlap=args.sentence_window_overlap,
+        parent_child_count=args.parent_child_count,
+        agent_window_words=args.agent_window_words,
+        agent_max_units=args.agent_max_units,
+        agent_max_input_chars=args.agent_max_input_chars,
+        agent_max_output_tokens=args.agent_max_output_tokens,
+        agent_temperature=args.agent_temperature,
+        agent_model=args.agent_model,
+        use_agent=False if args.disable_agent else None,
+        fallback_threshold=args.fallback_threshold,
         fixed_size=args.fixed_size,
         fixed_overlap=args.fixed_overlap,
     )

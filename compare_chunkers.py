@@ -13,8 +13,12 @@ def main() -> None:
 
     rows = []
     for path in sorted(args.artifacts_dir.iterdir() if args.artifacts_dir.exists() else []):
+        if path.name in {"evaluations", "answer_quality", "answer_quality_smoke"}:
+            continue
         manifest_path = path / "manifest.json"
-        eval_path = path / "chunk_eval.json"
+        eval_path = args.artifacts_dir / "evaluations" / path.name / "chunk_eval.json"
+        if not eval_path.exists():
+            eval_path = path / "chunk_eval.json"
         if not manifest_path.exists() or not eval_path.exists():
             continue
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -49,4 +53,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

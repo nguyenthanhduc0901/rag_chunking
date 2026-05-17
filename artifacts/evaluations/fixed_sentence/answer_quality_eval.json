@@ -1,0 +1,661 @@
+{
+  "chunker": "fixed_sentence",
+  "artifact_dir": "artifacts/fixed_sentence",
+  "model": "gemini-2.5-flash",
+  "top_k": 5,
+  "elapsed_seconds": 51.64,
+  "question_count": 20,
+  "question_scope_counts": {
+    "local": 7,
+    "multi_paragraph": 7,
+    "book_theme": 6
+  },
+  "summary": {
+    "samples": 20,
+    "pass_rate": 0.85,
+    "hallucination_rate": 0.0,
+    "correctness_avg": 4.15,
+    "faithfulness_avg": 4.5,
+    "completeness_avg": 4.15,
+    "context_usefulness_avg": 4.3,
+    "citation_support_avg": 4.55,
+    "overall_avg": 4.33,
+    "by_scope": {
+      "book_theme": {
+        "samples": 6,
+        "pass_rate": 0.6666666666666666,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 3.1666666666666665,
+        "faithfulness_avg": 3.5,
+        "completeness_avg": 3.1666666666666665,
+        "context_usefulness_avg": 3.3333333333333335,
+        "citation_support_avg": 3.5,
+        "overall_avg": 3.333333333333333
+      },
+      "local": {
+        "samples": 7,
+        "pass_rate": 1.0,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 5.0,
+        "faithfulness_avg": 5.0,
+        "completeness_avg": 5.0,
+        "context_usefulness_avg": 5.0,
+        "citation_support_avg": 5.0,
+        "overall_avg": 5.0
+      },
+      "multi_paragraph": {
+        "samples": 7,
+        "pass_rate": 0.8571428571428571,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 4.142857142857143,
+        "faithfulness_avg": 4.857142857142857,
+        "completeness_avg": 4.142857142857143,
+        "context_usefulness_avg": 4.428571428571429,
+        "citation_support_avg": 5.0,
+        "overall_avg": 4.514285714285714
+      }
+    }
+  },
+  "rows": [
+    {
+      "question_id": "q00048",
+      "question_scope": "local",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How do archaeologists reconstruct the history of early inhabitants in Louisiana, given that these groups existed long before European arrival?",
+      "answer": "Archaeologists reconstruct the history of early inhabitants in Louisiana by studying the traces of their activities, such as where they cooked, built houses, held religious ceremonies, made tools, or dumped trash [1]. If these traces are undisturbed, archaeologists can determine who left them, when they were left, and what activities were associated with them [1, 5]. This process involves careful survey and excavation, where archaeologists examine artifacts on the ground, record concentrations as sites, and evaluate each site's size and age to understand its contribution to Louisiana's past [2].",
+      "retrieved_doc_ids": [
+        "62235",
+        "62235",
+        "62235",
+        "62235",
+        "62235"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:62235:000014",
+        "fixed_sentence:62235:000017",
+        "fixed_sentence:62235:000006",
+        "fixed_sentence:62235:000007",
+        "fixed_sentence:62235:000015"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how archaeologists reconstruct the history of early inhabitants in Louisiana, aligning with the gold standard. It correctly identifies the methods and types of evidence used, and the citations are appropriate."
+    },
+    {
+      "question_id": "q00011",
+      "question_scope": "multi_paragraph",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What are the ideal conditions and placement for a barometer to ensure accurate readings?",
+      "answer": "For accurate readings, a barometer should be placed to avoid side blows and be far enough from the deck above to allow for the spring of the metal arm during sudden ship movements [1]. If there's a risk of the instrument striking something when the vessel is inclined, soft padding or a light elastic cord should be used to prevent impact without interfering with the instrument's free swing [1]. When setting the barometer, the vernier straight edge, the top of the mercury, and the observer's eye should be on the same level, with the edge just touching the middle and uppermost point of the column [3]. It's important to look squarely, or at right angles, to the scale, and light or something white behind the tube can help in accurately setting the vernier and reading off [3]. After fixing the instrument, gentle taps on the bottom are needed to move the mercury [1].",
+      "retrieved_doc_ids": [
+        "23921",
+        "23921",
+        "23921",
+        "23921",
+        "23921"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:23921:000074",
+        "fixed_sentence:23921:000077",
+        "fixed_sentence:23921:000052",
+        "fixed_sentence:23921:000009",
+        "fixed_sentence:23921:000073"
+      ],
+      "correctness": 3,
+      "faithfulness": 5,
+      "completeness": 3,
+      "context_usefulness": 4,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer is faithful to the retrieved context and provides accurate information regarding barometer placement and reading. However, it misses some key aspects mentioned in the gold answer hint, such as avoiding direct heat sources, sudden temperature changes, and wind, and being placed amidships or below the lowest battery/gun-deck in a ship of war. The answer focuses more on the physical protection of the barometer and the reading process rather than the environmental conditions for accuracy."
+    },
+    {
+      "question_id": "q00149",
+      "question_scope": "book_theme",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "What overarching factor consistently influences the dietary choices of crows, as evidenced by their consumption patterns of various food sources?",
+      "answer": "The overarching factor consistently influencing the dietary choices of crows is their euryphagous nature, meaning they consume a wide variety of foods [1, 4]. This adaptability allows them to exert a stabilizing influence on prey populations and the biotic community [1]. Their diet varies based on the time of year and local availability, with staple foods changing seasonally (e.g., wheat in general, but grain sorghum, sunflower seeds, and corn for wintering crows) [1, 2, 5].",
+      "retrieved_doc_ids": [
+        "33545",
+        "33545",
+        "33545",
+        "33545",
+        "33545"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:33545:000052",
+        "fixed_sentence:33545:000051",
+        "fixed_sentence:33545:000034",
+        "fixed_sentence:33545:000010",
+        "fixed_sentence:33545:000022"
+      ],
+      "correctness": 3,
+      "faithfulness": 4,
+      "completeness": 3,
+      "context_usefulness": 4,
+      "citation_support": 4,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies euryphagous nature and adaptability as factors, but the gold answer emphasizes \"availability of food sources\" as the primary driver. The answer does mention \"local availability\" and \"staple foods changing seasonally\" which aligns with the gold answer, but it's not the primary focus of the answer's opening statement. The answer is mostly faithful to the context and provides relevant citations."
+    },
+    {
+      "question_id": "q00150",
+      "question_scope": "local",
+      "question_type": "concept",
+      "difficulty": "medium",
+      "question": "What is the primary mechanism by which clover and other legumes acquire nitrogen from the atmosphere?",
+      "answer": "Clover and other legumes acquire nitrogen from the atmosphere through bacteria that inhabit their root tubercles [1, 2]. These bacteria allow the legumes to feed upon the inexhaustible supply of atmospheric nitrogen that freely enters the pores of the soil [1, 2]. When grown on soils of normal productive capacity, legumes secure about two-thirds of their total nitrogen from the air [4].",
+      "retrieved_doc_ids": [
+        "4525",
+        "4525",
+        "4525",
+        "4525",
+        "4525"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:4525:000026",
+        "fixed_sentence:4525:000025",
+        "fixed_sentence:4525:000032",
+        "fixed_sentence:4525:000027",
+        "fixed_sentence:4525:000029"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies the primary mechanism (bacteria in root tubercles) and provides additional relevant details about the proportion of nitrogen secured from the air, all supported by the provided context."
+    },
+    {
+      "question_id": "q00007",
+      "question_scope": "multi_paragraph",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What is the process by which El Morro's vertical walls are maintained and how does it relate to the formation of the box canyon?",
+      "answer": "El Morro maintains its vertical walls by breaking into blocks that fall away from the main sandstone mass, leaving a vertical joint face [1]. This process is related to the formation of the box canyon because the steep canyon walls are essentially one side of a joint, with the material on the other side having eroded away [1]. The initial cracking of the sandstone into joints was caused by great pressures from overlying rocks and geological movements [2]. Running water and wind then removed overlying rocks, allowing water to enter these joints, and through freezing and thawing, broke up the rock into fragments that were washed away [1].",
+      "retrieved_doc_ids": [
+        "65891",
+        "65891",
+        "65891",
+        "59867",
+        "65891"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:65891:000048",
+        "fixed_sentence:65891:000047",
+        "fixed_sentence:65891:000043",
+        "fixed_sentence:59867:000008",
+        "fixed_sentence:65891:000044"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how El Morro's vertical walls are maintained and how this relates to the box canyon's formation, citing relevant context."
+    },
+    {
+      "question_id": "q00090",
+      "question_scope": "book_theme",
+      "question_type": "concept",
+      "difficulty": "hard",
+      "question": "What overarching trend in salmon populations can be inferred from the varying catch numbers across different locations and timeframes mentioned in the text?",
+      "answer": "The overarching trend in salmon populations shows fluctuations, with a general tendency towards decrease in the Penobscot Bay and River fishery from 1880 to 1895, despite a significant increase in catch in 1896 [2, 5].",
+      "retrieved_doc_ids": [
+        "17039",
+        "17039",
+        "37101",
+        "37101",
+        "17039"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:17039:000005",
+        "fixed_sentence:17039:000013",
+        "fixed_sentence:37101:000113",
+        "fixed_sentence:37101:000044",
+        "fixed_sentence:17039:000007"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately identifies the overarching trend of decline with fluctuations, as supported by the provided context and gold answer hint. The citations are appropriate and support the claims made."
+    },
+    {
+      "question_id": "q00300",
+      "question_scope": "local",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "Why have many of the Mesa Verde cliff dwellings remained unexplored by modern individuals?",
+      "answer": "Many of the Mesa Verde cliff dwellings have remained unexplored by modern individuals because little of the Mesa Verde has been explored in modern times, especially the remote parts, over half of which is Ute Indian Reservation. Hundreds of ruins have not been entered in modern times, and only a small number in the more accessible areas have been entered [3].",
+      "retrieved_doc_ids": [
+        "57422",
+        "57422",
+        "57422",
+        "57422",
+        "57422"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:57422:000114",
+        "fixed_sentence:57422:000060",
+        "fixed_sentence:57422:000076",
+        "fixed_sentence:57422:000086",
+        "fixed_sentence:57422:000097"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately explains why many Mesa Verde cliff dwellings remain unexplored, citing the remote nature of the Ute Indian Reservation, which aligns perfectly with the gold standard and retrieved context."
+    },
+    {
+      "question_id": "q00062",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "easy",
+      "question": "What are some examples of animals that are protected by local populations or laws, but are still hunted by certain groups?",
+      "answer": "The mountain goat is an example of an animal that is protected by law and its habitat, but is still hunted by certain groups. In southern British Columbia, Indians, protected by treaty rights, kill mountain goats with impunity, despite laws governing white hunters [2]. The Kootenays and Stoneys, specifically, are noted as \"game murderers\" who hunt extensively in the Rocky Mountains [2, 3].",
+      "retrieved_doc_ids": [
+        "59885",
+        "48430",
+        "48430",
+        "59885",
+        "14866"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:59885:000012",
+        "fixed_sentence:48430:000051",
+        "fixed_sentence:48430:000052",
+        "fixed_sentence:59885:000015",
+        "fixed_sentence:14866:000012"
+      ],
+      "correctness": 3,
+      "faithfulness": 5,
+      "completeness": 3,
+      "context_usefulness": 4,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies mountain goats as an example and accurately describes the hunting by Indigenous groups. However, it misses the other examples from the gold answer hint (gulls, cormorants, ruffed grouse) which are not present in the retrieved context."
+    },
+    {
+      "question_id": "q00248",
+      "question_scope": "book_theme",
+      "question_type": "why_how",
+      "difficulty": "easy",
+      "question": "Why might the calculated home range size for opossums be inaccurate, according to the text?",
+      "answer": "The calculated home range size for opossums might be inaccurate because various unknown or unmeasurable factors distort the data [1, 2]. Specifically, for opossums caught at five or more stations, the longer time involved might mean some had altered their ranges to invade new areas [1]. Also, ranges might be broadly oval rather than circular, causing the maximum measured diameter to exceed the average range diameter [1]. For animals with home ranges partly outside the study area, recorded captures would represent only one sector, leading to computed radii for individual home ranges being too small and the average home range figure being erroneously low [1]. This error is greatest for those caught at only two locations and least for those trapped at the most different locations [1].",
+      "retrieved_doc_ids": [
+        "37199",
+        "37199",
+        "37199",
+        "29688",
+        "37199"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:37199:000027",
+        "fixed_sentence:37199:000028",
+        "fixed_sentence:37199:000025",
+        "fixed_sentence:29688:000012",
+        "fixed_sentence:37199:000071"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately explains why the calculated home range size for opossums might be inaccurate, citing all the reasons mentioned in the gold source and retrieved context. It correctly identifies that ranges extending beyond the study area lead to incomplete capture data and erroneously low estimates. The citations are accurate and support the claims made."
+    },
+    {
+      "question_id": "q00001",
+      "question_scope": "local",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "Which specific varieties of hickory are mentioned in the text?",
+      "answer": "The specific varieties of hickory mentioned in the text are: Shagbark Hickory (_Carya ovata_) [1], Mockernut Hickory (_Carya tomentosa_) [2], Bitternut Hickory (_Carya cordiformis_) [3], Pignut Hickory (_Carya glabra_) [4], and Shellbark Hickory (_Carya laciniosa_) [5].",
+      "retrieved_doc_ids": [
+        "53535",
+        "53535",
+        "53535",
+        "53535",
+        "53535"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:53535:000047",
+        "fixed_sentence:53535:000050",
+        "fixed_sentence:53535:000053",
+        "fixed_sentence:53535:000051",
+        "fixed_sentence:53535:000048"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies all five varieties of hickory mentioned in the text and provides accurate scientific names and citations."
+    },
+    {
+      "question_id": "q00148",
+      "question_scope": "multi_paragraph",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How did early scientific observations of chemical reactions involving elements lead to the conceptualization of atoms, even without knowing their individual weights?",
+      "answer": "Early scientific observations of chemical reactions led to the conceptualization of atoms through the work of scientists like Dalton. He visualized molecules as formed by individual atoms of elements uniting. Even without knowing the individual weight of an atom, Dalton could determine how many times heavier or lighter one atom was compared to another element's atom based on the proportionate relationship of each component element's weight to the entire molecule [1].",
+      "retrieved_doc_ids": [
+        "66246",
+        "66246",
+        "66246",
+        "66246",
+        "66246"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:66246:000010",
+        "fixed_sentence:66246:000014",
+        "fixed_sentence:66246:000038",
+        "fixed_sentence:66246:000023",
+        "fixed_sentence:66246:000021"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately explains how Dalton's work on combining elements in fixed proportions, even without knowing individual atomic weights, led to the conceptualization of atoms. The retrieved context fully supports this explanation."
+    },
+    {
+      "question_id": "q00039",
+      "question_scope": "book_theme",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What are some of the topics discussed in this publication?",
+      "answer": "The provided context is not enough to answer the question about the topics discussed in the publication. The context primarily lists publication titles and some bibliographic details, but does not describe the content of the publications themselves [1, 2, 3, 4, 5].",
+      "retrieved_doc_ids": [
+        "48038",
+        "48038",
+        "48126",
+        "59810",
+        "37199"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:48038:000104",
+        "fixed_sentence:48038:000100",
+        "fixed_sentence:48126:000167",
+        "fixed_sentence:59810:000068",
+        "fixed_sentence:37199:000003"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The retrieved context does not contain information about the topics discussed in the publication. It only lists publication titles and bibliographic details. Therefore, the answer correctly states that the context is not enough to answer the question."
+    },
+    {
+      "question_id": "q00241",
+      "question_scope": "local",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "Beyond the loss of church privileges, what specific social and economic hardships might an excommunicated individual face, according to the text?",
+      "answer": "Beyond the loss of church privileges, an excommunicated individual faces social and economic hardships including being boycotted, losing friends and servants, and having difficulty obtaining food and clothing [1].",
+      "retrieved_doc_ids": [
+        "16030",
+        "16030",
+        "16030",
+        "16030",
+        "26074"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:16030:000017",
+        "fixed_sentence:16030:000016",
+        "fixed_sentence:16030:000019",
+        "fixed_sentence:16030:000018",
+        "fixed_sentence:26074:000057"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately identifies all the social and economic hardships mentioned in the gold source and retrieved context, including boycotting, loss of friends and servants, and difficulty obtaining food and clothing. The citation is correct."
+    },
+    {
+      "question_id": "q00206",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "easy",
+      "question": "Why is the Northeastern United States particularly affected by acid rain, and what additional concern has arisen regarding this region?",
+      "answer": "The Northeastern United States is particularly affected by acid rain due to a large number of cities, dense population, and a concentration of power and industrial plants. Additionally, prevailing winds bring storms and pollution from the Midwest, and the local soil and rocks are less likely to neutralize acidity in the rain [1]. An additional concern that has arisen is that many historic buildings and monuments are located in these areas of highest acidity [1, 2].",
+      "retrieved_doc_ids": [
+        "57972",
+        "57972",
+        "57972",
+        "57972",
+        "57972"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:57972:000007",
+        "fixed_sentence:57972:000002",
+        "fixed_sentence:57972:000018",
+        "fixed_sentence:57972:000006",
+        "fixed_sentence:57972:000017"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately identifies why the Northeastern US is affected by acid rain and the additional concern about historic buildings and monuments, fully supported by the provided context."
+    },
+    {
+      "question_id": "q00053",
+      "question_scope": "book_theme",
+      "question_type": "fact",
+      "difficulty": "medium",
+      "question": "What are some of the ways water flow can be managed or altered to generate power?",
+      "answer": "The retrieved context is not enough.",
+      "retrieved_doc_ids": [
+        "62117",
+        "62117",
+        "62117",
+        "62117",
+        "62117"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:62117:000005",
+        "fixed_sentence:62117:000006",
+        "fixed_sentence:62117:000072",
+        "fixed_sentence:62117:000061",
+        "fixed_sentence:62117:000031"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The retrieved context does not contain enough information to answer the question. The gold answer hint mentions dams, spillways, and pipes, but these are not present in the retrieved context in a way that explains how they manage or alter water flow for power generation."
+    },
+    {
+      "question_id": "q00123",
+      "question_scope": "local",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "How can the daily changes in a barometer be recorded and visualized?",
+      "answer": "The daily changes in a barometer can be recorded by noting each observation with a dot on a form or table of double entry, corresponding to its altitude and the time of observation. These dots should then be connected by a line to form a free curve or zig-zag, which visually represents the movements over previous days [1].",
+      "retrieved_doc_ids": [
+        "23921",
+        "23921",
+        "46894",
+        "23921",
+        "23921"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:23921:000050",
+        "fixed_sentence:23921:000036",
+        "fixed_sentence:46894:000054",
+        "fixed_sentence:23921:000077",
+        "fixed_sentence:23921:000046"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how to record and visualize daily barometer changes, matching the gold standard and using the provided context effectively."
+    },
+    {
+      "question_id": "q00224",
+      "question_scope": "multi_paragraph",
+      "question_type": "why_how",
+      "difficulty": "medium",
+      "question": "How do geologists determine the orientation of rock formations in the Forest Park area, and what does this orientation reveal about their geological history?",
+      "answer": "Geologists determine the orientation of rock formations in the Forest Park area by observing the foliation and bedding within the rocks [1]. Foliation refers to the parallel arrangement of mica plates and the segregation of darker minerals in schists and phyllites, which is related to metamorphic processes. Bedding refers to the inherited sedimentary layering in quartzites [1]. In this region, foliation and bedding are practically parallel, and all orientation features are referred to as foliation [1].\n\nThe orientation reveals that the rocks consistently strike north to northwest and dip to the east, averaging forty-five degrees down from the horizontal [4]. This tilting indicates that earth movements occurred after the sedimentary rocks hardened but before the present time [3]. Originally, these metamorphic rock formations were deposited in a nearly horizontal position on the floor of an ancient sea [3]. During late Ordovician or Devonian time, these sedimentary layers were folded and metamorphosed [5].",
+      "retrieved_doc_ids": [
+        "61400",
+        "61400",
+        "61400",
+        "61400",
+        "61400"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:61400:000011",
+        "fixed_sentence:61400:000003",
+        "fixed_sentence:61400:000014",
+        "fixed_sentence:61400:000013",
+        "fixed_sentence:61400:000023"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how geologists determine rock orientation using foliation and bedding, and correctly explains what the orientation reveals about the geological history, including the tilting due to earth movements. All information is supported by the provided context and citations are accurate."
+    },
+    {
+      "question_id": "q00080",
+      "question_scope": "book_theme",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How does the author convey the impact of early exploration and the passage of time on understanding the original state and cultural significance of the Mesa Verde cliff dwellings?",
+      "answer": "The author conveys the impact of early exploration and the passage of time by highlighting that early explorers and later archaeologists removed most of the belongings from the cliff dwellings, leaving them empty [2]. This removal makes the dwellings seem like \"empty houses\" to visitors, who often fail to see the people who built them [2]. The author emphasizes that one must remember the dwellings are the \"architectural expression of a settled, industrious agricultural people\" who lived in the region for a thousand years, with their culture peaking in the thirteenth century [2]. The text also notes that some cliff dwellings were entered by early explorers as early as 1884, indicated by carved inscriptions [4]. In some cases, early explorers were unable to reach certain dwellings, which were later entered by park service men in 1915, revealing untouched collections of artifacts [4].",
+      "retrieved_doc_ids": [
+        "57422",
+        "57422",
+        "57422",
+        "57422",
+        "57422"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:57422:000123",
+        "fixed_sentence:57422:000114",
+        "fixed_sentence:57422:000001",
+        "fixed_sentence:57422:000086",
+        "fixed_sentence:57422:000027"
+      ],
+      "correctness": 4,
+      "faithfulness": 5,
+      "completeness": 4,
+      "context_usefulness": 4,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies how early explorers impacted the understanding of the dwellings by removing artifacts and disturbing sites. It also touches on the importance of seeing beyond the physical structures to the people who built them. However, it doesn't explicitly mention the difficulty in reconstructing the original appearance or size of the dwellings due to early exploration, which was a key point in the gold source."
+    },
+    {
+      "question_id": "q00207",
+      "question_scope": "local",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What is the name of the prominent mountain that gives Grand Teton National Park its name?",
+      "answer": "The prominent mountain that gives Grand Teton National Park its name is the Grand Teton [1, 5].",
+      "retrieved_doc_ids": [
+        "36128",
+        "59869",
+        "36128",
+        "36128",
+        "59869"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:36128:000030",
+        "fixed_sentence:59869:000006",
+        "fixed_sentence:36128:000029",
+        "fixed_sentence:36128:000078",
+        "fixed_sentence:59869:000007"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies the mountain and is fully supported by the provided context, with accurate citations."
+    },
+    {
+      "question_id": "q00274",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "medium",
+      "question": "What are the proposed steps for establishing a mussel fishery closure and what is the suggested approach for funding the management of mussel harvesting?",
+      "answer": "The proposed steps for establishing a mussel fishery closure are:\n1. The law should stipulate the principle of closing rivers by regions or sections, with specific sections determined after investigation by qualified authorities [1].\n2. State authorities, such as the fish commission, should study the needs of the mussel industry and determine which portions of streams should be closed for a period of years [1].\n3. After preliminary determination, public advertisement should be made in affected regions, and opportunities for public hearings should be provided [1].\n4. The commission should then submit final recommendations to the governor, who would issue a proclamation ordering the closure [1, 3].\n5. Alternate portions of rivers or river systems should be closed for approximately five-year periods to allow mussel beds to recuperate, with discretion given to executive officers regarding the duration [3].\n6. The units of division for a river system should be large enough for practical and cost-effective enforcement, ideally broken at points with significant community interest in shelling [3].\n\nThe retrieved context is not enough to answer the question about the suggested approach for funding the management of mussel harvesting.",
+      "retrieved_doc_ids": [
+        "43177",
+        "43177",
+        "43177",
+        "43177",
+        "43177"
+      ],
+      "retrieved_chunk_ids": [
+        "fixed_sentence:43177:000056",
+        "fixed_sentence:43177:000052",
+        "fixed_sentence:43177:000061",
+        "fixed_sentence:43177:000020",
+        "fixed_sentence:43177:000004"
+      ],
+      "correctness": 3,
+      "faithfulness": 4,
+      "completeness": 3,
+      "context_usefulness": 3,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The answer correctly identifies the steps for establishing a mussel fishery closure and cites the retrieved context appropriately. However, it states that the retrieved context is not enough to answer the funding question, which is incorrect. The gold source material, which is also present in the full retrieved context (though truncated in the provided snippet), contains the answer to the funding question. Therefore, the answer is incomplete regarding the funding aspect."
+    }
+  ]
+}

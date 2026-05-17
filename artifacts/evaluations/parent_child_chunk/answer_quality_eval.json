@@ -1,0 +1,661 @@
+{
+  "chunker": "parent_child_chunk",
+  "artifact_dir": "artifacts/parent_child_chunk",
+  "model": "gemini-2.5-flash",
+  "top_k": 5,
+  "elapsed_seconds": 45.81,
+  "question_count": 20,
+  "question_scope_counts": {
+    "local": 7,
+    "multi_paragraph": 7,
+    "book_theme": 6
+  },
+  "summary": {
+    "samples": 20,
+    "pass_rate": 0.75,
+    "hallucination_rate": 0.05,
+    "correctness_avg": 3.5,
+    "faithfulness_avg": 3.6,
+    "completeness_avg": 3.5,
+    "context_usefulness_avg": 3.65,
+    "citation_support_avg": 3.7,
+    "overall_avg": 3.59,
+    "by_scope": {
+      "book_theme": {
+        "samples": 6,
+        "pass_rate": 0.6666666666666666,
+        "hallucination_rate": 0.16666666666666666,
+        "correctness_avg": 3.0,
+        "faithfulness_avg": 3.1666666666666665,
+        "completeness_avg": 3.0,
+        "context_usefulness_avg": 3.3333333333333335,
+        "citation_support_avg": 3.1666666666666665,
+        "overall_avg": 3.1333333333333333
+      },
+      "local": {
+        "samples": 7,
+        "pass_rate": 0.7142857142857143,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 3.5714285714285716,
+        "faithfulness_avg": 3.5714285714285716,
+        "completeness_avg": 3.5714285714285716,
+        "context_usefulness_avg": 3.5714285714285716,
+        "citation_support_avg": 3.5714285714285716,
+        "overall_avg": 3.5714285714285716
+      },
+      "multi_paragraph": {
+        "samples": 7,
+        "pass_rate": 0.8571428571428571,
+        "hallucination_rate": 0.0,
+        "correctness_avg": 3.857142857142857,
+        "faithfulness_avg": 4.0,
+        "completeness_avg": 3.857142857142857,
+        "context_usefulness_avg": 4.0,
+        "citation_support_avg": 4.285714285714286,
+        "overall_avg": 4.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "question_id": "q00048",
+      "question_scope": "local",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How do archaeologists reconstruct the history of early inhabitants in Louisiana, given that these groups existed long before European arrival?",
+      "answer": "Archaeologists reconstruct the history of early inhabitants in Louisiana by studying the traces of their activities, such as cooking areas, houses, religious ceremony sites, tool-making locations, and trash dumps [1]. By examining these undisturbed traces, archaeologists can determine who left them, when they were left, and what activities were associated with them [1]. This process involves careful survey and excavation, where archaeologists examine artifacts on the ground, record concentrations as sites, and evaluate each site's size, age, and contribution to understanding Louisiana's past [2].",
+      "retrieved_doc_ids": [
+        "62235",
+        "62235",
+        "62235",
+        "62235",
+        "62235"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:62235:000017",
+        "parent_child_chunk:62235:000020",
+        "parent_child_chunk:62235:000024",
+        "parent_child_chunk:62235:000016",
+        "parent_child_chunk:62235:000023"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how archaeologists reconstruct the history of early inhabitants in Louisiana, aligning with the gold standard. It correctly identifies the analysis of undisturbed traces of past human activities as the primary method, including specific examples like cooking, building, ceremonies, tool-making, and waste disposal. The answer also explains that this allows archaeologists to determine who, when, and what activities were associated with these traces. The citations are accurate and support the claims made."
+    },
+    {
+      "question_id": "q00011",
+      "question_scope": "multi_paragraph",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What are the ideal conditions and placement for a barometer to ensure accurate readings?",
+      "answer": "For accurate readings, a barometer should be suspended in a good light, away from direct sunshine or heat sources like a fire or lamp [1]. It should be placed as centrally as possible, minimizing exposure to sudden temperature changes, wind gusts, or potential damage [1]. In a ship, it should be below the lowest battery or gun-deck [1]. Light should be able to access the back of the tube to properly set the index, with the observer's eye level with the mercury surface [1]. White paper or card can reflect light for correct vernier setting [1]. The barometer should also be positioned to avoid side blows and allow for the spring of the metal arm during sudden movements, especially on a ship [1]. If there's a risk of striking, soft padding should be used [1].",
+      "retrieved_doc_ids": [
+        "23921",
+        "23921",
+        "23921",
+        "23921",
+        "23921"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:23921:000086",
+        "parent_child_chunk:23921:000061",
+        "parent_child_chunk:23921:000090",
+        "parent_child_chunk:23921:000091",
+        "parent_child_chunk:23921:000092"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately summarizes the ideal conditions and placement for a barometer based on the provided context. It covers all the key aspects mentioned in the gold answer hint and provides additional relevant details from the retrieved context."
+    },
+    {
+      "question_id": "q00149",
+      "question_scope": "book_theme",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "What overarching factor consistently influences the dietary choices of crows, as evidenced by their consumption patterns of various food sources?",
+      "answer": "The overarching factor consistently influencing the dietary choices of crows is the availability of different foods at various times of the year [1]. This includes staple foods like grain sorghum and sunflower seeds in winter, oats and wheat depending on availability, and newly sown oat fields in late winter and early spring [1, 2, 3]. The drying up of creeks also influences their consumption of aquatic animals in early autumn [2].",
+      "retrieved_doc_ids": [
+        "33545",
+        "33545",
+        "33545",
+        "33545",
+        "33545"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:33545:000026",
+        "parent_child_chunk:33545:000058",
+        "parent_child_chunk:33545:000060",
+        "parent_child_chunk:33545:000020",
+        "parent_child_chunk:33545:000033"
+      ],
+      "correctness": 4,
+      "faithfulness": 5,
+      "completeness": 4,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies availability as the primary factor. It also provides good examples of how availability influences their diet, with appropriate citations."
+    },
+    {
+      "question_id": "q00150",
+      "question_scope": "local",
+      "question_type": "concept",
+      "difficulty": "medium",
+      "question": "What is the primary mechanism by which clover and other legumes acquire nitrogen from the atmosphere?",
+      "answer": "Clover and other legumes acquire nitrogen from the atmosphere through bacteria that inhabit their root tubercles [1].",
+      "retrieved_doc_ids": [
+        "4525",
+        "4525",
+        "4525",
+        "684",
+        "4525"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:4525:000031",
+        "parent_child_chunk:4525:000030",
+        "parent_child_chunk:4525:000032",
+        "parent_child_chunk:684:000034",
+        "parent_child_chunk:4525:000005"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies the mechanism by which clover and other legumes acquire nitrogen, directly supported by the provided context."
+    },
+    {
+      "question_id": "q00007",
+      "question_scope": "multi_paragraph",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What is the process by which El Morro's vertical walls are maintained and how does it relate to the formation of the box canyon?",
+      "answer": "El Morro maintains its vertical walls by breaking into blocks that fall away from the main sandstone mass, leaving a vertical joint face [1]. This process is directly related to the formation of the box canyon, as the steep canyon walls are essentially one side of a joint from which material on the other side has eroded away [1]. The initial cracking of the sandstone into joints, caused by immense pressures from overlying rocks and geological movements, allowed water to penetrate, freeze, and thaw, breaking up the rock into fragments that were then washed away [1].",
+      "retrieved_doc_ids": [
+        "65891",
+        "65891",
+        "65891",
+        "65891",
+        "65891"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:65891:000055",
+        "parent_child_chunk:65891:000056",
+        "parent_child_chunk:65891:000052",
+        "parent_child_chunk:65891:000051",
+        "parent_child_chunk:65891:000053"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately describes how El Morro's vertical walls are maintained and how this relates to the box canyon's formation, citing the retrieved context correctly."
+    },
+    {
+      "question_id": "q00090",
+      "question_scope": "book_theme",
+      "question_type": "concept",
+      "difficulty": "hard",
+      "question": "What overarching trend in salmon populations can be inferred from the varying catch numbers across different locations and timeframes mentioned in the text?",
+      "answer": "The overarching trend in salmon populations shows a general tendency towards a decrease over an eight-year period leading up to 1896, with a significant reduction of 36% in salmon caught in 1896 compared to 1880, and a nearly 30% decline from 1892 to 1895. However, 1896 presented a \"very pleasing contrast\" with an increase in catch, being 20% greater than any previous year and over 93% greater than the average for the preceding 22 years for some successful weirs [2].",
+      "retrieved_doc_ids": [
+        "17039",
+        "17039",
+        "17039",
+        "17039",
+        "17039"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:17039:000045",
+        "parent_child_chunk:17039:000016",
+        "parent_child_chunk:17039:000004",
+        "parent_child_chunk:17039:000022",
+        "parent_child_chunk:17039:000023"
+      ],
+      "correctness": 3,
+      "faithfulness": 3,
+      "completeness": 3,
+      "context_usefulness": 3,
+      "citation_support": 3,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies a general decline and fluctuations, but the specific numbers cited for decline (36% and 30%) are not directly supported by the provided context. The increase in 1896 is well-supported."
+    },
+    {
+      "question_id": "q00300",
+      "question_scope": "local",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "Why have many of the Mesa Verde cliff dwellings remained unexplored by modern individuals?",
+      "answer": "The retrieved context is not enough.",
+      "retrieved_doc_ids": [
+        "57422",
+        "57422",
+        "57422",
+        "57422",
+        "57422"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:57422:000088",
+        "parent_child_chunk:57422:000133",
+        "parent_child_chunk:57422:000129",
+        "parent_child_chunk:57422:000099",
+        "parent_child_chunk:57422:000070"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The answer states that the retrieved context is not enough, which is incorrect. The retrieved context contains the full answer to the question."
+    },
+    {
+      "question_id": "q00062",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "easy",
+      "question": "What are some examples of animals that are protected by local populations or laws, but are still hunted by certain groups?",
+      "answer": "The retrieved context is not enough.",
+      "retrieved_doc_ids": [
+        "15134",
+        "59885",
+        "48430",
+        "48430",
+        "15134"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:15134:000066",
+        "parent_child_chunk:59885:000014",
+        "parent_child_chunk:48430:000060",
+        "parent_child_chunk:48430:000061",
+        "parent_child_chunk:15134:000046"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The RAG answer states that the retrieved context is not enough, which is incorrect. The gold source material is present in the retrieved context, specifically in document 5. The model should have been able to extract the information about gulls, cormorants, and ruffed grouse being protected but still hunted by certain groups."
+    },
+    {
+      "question_id": "q00248",
+      "question_scope": "book_theme",
+      "question_type": "why_how",
+      "difficulty": "easy",
+      "question": "Why might the calculated home range size for opossums be inaccurate, according to the text?",
+      "answer": "The calculated home range size for opossums might be inaccurately low because captures recorded for animals with ranges partly outside the study area would represent only one sector of their home range, leading to radii computed for individual home ranges being too small [1]. This error is greatest for animals caught at only two locations and least for those trapped at the greatest number of different locations [1].",
+      "retrieved_doc_ids": [
+        "37199",
+        "37199",
+        "37199",
+        "37199",
+        "37199"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:37199:000032",
+        "parent_child_chunk:37199:000031",
+        "parent_child_chunk:37199:000083",
+        "parent_child_chunk:37199:000022",
+        "parent_child_chunk:37199:000029"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately explains why the home range size might be inaccurate, directly referencing the issue of ranges extending beyond the study area and the resulting impact on capture data, which aligns with the gold answer hint and retrieved context."
+    },
+    {
+      "question_id": "q00001",
+      "question_scope": "local",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "Which specific varieties of hickory are mentioned in the text?",
+      "answer": "The text mentions the following specific varieties of hickory: Shagbark Hickory (_Carya ovata_), Shellbark Hickory (_Carya laciniosa_), Pignut Hickory (_Carya glabra_), and Bitternut Hickory (_Carya cordiformis_) [1, 4].",
+      "retrieved_doc_ids": [
+        "53535",
+        "53535",
+        "53535",
+        "53535",
+        "53535"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:53535:000058",
+        "parent_child_chunk:53535:000055",
+        "parent_child_chunk:53535:000059",
+        "parent_child_chunk:53535:000060",
+        "parent_child_chunk:53535:000054"
+      ],
+      "correctness": 3,
+      "faithfulness": 3,
+      "completeness": 3,
+      "context_usefulness": 3,
+      "citation_support": 3,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer lists some of the hickory varieties but misses one. The citations are not accurate for the information provided."
+    },
+    {
+      "question_id": "q00148",
+      "question_scope": "multi_paragraph",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How did early scientific observations of chemical reactions involving elements lead to the conceptualization of atoms, even without knowing their individual weights?",
+      "answer": "Early scientific observations of chemical reactions, particularly by John Dalton, led to the conceptualization of atoms through quantitative chemical analysis [1]. Dalton and other scientists observed that when elements combined to form compounds, they did so in definite proportions by weight, a principle now known as the Law of Definite Proportions [1]. For example, to form water from hydrogen and oxygen, the weight of oxygen had to be eight times the weight of hydrogen, with any excess of either element left over [1].\n\nFurther evidence came from the Law of Multiple Proportions, which showed that if two elements formed more than one compound, the weights of one element that combined with a fixed weight of the other were in ratios of small whole numbers [1]. For instance, in hydrogen peroxide, the weight of oxygen is 16 times the weight of hydrogen, exactly twice the relative weight found in water [1]. These consistent and precise ratios in chemical combinations convinced Dalton that matter was composed of indivisible particles, or atoms, even without knowing their individual weights [1].",
+      "retrieved_doc_ids": [
+        "66246",
+        "66246",
+        "66246",
+        "66246",
+        "66246"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:66246:000012",
+        "parent_child_chunk:66246:000010",
+        "parent_child_chunk:66246:000044",
+        "parent_child_chunk:66246:000016",
+        "parent_child_chunk:66246:000024"
+      ],
+      "correctness": 4,
+      "faithfulness": 4,
+      "completeness": 4,
+      "context_usefulness": 4,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies Dalton's role and the concept of definite proportions. However, it incorrectly states that the Law of Multiple Proportions was used to conceptualize atoms, when the gold source and retrieved context only mention the Law of Definite Proportions in this regard. The example of hydrogen peroxide is also not directly supported as evidence for the conceptualization of atoms in the provided context."
+    },
+    {
+      "question_id": "q00039",
+      "question_scope": "book_theme",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What are some of the topics discussed in this publication?",
+      "answer": "The retrieved context is not enough.",
+      "retrieved_doc_ids": [
+        "26074",
+        "62676",
+        "18748",
+        "18050",
+        "18050"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:26074:000079",
+        "parent_child_chunk:62676:000078",
+        "parent_child_chunk:18748:000003",
+        "parent_child_chunk:18050:000076",
+        "parent_child_chunk:18050:000071"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The retrieved context does not contain any information about the topics discussed in the publication. The answer is correct in stating that the context is not enough."
+    },
+    {
+      "question_id": "q00241",
+      "question_scope": "local",
+      "question_type": "fact",
+      "difficulty": "hard",
+      "question": "Beyond the loss of church privileges, what specific social and economic hardships might an excommunicated individual face, according to the text?",
+      "answer": "An excommunicated individual faces social and economic hardships including being boycotted, losing friends and servants, and having difficulty obtaining food and clothing [1].",
+      "retrieved_doc_ids": [
+        "16030",
+        "16030",
+        "16030",
+        "16030",
+        "26074"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:16030:000020",
+        "parent_child_chunk:16030:000019",
+        "parent_child_chunk:16030:000022",
+        "parent_child_chunk:16030:000021",
+        "parent_child_chunk:26074:000029"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately identifies all the social and economic hardships mentioned in the gold source and retrieved context, including boycotting, loss of friends and servants, and difficulty obtaining food and clothing. The citation is correct."
+    },
+    {
+      "question_id": "q00206",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "easy",
+      "question": "Why is the Northeastern United States particularly affected by acid rain, and what additional concern has arisen regarding this region?",
+      "answer": "The Northeastern United States experiences the greatest acidity in rain (lowest pH values) [1]. An additional concern in this region is the effect of acid rain on historic buildings and monuments [2, 5].",
+      "retrieved_doc_ids": [
+        "57972",
+        "57972",
+        "57972",
+        "57972",
+        "57972"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:57972:000008",
+        "parent_child_chunk:57972:000002",
+        "parent_child_chunk:57972:000009",
+        "parent_child_chunk:57972:000007",
+        "parent_child_chunk:57972:000021"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer accurately identifies why the Northeastern US is affected by acid rain and the additional concern regarding historic buildings and monuments, supported by the provided context."
+    },
+    {
+      "question_id": "q00053",
+      "question_scope": "book_theme",
+      "question_type": "fact",
+      "difficulty": "medium",
+      "question": "What are some of the ways water flow can be managed or altered to generate power?",
+      "answer": "Water flow can be managed to generate power by leading it through a hydraulic race or canal to waterwheels, which can be of the turbine type [2]. These waterwheels, driven by the water's fall (head), can then power electric generators or dynamos [2].",
+      "retrieved_doc_ids": [
+        "62117",
+        "62117",
+        "62117",
+        "62117",
+        "62117"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:62117:000085",
+        "parent_child_chunk:62117:000071",
+        "parent_child_chunk:62117:000013",
+        "parent_child_chunk:62117:000036",
+        "parent_child_chunk:62117:000098"
+      ],
+      "correctness": 2,
+      "faithfulness": 2,
+      "completeness": 2,
+      "context_usefulness": 3,
+      "citation_support": 2,
+      "hallucination": true,
+      "verdict": "fail",
+      "reason": "The answer mentions \"hydraulic race\" and \"canal\" which are not explicitly in the gold answer hint or the gold source material. While the context mentions a canal, it's not directly linked to the gold answer's methods. The answer also focuses on waterwheels and generators, which are not the primary methods of managing water flow for power generation as described in the gold answer hint. The citations are incorrect as the information is not found in the cited context."
+    },
+    {
+      "question_id": "q00123",
+      "question_scope": "local",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "How can the daily changes in a barometer be recorded and visualized?",
+      "answer": "The retrieved context is not enough.",
+      "retrieved_doc_ids": [
+        "23921",
+        "23921",
+        "23921",
+        "23921",
+        "23921"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:23921:000042",
+        "parent_child_chunk:23921:000056",
+        "parent_child_chunk:23921:000058",
+        "parent_child_chunk:23921:000018",
+        "parent_child_chunk:23921:000054"
+      ],
+      "correctness": 1,
+      "faithfulness": 1,
+      "completeness": 1,
+      "context_usefulness": 1,
+      "citation_support": 1,
+      "hallucination": false,
+      "verdict": "fail",
+      "reason": "The answer states that the retrieved context is not enough, but context [3] directly answers the question. The model failed to extract the relevant information."
+    },
+    {
+      "question_id": "q00224",
+      "question_scope": "multi_paragraph",
+      "question_type": "why_how",
+      "difficulty": "medium",
+      "question": "How do geologists determine the orientation of rock formations in the Forest Park area, and what does this orientation reveal about their geological history?",
+      "answer": "Geologists determine the orientation of rock formations in the Forest Park area by observing the distinctly visible orientation imparted by the parallel arrangement of mica plates and segregation of darker minerals in schists and phyllites, and the inherited sedimentary layering in quartzites [1]. This measurable orientation is called foliation, and in this region, it is practically parallel to the original sedimentary layering (bedding) [1].\n\nTo describe this orientation, geologists use the terms \"dip\" and \"strike\" [1]. The dip is the angle between an imaginary horizontal line and the downward slope of the foliation, while the strike is the compass direction [1]. This orientation reveals that the rocks are primarily metamorphic, originally sedimentary, and that the metamorphism was slight enough for several pages of geologic history to still be read [1].",
+      "retrieved_doc_ids": [
+        "61400",
+        "61400",
+        "61400",
+        "61400",
+        "61400"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:61400:000013",
+        "parent_child_chunk:61400:000004",
+        "parent_child_chunk:61400:000016",
+        "parent_child_chunk:61400:000015",
+        "parent_child_chunk:61400:000003"
+      ],
+      "correctness": 3,
+      "faithfulness": 4,
+      "completeness": 3,
+      "context_usefulness": 4,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies how geologists determine orientation (foliation, bedding, strike, dip) and mentions that the rocks were originally sedimentary and are now tilted due to earth movements. However, it misses the specific detail about the consistent north to northwest strike and eastward dip, and the stacking of formations from oldest in the west to youngest in the east, which are crucial for understanding what the orientation reveals about the geological history."
+    },
+    {
+      "question_id": "q00080",
+      "question_scope": "book_theme",
+      "question_type": "why_how",
+      "difficulty": "hard",
+      "question": "How does the author convey the impact of early exploration and the passage of time on understanding the original state and cultural significance of the Mesa Verde cliff dwellings?",
+      "answer": "The author conveys the impact of early exploration and the passage of time by describing how early explorers, some using dynamite, carelessly and ruthlessly excavated the ruins, primarily for the sales value of artifacts [3]. This led to the scattering and disappearance of much material, making it difficult to understand the original state and cultural significance [3]. Only a few, like the Wetherill brothers, kept records, which now provide value to collections even if they are in distant parts of the world [3].",
+      "retrieved_doc_ids": [
+        "57422",
+        "57422",
+        "57422",
+        "57422",
+        "57422"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:57422:000133",
+        "parent_child_chunk:57422:000113",
+        "parent_child_chunk:57422:000034",
+        "parent_child_chunk:57422:000129",
+        "parent_child_chunk:57422:000134"
+      ],
+      "correctness": 3,
+      "faithfulness": 3,
+      "completeness": 3,
+      "context_usefulness": 3,
+      "citation_support": 3,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer partially addresses the question by mentioning early explorers' impact on the ruins, but it misses the aspect of the passage of time and the need to look beyond physical structures to appreciate the people, as highlighted in the gold answer hint."
+    },
+    {
+      "question_id": "q00207",
+      "question_scope": "local",
+      "question_type": "summary",
+      "difficulty": "easy",
+      "question": "What is the name of the prominent mountain that gives Grand Teton National Park its name?",
+      "answer": "The prominent mountain that gives Grand Teton National Park its name is the Grand Teton [1].",
+      "retrieved_doc_ids": [
+        "36128",
+        "36128",
+        "36128",
+        "36128",
+        "59869"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:36128:000035",
+        "parent_child_chunk:36128:000034",
+        "parent_child_chunk:36128:000066",
+        "parent_child_chunk:36128:000037",
+        "parent_child_chunk:59869:000010"
+      ],
+      "correctness": 5,
+      "faithfulness": 5,
+      "completeness": 5,
+      "context_usefulness": 5,
+      "citation_support": 5,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies the Grand Teton as the mountain after which the park is named, directly supported by the provided context."
+    },
+    {
+      "question_id": "q00274",
+      "question_scope": "multi_paragraph",
+      "question_type": "concept",
+      "difficulty": "medium",
+      "question": "What are the proposed steps for establishing a mussel fishery closure and what is the suggested approach for funding the management of mussel harvesting?",
+      "answer": "The proposed steps for establishing a mussel fishery closure involve the legislature authorizing state authorities, such as the State fish commission, to study the mussel industry's needs and determine which stream portions should be closed for a period of years [3]. After preliminary plans are made, public advertisement and hearings should be conducted in affected regions. The commission would then submit final recommendations to the governor, who would issue a proclamation ordering the closure, which would have the full effect of law and specify penalties for violations. The governor, upon the commission's recommendation, should also have the power to reopen closed regions when necessary [3].\n\nFor funding the management of mussel harvesting, it is suggested that a fee of $1 or $2 per season be charged [5].",
+      "retrieved_doc_ids": [
+        "43177",
+        "43177",
+        "43177",
+        "43177",
+        "43177"
+      ],
+      "retrieved_chunk_ids": [
+        "parent_child_chunk:43177:000061",
+        "parent_child_chunk:43177:000065",
+        "parent_child_chunk:43177:000066",
+        "parent_child_chunk:43177:000060",
+        "parent_child_chunk:43177:000071"
+      ],
+      "correctness": 4,
+      "faithfulness": 4,
+      "completeness": 4,
+      "context_usefulness": 4,
+      "citation_support": 4,
+      "hallucination": false,
+      "verdict": "pass",
+      "reason": "The answer correctly identifies the steps for establishing a mussel fishery closure, including public hearings and a gubernatorial proclamation. However, it incorrectly cites context [5] for the funding mechanism, which is not present in the provided snippet. The gold source material indicates a small seasonal fee for shellers, which is mentioned in the original document but not in the retrieved context. The answer does not mention the license system, which is also part of the gold answer hint."
+    }
+  ]
+}

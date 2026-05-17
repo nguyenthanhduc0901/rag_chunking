@@ -38,8 +38,14 @@ artifacts/<chunker>/
   chunks.jsonl
   embeddings.npy
   faiss.index
-  chunk_eval.json
   manifest.json
+
+artifacts/evaluations/<chunker>/
+  chunk_eval.json
+  retrieval_eval.json
+  retrieval_eval_top10.json
+  feedback_report.json
+  answer_quality_eval.json
 ```
 
 ## Search
@@ -143,6 +149,5 @@ summary table:
   --questions eval/source_questions.jsonl
 
 .venv/bin/python -m rag_pipeline.feedback_report \
-  --artifact-dir artifacts/feedback_optimized \
-  --retrieval-eval artifacts/feedback_optimized/retrieval_eval.json
+  --artifact-dir artifacts/feedback_optimized
 ```
