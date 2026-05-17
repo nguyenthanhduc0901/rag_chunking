@@ -60,6 +60,8 @@ def build_artifacts(
     parent_max_words: int | None,
     parent_leaf_count: int | None,
     repair_margin: float | None,
+    sentence_window_size: int | None,
+    sentence_window_overlap: int | None,
     fixed_size: int | None,
     fixed_overlap: int | None,
 ) -> Path:
@@ -79,6 +81,8 @@ def build_artifacts(
         "parent_max_words": parent_max_words,
         "parent_leaf_count": parent_leaf_count,
         "repair_margin": repair_margin,
+        "sentence_window_size": sentence_window_size,
+        "sentence_window_overlap": sentence_window_overlap,
         "size": fixed_size,
         "overlap": fixed_overlap,
     }
@@ -231,6 +235,8 @@ def main() -> None:
     parser.add_argument("--parent-max-words", type=int, default=None)
     parser.add_argument("--parent-leaf-count", type=int, default=None)
     parser.add_argument("--repair-margin", type=float, default=None)
+    parser.add_argument("--sentence-window-size", type=int, default=None)
+    parser.add_argument("--sentence-window-overlap", type=int, default=None)
     parser.add_argument("--fixed-size", type=int, default=None)
     parser.add_argument("--fixed-overlap", type=int, default=None)
     args = parser.parse_args()
@@ -257,6 +263,8 @@ def main() -> None:
         parent_max_words=args.parent_max_words,
         parent_leaf_count=args.parent_leaf_count,
         repair_margin=args.repair_margin,
+        sentence_window_size=args.sentence_window_size,
+        sentence_window_overlap=args.sentence_window_overlap,
         fixed_size=args.fixed_size,
         fixed_overlap=args.fixed_overlap,
     )

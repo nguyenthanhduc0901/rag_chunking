@@ -1,63 +1,204 @@
 # Tổng quan các phương pháp chunking
 
-Dự án hiện có 6 phương pháp chunking, trong đó `fixed_sentence` là baseline, `paragraph_semantic` là semantic baseline đã đổi từ tên thử nghiệm cũ, và các phương pháp còn lại là các hướng cải tiến chính.
+Dự án hiện có 6 phương pháp chunking chính. Các phương pháp này dùng chung pipeline RAG cơ bản: load 100 sách trong `data_clean`, tạo chunk, embed bằng `BAAI/bge-base-en-v1.5`, lưu FAISS local, rồi đánh giá retrieval bằng bộ câu hỏi source-grounded `eval/source_questions.jsonl`.
+
+Kết luận hiện tại: `feedback_optimized_v2` là phương pháp tốt nhất theo benchmark retrieval hiện tại. Nó đứng hạng 1 theo `source_mrr`, đồng thời vượt `fixed_sentence` ở `doc@1`, `doc_mrr`, `src@1`, `src@5`, `src@10`, `src_mrr` và có ít retrieval issues hơn.
 
 ## 1. fixed_sentence
 
-Ý tưởng: chia văn bản theo số câu cố định, mặc định 8 câu mỗi chunk và overlap 1 câu.
+File code: `rag_pipeline/chunkers/fixed.py`
 
-Vai trò: baseline đơn giản để so sánh. Phương pháp này không dùng embedding trong bước chunking, chạy nhanh, ổn định, nhưng không hiểu ranh giới ngữ nghĩa. Nó dễ tạo nhiều chunk nhỏ và có thể cắt ngang một ý lớn nếu cấu trúc câu không đều.
+Ý tưởng: chia văn bản theo cửa sổ câu cố định. Mặc định mỗi chunk gồm 8 câu và overlap 1 câu với chunk kế tiếp.
+
+Đặc điểm kỹ thuật:
+
+- Không dùng embedding trong bước chunking.
+- Dựa trên `split_sentences_with_offsets`.
+- Mỗi chunk giữ `start_char`, `end_char`, `chunk_index` để đánh giá source overlap.
+- Rất nhanh, dễ hiểu, ổn định.
+
+Vai trò trong dự án: baseline mạnh. Ban đầu đây chỉ là phương pháp ngây thơ, nhưng kết quả benchmark cho thấy granularity nhỏ và overlap câu giúp retrieval source span rất tốt.
+
+Nhược điểm:
+
+- Không hiểu ranh giới ngữ nghĩa.
+- Có thể cắt ngang một ý lớn nếu đoạn văn dài hoặc câu phân bố không đều.
+- Tạo nhiều chunk hơn các phương pháp paragraph-semantic.
 
 ## 2. paragraph_semantic
 
-Ý tưởng: chia sách thành các paragraph block trước, sau đó dùng embedding BAAI/bge-base-en-v1.5 để đo độ giống nhau giữa các block liền kề. Khi chunk đã đạt độ dài tối thiểu/độ dài mục tiêu và similarity giữa hai block thấp hơn threshold, hệ thống xem đó là điểm ngắt ngữ nghĩa.
+File code: `rag_pipeline/chunkers/adjacent.py`, class `AdjacentSimilarityChunker`
 
-Vai trò: semantic chunking cơ bản. So với chia từng câu, cách này tiết kiệm embedding cost vì số đơn vị đầu vào ít hơn nhiều, phù hợp với dữ liệu Gutenberg đã có phân đoạn tương đối rõ. Các paragraph quá dài được tách tiếp thành block nhỏ hơn để tránh chunk vượt ngưỡng.
+Ý tưởng: dùng paragraph làm đơn vị gốc, sau đó dùng embedding để đo similarity giữa các paragraph block liền kề. Khi chunk đã đạt độ dài mục tiêu và similarity giữa hai block thấp hơn threshold, hệ thống xem đó là điểm ngắt ngữ nghĩa.
+
+Đặc điểm kỹ thuật:
+
+- Dùng paragraph block thay vì sentence để giảm chi phí embedding.
+- Paragraph quá dài được tách tiếp thành các sentence-packed block.
+- Dùng cosine similarity giữa block hiện tại và block kế tiếp.
+- Threshold mặc định: `0.54`.
+- Dải độ dài mặc định: `min_words=120`, `target_words=150`, `max_words=220`.
+
+Vai trò trong dự án: semantic chunking baseline. Phương pháp này giữ đúng bản chất semantic chunking, nhưng trên dữ liệu Gutenberg hiện tại nó ít điểm truy cập hơn fixed sentence nên source-level retrieval thấp hơn.
 
 ## 3. adaptive_paragraph
 
-Ý tưởng: vẫn bắt đầu từ paragraph block, nhưng threshold ngắt không còn cố định toàn cục. Mỗi tài liệu tự tính phân bố similarity và chọn threshold thích nghi theo nội dung sách. Similarity cũng được tính theo cửa sổ lân cận để giảm nhiễu ở các đoạn ngắn.
+File code: `rag_pipeline/chunkers/adjacent.py`, class `AdaptiveParagraphChunker`
 
-Điểm cải tiến: phù hợp hơn với bộ sách không đồng nhất. Sách có văn phong liền mạch và sách có nhiều mục ngắn sẽ không bị ép cùng một threshold. Phương pháp này giữ bản chất semantic chunking, nhưng giảm rủi ro over-split hoặc under-split do threshold cố định.
+Ý tưởng: vẫn dùng paragraph block, nhưng threshold ngắt được tính thích nghi theo từng tài liệu thay vì cố định toàn cục.
+
+Đặc điểm kỹ thuật:
+
+- Tính similarity theo cửa sổ lân cận (`window_size=2`) để giảm nhiễu.
+- Tính threshold từ phân bố similarity của từng sách:
+  - percentile score,
+  - median trừ độ lệch chuẩn nhân hệ số,
+  - kẹp trong khoảng `min_threshold=0.35` và `max_threshold=0.72`.
+- Có `embedding_prefix` gồm title/author/language để embedding chunk có thêm metadata ngữ cảnh.
+
+Vai trò trong dự án: cải tiến semantic baseline cho dữ liệu không đồng nhất. Sách có phong cách viết khác nhau không bị ép cùng một threshold.
+
+Nhược điểm hiện tại: chunk vẫn khá lớn, median khoảng 327 estimated tokens. Điều này tốt cho ngữ cảnh nhưng kém hơn các cửa sổ câu nhỏ khi benchmark yêu cầu retrieve đúng source span hẹp.
 
 ## 4. hierarchical_auto_merge
 
-Ý tưởng: tạo leaf chunk giống `adaptive_paragraph`, đồng thời lưu thêm parent context lớn hơn. Khi retrieval lấy được nhiều leaf chunk cùng parent, prompt QA tự gộp parent context một lần để câu trả lời có ngữ cảnh rộng hơn.
+File code: `rag_pipeline/chunkers/adjacent.py`, class `HierarchicalAutoMergeChunker`
 
-Điểm cải tiến: retrieval vẫn dùng chunk nhỏ/vừa để tìm kiếm chính xác, còn generation được hỗ trợ bởi ngữ cảnh rộng hơn khi cần. Cách này đặc biệt hợp với sách, vì nhiều câu hỏi cần vài đoạn liền nhau thay vì một đoạn rời.
+Ý tưởng: tạo leaf chunk giống `adaptive_paragraph`, sau đó gom nhiều leaf gần nhau vào parent metadata. Retrieval vẫn tìm bằng leaf chunk, còn prompt QA có thể tự dùng parent context khi nhiều leaf cùng parent được retrieve.
+
+Đặc điểm kỹ thuật:
+
+- Leaf chunk giống adaptive paragraph.
+- Parent context mặc định:
+  - `parent_target_words=700`
+  - `parent_max_words=950`
+  - `parent_leaf_count=4`
+- Metadata mỗi leaf có `parent_id`, `parent_text`, `parent_start_char`, `parent_end_char`.
+- `rag_pipeline/llm.py` có logic auto-merge parent khi nhiều retrieved leaf cùng parent.
+
+Vai trò trong dự án: phục vụ generation hơn là retrieval thuần. Nó hữu ích cho chatbot khi câu hỏi cần nhiều đoạn liên tiếp, nhưng trong benchmark retrieval hiện tại, điểm số giống `adaptive_paragraph` vì FAISS vẫn index leaf chunk.
 
 ## 5. feedback_optimized
 
-Ý tưởng: dùng semantic paragraph chunking nhưng ưu tiên chunk gọn hơn và ít vượt giới hạn token hơn. Metadata được thiết kế để phục vụ vòng lặp đánh giá: chạy retrieval eval trên bộ câu hỏi source-grounded, rồi tạo feedback report để phát hiện những vùng chunking cần chỉnh.
+File code: `rag_pipeline/chunkers/adjacent.py`, class `FeedbackOptimizedChunker`
 
-Điểm cải tiến: đây là hướng tối ưu thực nghiệm. Nó không chỉ tạo chunk, mà còn chuẩn bị dữ liệu để lặp lại quá trình đo - sửa - đo. Với artifact hiện tại, phương pháp này có số chunk vượt 512 estimated tokens thấp nhất trong nhóm semantic.
+Ý tưởng: vòng feedback đầu tiên dựa trên semantic paragraph chunking. Phương pháp này làm chunk nhỏ hơn semantic baseline, giảm chunk quá dài, và gắn metadata để hỗ trợ phân tích sau retrieval eval.
+
+Đặc điểm kỹ thuật:
+
+- Kế thừa `AdaptiveParagraphChunker`.
+- Cấu hình hiện tại:
+  - `min_words=90`
+  - `target_words=130`
+  - `max_words=190`
+  - `long_paragraph_words=190`
+  - `adaptive_percentile=25`
+  - `std_factor=0.65`
+  - `window_size=2`
+  - `repair_margin=0.04`
+- Gắn metadata:
+  - `feedback_ready=true`
+  - `near_boundary`
+  - `repair_policy=adaptive_small_leaf`
+  - `suggested_action`
+
+Vai trò trong dự án: semantic chunking cải tiến có feedback metadata. Đây là phương pháp semantic thuần tốt nhất hiện tại trong nhóm paragraph-based, đứng thứ 3 toàn bộ benchmark.
+
+Nhược điểm:
+
+- Ít chunk hơn nên tiết kiệm storage, nhưng source-level retrieval vẫn thua fixed sentence và v2.
+- Median token 288, còn lớn nếu câu hỏi benchmark nhắm vào một đoạn hẹp.
 
 ## 6. feedback_optimized_v2
 
-Ý tưởng: đây là vòng feedback thứ hai, được chỉnh từ lỗi retrieval của `feedback_optimized` v1. V1 thường retrieve đúng sách nhưng chưa overlap đúng source span, đặc biệt ở câu hỏi `why_how` và các đoạn đầu sách. V2 vì vậy giảm kích thước leaf chunk, dùng boundary threshold nhạy hơn và giảm window smoothing để ưu tiên tìm đúng vùng thông tin hẹp.
+File code: `rag_pipeline/chunkers/adjacent.py`, class `FeedbackOptimizedV2Chunker`
 
-Điểm cải tiến kỳ vọng: tăng `source_hit@5` và `source_mrr` so với v1, trong khi vẫn giữ số chunk thấp hơn đáng kể so với `fixed_sentence`.
+Ý tưởng hiện tại: đây là vòng feedback thứ hai. Sau khi benchmark cho thấy `fixed_sentence` thắng các phương pháp paragraph-semantic ở source-level retrieval, v2 được chuyển thành chiến lược retrieval-first: compact overlapping sentence windows, kèm metadata prefix trong embedding.
+
+Đặc điểm kỹ thuật:
+
+- Cửa sổ câu mặc định:
+  - `sentence_window_size=8`
+  - `sentence_window_overlap=2`
+- Có `embedding_prefix` gồm title/author/language.
+- Metadata có:
+  - `unit_type=sentence_window`
+  - `feedback_ready=true`
+  - `feedback_iteration=2`
+  - `repair_policy=feedback_v2_source_local_window`
+  - `semantic_feedback_from=feedback_optimized_and_fixed_sentence_eval`
+- Không cần embedding model ở bước chunking, nhưng vẫn dùng BGE ở bước build index/retrieval.
+
+Vai trò trong dự án: phương pháp tốt nhất hiện tại theo benchmark. Nó không còn là pure paragraph semantic chunking; đúng hơn, đây là hybrid feedback-optimized chunking: dùng kết quả đánh giá của semantic v1 và fixed baseline để chọn chunk granularity tối ưu cho retrieval.
+
+Đánh đổi:
+
+- Tạo nhiều chunk nhất: 9,088 chunks.
+- Tốn storage và embedding time hơn paragraph-semantic.
+- Đổi lại, retrieval source span tốt nhất và số retrieval issues thấp nhất.
 
 ## Artifact hiện tại
 
-| Chunker | Số sách | Số chunk | GPU build | Thời gian build | Median estimated tokens | Chunk > 512 tokens |
-| --- | ---: | ---: | --- | ---: | ---: | ---: |
-| fixed_sentence | 100 | 7,815 | cuda | 107.57s | 145 | 33 |
-| paragraph_semantic | 100 | 3,276 | cuda | 177.04s | 315 | 30 |
-| adaptive_paragraph | 100 | 3,092 | cuda | 178.25s | 327 | 33 |
-| hierarchical_auto_merge | 100 | 3,092 | cuda | 179.02s | 327 | 33 |
-| feedback_optimized | 100 | 3,516 | cuda | 177.93s | 288 | 8 |
+Các artifact chính nằm trong `artifacts/<chunker>/`:
 
-## Benchmark đang có
+```text
+chunks.jsonl
+embeddings.npy
+faiss.index
+chunk_eval.json
+retrieval_eval.json
+retrieval_eval_top10.json
+feedback_report.json
+manifest.json
+```
 
-- Intrinsic chunk benchmark: mỗi artifact có `chunk_eval.json`, gồm số chunk, số sách, độ dài ký tự/token ước lượng, số câu mỗi chunk, số chunk vượt 512 estimated tokens, số chunk quá ngắn, boundary similarity và số chunk mỗi sách.
-- Bảng so sánh nhanh: chạy `python compare_chunkers.py` để gom các chỉ số chunk từ mọi artifact.
-- Retrieval benchmark framework: `rag_pipeline/evaluate_retrieval.py` đo `hit@1`, `hit@k`, `mrr`, keyword recall và top results từ file câu hỏi JSONL.
-- Source-grounded benchmark generator: `rag_pipeline/generate_benchmark_questions.py` sinh câu hỏi từ paragraph gốc trong `data_clean`, không lấy từ artifact của bất kỳ chunker nào, nên công bằng hơn khi so sánh các phương pháp chunking.
-- Feedback report: `rag_pipeline/feedback_report.py` dùng kết quả retrieval eval để phân tích điểm yếu của chunking.
+| Chunker | Số sách | Số chunk | GPU build | Build time | Median tokens | Chunk >512 | Retrieval issues |
+| --- | ---: | ---: | --- | ---: | ---: | ---: | ---: |
+| feedback_optimized_v2 | 100 | 9,088 | cuda | 123.68s | 146 | 29 | 43 |
+| fixed_sentence | 100 | 7,815 | cuda | 107.57s | 145 | 33 | 50 |
+| feedback_optimized | 100 | 3,516 | cuda | 177.93s | 288 | 8 | 58 |
+| paragraph_semantic | 100 | 3,276 | cuda | 177.04s | 315 | 30 | 70 |
+| adaptive_paragraph | 100 | 3,092 | cuda | 178.25s | 327 | 33 | 72 |
+| hierarchical_auto_merge | 100 | 3,092 | cuda | 179.02s | 327 | 33 | 72 |
 
-## Kết quả benchmark hiện tại
+## Benchmark hiện tại
 
-`eval/source_questions.jsonl` hiện là bộ benchmark chính, gồm 200 câu hỏi được sinh từ paragraph gốc của 100 sách. Kết quả retrieval đã được ghi trong `artifacts/retrieval_summary.md` và `artifacts/retrieval_summary.json`.
+Bộ benchmark chính: `eval/source_questions.jsonl`
 
-Các chỉ số chính để báo cáo là `doc_hit@1`, `doc_hit@5`, `doc_mrr`, `source_hit@1`, `source_hit@5`, `source_hit@10`, `source_mrr` và số retrieval issues trong feedback report.
+- 200 câu hỏi.
+- Sinh từ source paragraph gốc trong `data_clean`.
+- Không phụ thuộc artifact của bất kỳ chunker nào.
+- Mỗi câu hỏi có `expected_doc_id`, source span gốc, expected keywords và answer hint.
+
+Framework đánh giá:
+
+- `rag_pipeline/evaluate_chunks.py`: intrinsic chunk metrics.
+- `rag_pipeline/evaluate_retrieval.py`: retrieval metrics theo doc và source span.
+- `rag_pipeline/feedback_report.py`: liệt kê câu hỏi/chunk có vấn đề để phục vụ vòng feedback tiếp theo.
+- `compare_retrieval.py`: gom kết quả thành `artifacts/retrieval_summary.md` và `artifacts/retrieval_summary.json`.
+
+## Kết quả retrieval hiện tại
+
+| Rank | Chunker | doc@1 | doc@5 | doc@10 | doc_mrr | src@1 | src@5 | src@10 | src_mrr |
+| ---: | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | feedback_optimized_v2 | 82.5% | 93.0% | 95.0% | 0.865 | 63.5% | 86.0% | 90.5% | 0.721 |
+| 2 | fixed_sentence | 82.0% | 93.0% | 96.0% | 0.863 | 59.0% | 82.5% | 88.5% | 0.680 |
+| 3 | feedback_optimized | 77.0% | 89.0% | 92.0% | 0.817 | 51.5% | 78.5% | 86.5% | 0.619 |
+| 4 | paragraph_semantic | 75.5% | 91.0% | 94.0% | 0.810 | 48.0% | 73.0% | 81.5% | 0.573 |
+| 5 | adaptive_paragraph | 74.5% | 89.0% | 92.5% | 0.802 | 43.5% | 77.0% | 85.0% | 0.557 |
+| 6 | hierarchical_auto_merge | 74.5% | 89.0% | 92.5% | 0.802 | 43.5% | 77.0% | 85.0% | 0.557 |
+
+## Nhận định báo cáo
+
+Nếu mục tiêu là chứng minh cải tiến chunking qua retrieval benchmark, nên trình bày theo trục sau:
+
+1. `fixed_sentence` là baseline rất mạnh vì chunk nhỏ và có overlap.
+2. `paragraph_semantic`, `adaptive_paragraph`, `hierarchical_auto_merge` giữ bản chất semantic nhưng chunk lớn hơn, nên source-level retrieval kém hơn.
+3. `feedback_optimized` là semantic v1: tiết kiệm chunk hơn, ít overlong chunk hơn, và tốt nhất trong nhóm paragraph-semantic.
+4. `feedback_optimized_v2` là bước cải tiến dựa trên feedback thực nghiệm: chuyển sang sentence window có overlap 2 và metadata prefix. Nó đánh đổi số lượng chunk để lấy source-level retrieval tốt nhất.
+
+Phương pháp tốt nhất hiện tại: `feedback_optimized_v2`.
+
+Phương pháp semantic paragraph tốt nhất hiện tại: `feedback_optimized`.
+
+Phương pháp baseline mạnh nhất: `fixed_sentence`.

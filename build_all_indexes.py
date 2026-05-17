@@ -39,6 +39,8 @@ def main() -> None:
     parser.add_argument("--parent-max-words", type=int, default=None)
     parser.add_argument("--parent-leaf-count", type=int, default=None)
     parser.add_argument("--repair-margin", type=float, default=None)
+    parser.add_argument("--sentence-window-size", type=int, default=None)
+    parser.add_argument("--sentence-window-overlap", type=int, default=None)
     args = parser.parse_args()
 
     for chunker in args.chunkers:
@@ -65,6 +67,8 @@ def main() -> None:
             parent_max_words=args.parent_max_words,
             parent_leaf_count=args.parent_leaf_count,
             repair_margin=args.repair_margin,
+            sentence_window_size=args.sentence_window_size,
+            sentence_window_overlap=args.sentence_window_overlap,
             fixed_size=None,
             fixed_overlap=None,
         )

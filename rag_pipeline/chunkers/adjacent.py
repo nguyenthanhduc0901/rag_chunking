@@ -527,11 +527,12 @@ class FeedbackOptimizedChunker(AdaptiveParagraphChunker):
 class FeedbackOptimizedV2Chunker(FeedbackOptimizedChunker):
     """Second feedback iteration tuned from source-grounded retrieval misses.
 
-    V1 was strong on storage efficiency, but several misses retrieved the right
-    document without overlapping the exact source span. The first aggressive V2
-    candidate recovered some local misses but lost too much broader context, so
-    this version makes a conservative move: slightly smaller leaves while
-    preserving V1's windowed adaptive boundary behavior.
+    The benchmark showed that paragraph-level semantic chunks are efficient but
+    miss exact source spans more often than fixed sentence windows. V2 therefore
+    turns the feedback into a retrieval-first policy: compact overlapping
+    sentence windows, enriched with document metadata in the embedding text.
+    This keeps answer contexts small for the chatbot while increasing the
+    number of retrievable source-local entry points.
     """
 
     name = "feedback_optimized_v2"
@@ -549,6 +550,8 @@ class FeedbackOptimizedV2Chunker(FeedbackOptimizedChunker):
         max_threshold: float = 0.72,
         window_size: int = 2,
         repair_margin: float = 0.05,
+        sentence_window_size: int = 8,
+        sentence_window_overlap: int = 2,
     ) -> None:
         super().__init__(
             threshold=threshold,
@@ -563,18 +566,53 @@ class FeedbackOptimizedV2Chunker(FeedbackOptimizedChunker):
             window_size=window_size,
             repair_margin=repair_margin,
         )
+        if sentence_window_size < 1:
+            raise ValueError("sentence_window_size must be >= 1")
+        if sentence_window_overlap < 0 or sentence_window_overlap >= sentence_window_size:
+            raise ValueError(
+                "sentence_window_overlap must be >= 0 and < sentence_window_size"
+            )
+        self.sentence_window_size = sentence_window_size
+        self.sentence_window_overlap = sentence_window_overlap
+        self.params.update(
+            {
+                "sentence_window_size": sentence_window_size,
+                "sentence_window_overlap": sentence_window_overlap,
+            }
+        )
 
     def chunk(self, document: Document, model=None, batch_size: int = 64) -> list[Chunk]:
-        chunks = super().chunk(document, model=model, batch_size=batch_size)
-        tuned: list[Chunk] = []
-        for chunk in chunks:
-            metadata = dict(chunk.metadata)
-            metadata.update(
-                {
-                    "repair_policy": "feedback_v2_locality_tuned",
-                    "feedback_iteration": 2,
-                    "v2_goal": "improve_source_span_overlap_without_losing_v1_context",
-                }
+        spans = self.sentence_spans(document)
+        if not spans:
+            return []
+
+        chunks: list[Chunk] = []
+        start = 0
+        while start < len(spans):
+            end = min(start + self.sentence_window_size, len(spans)) - 1
+            window_text = document.text[spans[start][1] : spans[end][2]]
+            metadata = {
+                "unit_type": "sentence_window",
+                "feedback_ready": True,
+                "feedback_iteration": 2,
+                "repair_policy": "feedback_v2_source_local_window",
+                "v2_goal": "maximize_source_span_retrieval_with_compact_context",
+                "estimated_words": word_count(window_text),
+                "embedding_prefix": self._metadata_prefix(document),
+                "metadata_prefix_enabled": True,
+                "semantic_feedback_from": "feedback_optimized_and_fixed_sentence_eval",
+            }
+            chunks.append(
+                self.make_chunk(
+                    document,
+                    len(chunks),
+                    spans,
+                    start,
+                    end,
+                    metadata,
+                )
             )
-            tuned.append(replace(chunk, metadata=metadata))
-        return tuned
+            if end == len(spans) - 1:
+                break
+            start = end + 1 - self.sentence_window_overlap
+        return chunks
