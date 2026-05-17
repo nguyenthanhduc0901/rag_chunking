@@ -9,19 +9,19 @@
 
   const button = document.createElement("button");
   button.id = "gutenberg-rag-chatbot-button";
-  button.textContent = "Chat";
+  button.textContent = "RAG Chat";
   button.style.position = "fixed";
   button.style.right = "18px";
   button.style.bottom = "18px";
   button.style.zIndex = "2147483647";
   button.style.border = "0";
-  button.style.borderRadius = "999px";
-  button.style.padding = "11px 16px";
-  button.style.background = "#176b5c";
+  button.style.borderRadius = "8px";
+  button.style.padding = "12px 15px";
+  button.style.background = "#116658";
   button.style.color = "white";
-  button.style.font = "14px Arial, Helvetica, sans-serif";
+  button.style.font = "650 14px Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif";
   button.style.cursor = "pointer";
-  button.style.boxShadow = "0 8px 26px rgba(0,0,0,.22)";
+  button.style.boxShadow = "0 12px 34px rgba(17,102,88,.28)";
 
   const frame = document.createElement("iframe");
   frame.id = "gutenberg-rag-chatbot-frame";
@@ -34,10 +34,10 @@
   frame.style.height = "600px";
   frame.style.maxWidth = "calc(100vw - 36px)";
   frame.style.maxHeight = "calc(100vh - 92px)";
-  frame.style.border = "1px solid #dadce0";
-  frame.style.borderRadius = "10px";
+  frame.style.border = "1px solid #d9e0dd";
+  frame.style.borderRadius = "12px";
   frame.style.background = "white";
-  frame.style.boxShadow = "0 14px 40px rgba(0,0,0,.24)";
+  frame.style.boxShadow = "0 18px 46px rgba(22,32,29,.2)";
   frame.style.zIndex = "2147483647";
   frame.style.display = "none";
 

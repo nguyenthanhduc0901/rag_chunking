@@ -1,0 +1,946 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chunking Playground</title>
+    <link rel="stylesheet" href="/app.css" />
+    <style>
+      .workspace {
+        width: calc(100vw - 24px);
+        margin: 12px auto 24px;
+        display: grid;
+        grid-template-columns: minmax(340px, 510px) minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        min-width: 0;
+      }
+
+      .panel-head {
+        padding: 13px 14px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .panel-head h2 {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .panel-body {
+        padding: 14px;
+      }
+
+      .input-grid {
+        display: grid;
+        gap: 12px;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 420px;
+        resize: vertical;
+        padding: 12px;
+        line-height: 1.45;
+      }
+
+      input[type="file"] {
+        width: 100%;
+        padding: 8px;
+      }
+
+      .method-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        max-height: 210px;
+        overflow: auto;
+        padding-right: 2px;
+      }
+
+      .method {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        border: 1px solid var(--line);
+        border-radius: 7px;
+        padding: 8px;
+        background: linear-gradient(180deg, #ffffff, #f8fbfa);
+        font-size: 13px;
+      }
+
+      .method input {
+        margin-top: 2px;
+      }
+
+      .method span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 2px;
+      }
+
+      .actions {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .actions button {
+        min-height: 40px;
+        padding: 0 16px;
+      }
+
+      .dashboard {
+        display: grid;
+        gap: 14px;
+      }
+
+      .doc-stats,
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .stat {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: linear-gradient(180deg, #ffffff, #f8fbfa);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 19px;
+        line-height: 1.1;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .report {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: var(--surface);
+      }
+
+      .report-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px;
+        background:
+          linear-gradient(90deg, rgba(220, 238, 233, 0.8), rgba(239, 244, 242, 0.6)),
+          var(--panel);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .report-title h3 {
+        margin: 0;
+        font-size: 15px;
+      }
+
+      .bars {
+        padding: 12px;
+        display: grid;
+        gap: 7px;
+      }
+
+      .bar {
+        display: grid;
+        grid-template-columns: 58px 1fr 74px;
+        gap: 8px;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .track {
+        height: 9px;
+        border-radius: 999px;
+        background: #e5ebe9;
+        overflow: hidden;
+      }
+
+      .fill {
+        height: 100%;
+        width: var(--w, 0%);
+        background: linear-gradient(90deg, var(--accent), var(--blue));
+      }
+
+      .overview {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+        gap: 12px;
+      }
+
+      .chart-card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #ffffff, #f8fbfa);
+        padding: 12px;
+        min-width: 0;
+      }
+
+      .chart-card h3 {
+        margin: 0 0 10px;
+        font-size: 14px;
+      }
+
+      .compare-bars {
+        display: grid;
+        gap: 10px;
+      }
+
+      .compare-row {
+        display: grid;
+        grid-template-columns: minmax(130px, 190px) 1fr 80px;
+        gap: 10px;
+        align-items: center;
+        font-size: 12px;
+      }
+
+      .compare-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 650;
+      }
+
+      .compare-fill {
+        height: 16px;
+        width: var(--w, 0%);
+        border-radius: 999px;
+        background: var(--bar-color, var(--accent));
+      }
+
+      .method-visuals {
+        padding: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .histogram {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(20px, 1fr));
+        align-items: end;
+        gap: 6px;
+        min-height: 128px;
+        padding-top: 6px;
+      }
+
+      .hist-bar {
+        min-height: 4px;
+        height: var(--h, 4px);
+        border-radius: 6px 6px 2px 2px;
+        background: linear-gradient(180deg, var(--bar-color, var(--blue)), var(--accent));
+      }
+
+      .hist-labels {
+        display: grid;
+        grid-template-columns: repeat(8, minmax(20px, 1fr));
+        gap: 6px;
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin-top: 8px;
+      }
+
+      .legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .legend i {
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        background: var(--legend-color);
+      }
+
+      .radar-wrap {
+        display: grid;
+        grid-template-columns: minmax(240px, 320px) 1fr;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .radar {
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 1;
+      }
+
+      .radar text {
+        fill: var(--muted);
+        font-size: 11px;
+      }
+
+      .radar-grid {
+        fill: none;
+        stroke: #d9e0dd;
+        stroke-width: 1;
+      }
+
+      .radar-axis {
+        stroke: #c7d1cd;
+        stroke-width: 1;
+      }
+
+      .radar-shape {
+        fill: var(--radar-color);
+        fill-opacity: 0.16;
+        stroke: var(--radar-color);
+        stroke-width: 2;
+      }
+
+      .radar-table {
+        display: grid;
+        gap: 7px;
+        font-size: 12px;
+      }
+
+      .radar-score {
+        display: grid;
+        grid-template-columns: minmax(120px, 1fr) 52px;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .radar-score span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        min-width: 0;
+        color: var(--muted);
+      }
+
+      .radar-score i {
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        background: var(--legend-color);
+        flex: 0 0 auto;
+      }
+
+      .loading-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        align-items: center;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: linear-gradient(180deg, #ffffff, #f8fbfa);
+      }
+
+      .spinner {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 4px solid #dceee9;
+        border-top-color: var(--accent);
+        animation: spin 0.8s linear infinite;
+      }
+
+      .loading-card strong {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .chunks {
+        display: grid;
+        gap: 8px;
+        padding: 12px;
+        border-top: 1px solid var(--line);
+        max-height: 480px;
+        overflow: auto;
+      }
+
+      .chunk {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        overflow: hidden;
+      }
+
+      .chunk summary {
+        cursor: pointer;
+        padding: 10px;
+        font-weight: 650;
+        color: var(--ink);
+      }
+
+      .chunk pre {
+        margin: 0;
+        padding: 0 10px 10px;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font: 13px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #24312d;
+      }
+
+      .error {
+        color: var(--danger);
+        padding: 12px;
+      }
+
+      @media (max-width: 920px) {
+        .workspace {
+          grid-template-columns: 1fr;
+        }
+
+        .doc-stats,
+        .cards,
+        .overview,
+        .radar-wrap {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 520px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .method-grid,
+        .doc-stats,
+        .cards,
+        .overview,
+        .radar-wrap {
+          grid-template-columns: 1fr;
+        }
+
+        .actions {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <h1>Chunking Playground</h1>
+        </div>
+        <nav class="nav">
+          <a href="/chatbot.html">Chatbot</a>
+          <a class="active" href="/chunk-playground.html">Chunks</a>
+        </nav>
+      </header>
+
+      <main class="workspace">
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Input</h2>
+            <span class="status-pill" id="status">Ready</span>
+          </div>
+          <div class="panel-body input-grid">
+            <label>
+              <span class="tiny">TXT or Markdown file</span>
+              <input id="file" type="file" accept=".txt,.md,text/plain,text/markdown" />
+            </label>
+            <label>
+              <span class="tiny">Document text</span>
+              <textarea id="text" placeholder="Paste a short document, article, or book excerpt here."></textarea>
+            </label>
+            <div>
+              <div class="tiny" style="margin-bottom: 7px">Chunking methods</div>
+              <div class="method-grid" id="methods"></div>
+            </div>
+            <div class="actions">
+              <button id="run" type="button">Analyze Chunks</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Results</h2>
+            <span class="status-pill" id="docStatus">No document</span>
+          </div>
+          <div class="panel-body dashboard" id="results">
+            <div class="doc-stats">
+              <div class="stat"><strong>0</strong><span>chars</span></div>
+              <div class="stat"><strong>0</strong><span>words</span></div>
+              <div class="stat"><strong>0</strong><span>est. tokens</span></div>
+              <div class="stat"><strong>0</strong><span>methods</span></div>
+            </div>
+            <p class="tiny">Run the analyzer to inspect chunk counts, chunk length distribution, and the actual chunk text.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      const apiBase = new URL(".", window.location.href).origin;
+      const textEl = document.getElementById("text");
+      const fileEl = document.getElementById("file");
+      const methodsEl = document.getElementById("methods");
+      const runButton = document.getElementById("run");
+      const statusEl = document.getElementById("status");
+      const docStatusEl = document.getElementById("docStatus");
+      const resultsEl = document.getElementById("results");
+
+      const defaultText = `The forest had changed after the first weeks of rain. Streams that had been silent in summer now ran over the stones, carrying leaves and small branches toward the lower valley.
+
+The town council had argued for years about whether the old mill pond should be restored. Farmers wanted predictable irrigation, while naturalists warned that rebuilding the dam would flood the nesting grounds near the marsh.
+
+In the end, the surveyors proposed a compromise. The dam would not be rebuilt at its original height. Instead, a lower spillway would slow the spring floods without covering the meadows. The plan satisfied no one completely, but it gave each side enough protection to continue the discussion.
+
+By autumn, schoolchildren were visiting the valley to measure water clarity and count migrating birds. Their notebooks became a small public record of the place: not a perfect wilderness, and not a fully engineered system, but a landscape still being negotiated.`;
+
+      textEl.value = defaultText;
+
+      function escapeHtml(text) {
+        return String(text)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;");
+      }
+
+      function fmt(value, digits = 0) {
+        const number = Number(value || 0);
+        return number.toLocaleString(undefined, {
+          maximumFractionDigits: digits,
+          minimumFractionDigits: digits,
+        });
+      }
+
+      function clamp(value, min = 0, max = 1) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      const palette = ["#116658", "#2f5f9f", "#a86f16", "#b55445", "#6f5aa7", "#4f7a3f", "#8b5a2b", "#3d7187"];
+
+      function colorFor(index) {
+        return palette[index % palette.length];
+      }
+
+      async function loadMethods() {
+        const response = await fetch(`${apiBase}/api/preview-chunkers`);
+        const data = await response.json();
+        methodsEl.innerHTML = "";
+        for (const chunker of data.chunkers) {
+          const checked = ["fixed_sentence", "paragraph_semantic", "parent_child_chunk"].includes(chunker.name);
+          const item = document.createElement("label");
+          item.className = "method";
+          item.innerHTML = `
+            <input type="checkbox" value="${escapeHtml(chunker.name)}" ${checked ? "checked" : ""} />
+            <div>
+              <strong>${escapeHtml(chunker.name)}</strong>
+            </div>
+          `;
+          methodsEl.appendChild(item);
+        }
+      }
+
+      function selectedMethods() {
+        return [...methodsEl.querySelectorAll("input:checked")].map((item) => item.value);
+      }
+
+      fileEl.addEventListener("change", async () => {
+        const file = fileEl.files && fileEl.files[0];
+        if (!file) return;
+        const name = file.name.toLowerCase();
+        if (!name.endsWith(".txt") && !name.endsWith(".md")) {
+          statusEl.textContent = "TXT/MD only";
+          return;
+        }
+        textEl.value = await file.text();
+        statusEl.textContent = "File loaded";
+      });
+
+      function renderDocStats(document, methodCount) {
+        return `
+          <div class="doc-stats">
+            <div class="stat"><strong>${fmt(document.chars)}</strong><span>chars</span></div>
+            <div class="stat"><strong>${fmt(document.words)}</strong><span>words</span></div>
+            <div class="stat"><strong>${fmt(document.estimated_tokens)}</strong><span>est. tokens</span></div>
+            <div class="stat"><strong>${fmt(methodCount)}</strong><span>methods</span></div>
+          </div>
+        `;
+      }
+
+      function renderCards(metrics) {
+        return `
+          <div class="cards">
+            <div class="stat"><strong>${fmt(metrics.num_chunks)}</strong><span>chunks</span></div>
+            <div class="stat"><strong>${fmt(metrics.word_median, 1)}</strong><span>median words</span></div>
+            <div class="stat"><strong>${fmt(metrics.word_avg, 1)}</strong><span>avg words</span></div>
+            <div class="stat"><strong>${fmt(metrics.over_512_tokens)}</strong><span>chunks over 512 tokens</span></div>
+          </div>
+        `;
+      }
+
+      function renderComparison(reports) {
+        const valid = reports.filter((report) => !report.error);
+        if (!valid.length) return "";
+        const maxChunks = Math.max(1, ...valid.map((report) => report.metrics.num_chunks || 0));
+        const maxMedian = Math.max(1, ...valid.map((report) => report.metrics.word_median || 0));
+        const maxAvg = Math.max(1, ...valid.map((report) => report.metrics.word_avg || 0));
+        return `
+          <section class="overview">
+            <div class="chart-card">
+              <h3>Method comparison</h3>
+              <div class="compare-bars">
+                ${valid
+                  .map((report, index) => {
+                    const color = colorFor(index);
+                    const chunkWidth = Math.max(2, Math.round(((report.metrics.num_chunks || 0) / maxChunks) * 100));
+                    const medianWidth = Math.max(2, Math.round(((report.metrics.word_median || 0) / maxMedian) * 100));
+                    const avgWidth = Math.max(2, Math.round(((report.metrics.word_avg || 0) / maxAvg) * 100));
+                    return `
+                      <div>
+                        <div class="compare-row">
+                          <span class="compare-label" title="${escapeHtml(report.chunker)}">${escapeHtml(report.chunker)}</span>
+                          <div class="track"><div class="compare-fill" style="--w:${chunkWidth}%;--bar-color:${color}"></div></div>
+                          <span>${fmt(report.metrics.num_chunks)} chunks</span>
+                        </div>
+                        <div class="compare-row">
+                          <span class="tiny">median</span>
+                          <div class="track"><div class="compare-fill" style="--w:${medianWidth}%;--bar-color:${color}"></div></div>
+                          <span>${fmt(report.metrics.word_median, 1)} words</span>
+                        </div>
+                        <div class="compare-row">
+                          <span class="tiny">average</span>
+                          <div class="track"><div class="compare-fill" style="--w:${avgWidth}%;--bar-color:${color}"></div></div>
+                          <span>${fmt(report.metrics.word_avg, 1)} words</span>
+                        </div>
+                      </div>
+                    `;
+                  })
+                  .join("")}
+              </div>
+              <div class="legend">
+                ${valid
+                  .map(
+                    (report, index) =>
+                      `<span><i style="--legend-color:${colorFor(index)}"></i>${escapeHtml(report.chunker)}</span>`,
+                  )
+                  .join("")}
+              </div>
+            </div>
+            ${renderRadar(valid)}
+            ${renderTimingChart(valid)}
+          </section>
+        `;
+      }
+
+      function renderTimingChart(reports) {
+        const maxSeconds = Math.max(0.001, ...reports.map((report) => Number(report.elapsed_seconds || 0)));
+        return `
+          <div class="chart-card">
+            <h3>Processing time</h3>
+            <div class="compare-bars">
+              ${reports
+                .map((report, index) => {
+                  const seconds = Number(report.elapsed_seconds || 0);
+                  const width = Math.max(2, Math.round((seconds / maxSeconds) * 100));
+                  return `
+                    <div class="compare-row">
+                      <span class="compare-label" title="${escapeHtml(report.chunker)}">${escapeHtml(report.chunker)}</span>
+                      <div class="track"><div class="compare-fill" style="--w:${width}%;--bar-color:${colorFor(index)}"></div></div>
+                      <span>${fmt(seconds, 3)}s</span>
+                    </div>
+                  `;
+                })
+                .join("")}
+            </div>
+            <div class="tiny" style="margin-top: 10px">Measured on this preview request, including chunking and any model calls required by the selected method.</div>
+          </div>
+        `;
+      }
+
+      function tokenValues(report) {
+        return report.chunks.map((chunk) => Number(chunk.estimated_tokens || 0));
+      }
+
+      function wordValues(report) {
+        return report.chunks.map((chunk) => Number(chunk.words || 0));
+      }
+
+      function stdev(values) {
+        if (!values.length) return 0;
+        const avg = values.reduce((sum, value) => sum + value, 0) / values.length;
+        const variance = values.reduce((sum, value) => sum + (value - avg) ** 2, 0) / values.length;
+        return Math.sqrt(variance);
+      }
+
+      function methodScores(reports) {
+        const maxChunks = Math.max(1, ...reports.map((report) => report.metrics.num_chunks || 0));
+        const maxStd = Math.max(1, ...reports.map((report) => stdev(wordValues(report))));
+        return reports.map((report) => {
+          const tokens = tokenValues(report);
+          const chunkCount = report.metrics.num_chunks || 0;
+          const parentHits = report.chunks.filter((chunk) => chunk.metadata && chunk.metadata.parent_id).length;
+          const agentHits = report.chunks.filter((chunk) => chunk.metadata && chunk.metadata.agentic).length;
+          const golden = tokens.length
+            ? tokens.filter((value) => value >= 200 && value <= 400).length / tokens.length
+            : 0;
+          const stdScore = 1 - clamp(stdev(wordValues(report)) / maxStd);
+          const contextScore = chunkCount ? clamp((parentHits + agentHits * 0.5) / chunkCount) : 0.25;
+          return {
+            chunker: report.chunker,
+            color: colorFor(reports.indexOf(report)),
+            granularity: clamp(chunkCount / maxChunks),
+            consistency: stdScore,
+            tokenEfficiency: golden,
+            contextPreservation: contextScore || 0.25,
+          };
+        });
+      }
+
+      function radarPoint(score, axisIndex, axisCount, radius = 100, center = 130) {
+        const angle = -Math.PI / 2 + (axisIndex * Math.PI * 2) / axisCount;
+        const distance = radius * clamp(score);
+        return [
+          center + Math.cos(angle) * distance,
+          center + Math.sin(angle) * distance,
+        ];
+      }
+
+      function renderRadar(reports) {
+        const axes = [
+          ["granularity", "Granularity"],
+          ["consistency", "Consistency"],
+          ["tokenEfficiency", "Token efficiency"],
+          ["contextPreservation", "Context preservation"],
+        ];
+        const scores = methodScores(reports);
+        const axisCount = axes.length;
+        const grid = [0.25, 0.5, 0.75, 1]
+          .map((level) => {
+            const points = axes
+              .map((_, index) => radarPoint(level, index, axisCount).join(","))
+              .join(" ");
+            return `<polygon class="radar-grid" points="${points}"></polygon>`;
+          })
+          .join("");
+        const axisLines = axes
+          .map((axis, index) => {
+            const [x, y] = radarPoint(1, index, axisCount);
+            const [labelX, labelY] = radarPoint(1.16, index, axisCount);
+            return `
+              <line class="radar-axis" x1="130" y1="130" x2="${x}" y2="${y}"></line>
+              <text x="${labelX}" y="${labelY}" text-anchor="middle" dominant-baseline="middle">${axis[1]}</text>
+            `;
+          })
+          .join("");
+        const shapes = scores
+          .map((score) => {
+            const points = axes
+              .map(([key], index) => radarPoint(score[key], index, axisCount).join(","))
+              .join(" ");
+            return `<polygon class="radar-shape" style="--radar-color:${score.color}" points="${points}"></polygon>`;
+          })
+          .join("");
+        return `
+          <div class="chart-card">
+            <h3>Radar benchmark</h3>
+            <div class="radar-wrap">
+              <svg class="radar" viewBox="0 0 260 260" role="img" aria-label="Radar chart comparing chunking methods">
+                ${grid}
+                ${axisLines}
+                ${shapes}
+              </svg>
+              <div class="radar-table">
+                ${scores
+                  .map((score) => {
+                    const overall = (score.granularity + score.consistency + score.tokenEfficiency + score.contextPreservation) / 4;
+                    return `
+                      <div class="radar-score">
+                        <span><i style="--legend-color:${score.color}"></i> ${escapeHtml(score.chunker)}</span>
+                        <strong>${fmt(overall * 100)}%</strong>
+                      </div>
+                    `;
+                  })
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      function lengthBuckets(chunks) {
+        const ranges = [
+          [0, 80, "0-80"],
+          [81, 140, "81-140"],
+          [141, 220, "141-220"],
+          [221, 320, "221-320"],
+          [321, 460, "321-460"],
+          [461, 650, "461-650"],
+          [651, 900, "651-900"],
+          [901, Infinity, "900+"],
+        ];
+        const counts = ranges.map(() => 0);
+        for (const chunk of chunks) {
+          const words = chunk.words || 0;
+          const index = ranges.findIndex(([min, max]) => words >= min && words <= max);
+          counts[index === -1 ? counts.length - 1 : index] += 1;
+        }
+        return { labels: ranges.map((range) => range[2]), counts };
+      }
+
+      function renderHistogram(chunks, color) {
+        const { labels, counts } = lengthBuckets(chunks);
+        const maxCount = Math.max(1, ...counts);
+        return `
+          <div>
+            <h3>Length distribution</h3>
+            <div class="histogram">
+              ${counts
+                .map((count) => {
+                  const height = Math.max(4, Math.round((count / maxCount) * 118));
+                  return `<div class="hist-bar" title="${count} chunks" style="--h:${height}px;--bar-color:${color}"></div>`;
+                })
+                .join("")}
+            </div>
+            <div class="hist-labels">
+              ${labels.map((label) => `<span>${label}</span>`).join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      function renderChunks(chunks) {
+        return `
+          <div class="chunks">
+            ${chunks
+              .map(
+                (chunk) => `
+                  <details class="chunk">
+                    <summary>#${chunk.chunk_index} · ${fmt(chunk.words)} words · chars ${fmt(chunk.start_char)}-${fmt(chunk.end_char)}</summary>
+                    <pre>${escapeHtml(chunk.text)}</pre>
+                  </details>
+                `,
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      function renderReport(report, index = 0) {
+        if (report.error) {
+          return `
+            <section class="report">
+              <div class="report-title"><h3>${escapeHtml(report.chunker)}</h3></div>
+              <div class="error">${escapeHtml(report.error)}</div>
+            </section>
+          `;
+        }
+        return `
+          <section class="report">
+            <div class="report-title">
+              <h3>${escapeHtml(report.chunker)}</h3>
+              <span class="status-pill">${fmt(report.metrics.num_chunks)} chunks</span>
+            </div>
+            ${renderCards(report.metrics)}
+            ${
+              report.truncated_chunks
+                ? `<div class="tiny" style="padding: 10px 12px 0">Showing first ${fmt(report.returned_chunks)} chunks in the text preview. Metrics and charts are computed from all ${fmt(report.metrics.num_chunks)} chunks.</div>`
+                : ""
+            }
+            <div class="method-visuals">
+              ${renderHistogram(report.chunks, colorFor(index))}
+            </div>
+            ${renderChunks(report.chunks)}
+          </section>
+        `;
+      }
+
+      function renderLoading(chunkers, textLength) {
+        return `
+          <div class="loading-card">
+            <div class="spinner" aria-hidden="true"></div>
+            <div>
+              <strong>Analyzing chunks...</strong>
+              <div class="tiny">
+                Running ${chunkers.map(escapeHtml).join(", ")} on ${fmt(textLength)} characters.
+                Semantic and agentic methods may take longer because they use models.
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      async function runPreview() {
+        const text = textEl.value.trim();
+        const chunkers = selectedMethods();
+        if (!text) {
+          statusEl.textContent = "Text required";
+          return;
+        }
+        if (!chunkers.length) {
+          statusEl.textContent = "Choose a method";
+          return;
+        }
+
+        runButton.disabled = true;
+        statusEl.textContent = "Chunking";
+        docStatusEl.textContent = "Working";
+        resultsEl.innerHTML = renderLoading(chunkers, text.length);
+
+        try {
+          const response = await fetch(`${apiBase}/api/chunk-preview`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text, chunkers }),
+          });
+          const data = await response.json();
+          if (!response.ok) throw new Error(data.error || response.statusText);
+          resultsEl.innerHTML = `
+            ${renderDocStats(data.document, data.reports.length)}
+            ${renderComparison(data.reports)}
+            ${data.reports.map((report, index) => renderReport(report, index)).join("")}
+          `;
+          statusEl.textContent = "Ready";
+          docStatusEl.textContent = `${fmt(data.document.words)} words`;
+        } catch (error) {
+          resultsEl.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+          statusEl.textContent = "Error";
+          docStatusEl.textContent = "Error";
+        } finally {
+          runButton.disabled = false;
+        }
+      }
+
+      runButton.addEventListener("click", runPreview);
+      loadMethods().catch((error) => {
+        statusEl.textContent = "Error";
+        methodsEl.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+      });
+    </script>
+  </body>
+</html>

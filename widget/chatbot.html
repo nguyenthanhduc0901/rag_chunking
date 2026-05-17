@@ -4,42 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gutenberg RAG Chatbot</title>
+    <link rel="stylesheet" href="/app.css" />
     <style>
-      :root {
-        color-scheme: light;
-        --ink: #202124;
-        --muted: #5f6368;
-        --line: #dadce0;
-        --surface: #ffffff;
-        --soft: #f7f8f8;
-        --accent: #176b5c;
-        --accent-ink: #ffffff;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
       body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--ink);
-        background: var(--surface);
         height: 100vh;
         display: grid;
         grid-template-rows: auto 1fr auto;
+        background: var(--soft);
       }
 
-      header {
+      .chat-header {
+        padding: 14px;
         border-bottom: 1px solid var(--line);
-        padding: 12px 14px;
-        display: grid;
-        gap: 8px;
+        background: var(--surface);
+      }
+
+      .chat-title {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
       }
 
       h1 {
-        font-size: 15px;
         margin: 0;
+        font-size: 16px;
         line-height: 1.2;
       }
 
@@ -50,48 +40,39 @@
         align-items: center;
       }
 
-      select,
-      button,
-      textarea {
-        font: inherit;
-      }
-
       select {
         min-width: 0;
-        border: 1px solid var(--line);
-        border-radius: 6px;
-        padding: 7px 8px;
-        background: white;
-      }
-
-      .status {
-        font-size: 12px;
-        color: var(--muted);
+        min-height: 36px;
+        padding: 0 9px;
       }
 
       main {
         overflow: auto;
         padding: 14px;
-        background: var(--soft);
       }
 
       .msg {
+        position: relative;
+        max-width: 94%;
         border: 1px solid var(--line);
         border-radius: 8px;
-        padding: 10px;
+        padding: 10px 11px;
         margin-bottom: 10px;
-        background: white;
+        background: var(--surface);
         white-space: pre-wrap;
-        line-height: 1.35;
+        line-height: 1.42;
         font-size: 14px;
+        box-shadow: 0 6px 18px rgba(23, 32, 29, 0.06);
       }
 
-      .user {
-        border-color: #b9d7d0;
+      .msg.user {
+        margin-left: auto;
+        border-color: #b7d9d0;
+        background: #edf8f5;
       }
 
-      .assistant {
-        border-color: var(--line);
+      .msg.assistant {
+        margin-right: auto;
       }
 
       details {
@@ -104,60 +85,82 @@
         cursor: pointer;
         color: var(--accent);
         font-size: 13px;
+        font-weight: 650;
       }
 
       .source {
-        font-size: 12px;
-        color: var(--muted);
         margin: 7px 0;
+        color: var(--muted);
+        font-size: 12px;
       }
 
-      form {
+      .composer {
         border-top: 1px solid var(--line);
         padding: 10px;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 8px;
+        background: var(--surface);
       }
 
       textarea {
         resize: none;
-        min-height: 42px;
-        max-height: 110px;
-        border: 1px solid var(--line);
-        border-radius: 7px;
-        padding: 9px;
+        min-height: 44px;
+        max-height: 120px;
+        padding: 10px;
+        line-height: 1.35;
       }
 
-      button {
-        border: 0;
-        border-radius: 7px;
+      #send {
+        min-width: 78px;
         padding: 0 14px;
-        background: var(--accent);
-        color: var(--accent-ink);
-        cursor: pointer;
       }
 
-      button:disabled {
-        opacity: 0.5;
-        cursor: wait;
+      @media (max-width: 420px) {
+        .chat-header {
+          padding: 12px;
+        }
+
+        .controls {
+          grid-template-columns: 1fr;
+        }
+
+        .status-pill {
+          justify-content: center;
+        }
+
+        .msg {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Gutenberg Environmental Issues Chat</h1>
+    <header class="chat-header">
+      <div class="chat-title">
+        <div>
+          <h1>Gutenberg RAG Chat</h1>
+          <div class="tiny">Ask over the indexed Project Gutenberg books.</div>
+        </div>
+        <nav class="nav" aria-label="Widget navigation">
+          <a href="/chunk-playground.html" target="_blank" rel="noreferrer">Chunks</a>
+        </nav>
+      </div>
       <div class="controls">
+        <label class="sr-only" for="chunker">Chunking method</label>
         <select id="chunker"></select>
-        <span class="status" id="status">Loading</span>
+        <span class="status-pill" id="status">Loading</span>
       </div>
     </header>
 
     <main id="messages">
-      <div class="msg assistant">Ask a question about the books in this Gutenberg bookshelf.</div>
+      <div class="msg assistant">
+        Ask a question about the books in this Gutenberg bookshelf. Choose a chunking method above to compare retrieval behavior.
+      </div>
     </main>
 
-    <form id="form">
+    <form class="composer" id="form">
+      <label class="sr-only" for="message">Question</label>
       <textarea id="message" placeholder="Ask about a book, theme, or passage"></textarea>
       <button id="send" type="submit">Send</button>
     </form>
@@ -196,7 +199,7 @@
         const sourceLink = url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">Open book</a>` : "";
         return `
           <details>
-            <summary>#${result.rank} score=${result.score.toFixed(3)} | ${escapeHtml(title)}</summary>
+            <summary>#${result.rank} score=${Number(result.score).toFixed(3)} | ${escapeHtml(title)}</summary>
             <div class="source">${escapeHtml(author)} | doc_id=${escapeHtml(result.doc_id)} ${sourceLink}</div>
             <div>${escapeHtml(result.text)}</div>
           </details>
@@ -210,7 +213,7 @@
         for (const chunker of data.chunkers) {
           const option = document.createElement("option");
           option.value = chunker.name;
-          option.textContent = `${chunker.name} (${chunker.num_chunks || 0} chunks)`;
+          option.textContent = `${chunker.name} (${chunker.num_chunks || 0})`;
           chunkerSelect.appendChild(option);
         }
         statusEl.textContent = data.chunkers.length ? "Ready" : "No indexes";

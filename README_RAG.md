@@ -88,6 +88,16 @@ Or inject a floating widget:
 <script src="http://localhost:8787/chatbot.js"></script>
 ```
 
+Open the chunking playground:
+
+```text
+http://localhost:8787/chunk-playground.html
+```
+
+The playground accepts pasted text or `.txt`/`.md` files and compares chunk
+counts, chunk length metrics, and the actual chunk boundaries for selected
+chunking methods.
+
 For the real Gutenberg HTTPS page, prefer forwarding the VM port to your local
 machine and loading the widget from `http://localhost:8787`, because browsers may
 block scripts or iframes from a plain HTTP external VM IP on an HTTPS page.
